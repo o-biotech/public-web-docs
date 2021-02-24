@@ -4,7 +4,7 @@ module.exports = {
   title: 'Fathym IoT Ensemble Beta',
   tagline: 'Experience IoT in minutes | No credit card required',
   url: 'https://www.iot-ensemble.com',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'iot-ensemble', // Usually your GitHub org/user name.
@@ -38,15 +38,14 @@ module.exports = {
         },
         {
           to: 'docs',
-          activeBasePath: 'docs',
           label: 'Docs',
           position: 'right',
         },
         {
-          to: 'blog',
-          activeBasePath: 'blog',
+          href: 'https://www.iot-ensemble.com/blog',
           label: 'Blog',
           position: 'right',
+          target: '_top',
         },
         {
           href: 'https://www.iot-ensemble.com/dashboard',
@@ -110,20 +109,11 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        'api-docs': {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // The iot-ensemble website repo
-          // editUrl: 'https://github.com/iot-ensemble/public-web/edit/master/website/',
-        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // The iot-ensemble website repo
           // editUrl: 'https://github.com/iot-ensemble/public-web/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // The iot-ensemble website blog repo
-          // editUrl: 'https://github.com/iot-ensemble/public-web/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
