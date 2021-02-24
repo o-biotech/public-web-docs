@@ -77,7 +77,7 @@ module.exports = {
             },
             {
               label: 'Support',
-              to: '/docs/introduction/support',
+              to: '/introduction/support',
             },
           ],
         },
