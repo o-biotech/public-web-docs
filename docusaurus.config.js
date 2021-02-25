@@ -43,7 +43,7 @@ module.exports = {
           target: '_top',
         },
         {
-          to: 'docs',
+          to: '/',
           label: 'Docs',
           position: 'right',
         },
