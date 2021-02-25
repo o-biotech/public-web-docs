@@ -40,7 +40,7 @@ https://fathym-prd.azure-api.net/iot-ensemble/ColdQuery?flatten=false&resultType
 
 :::note
 
-If you would like to use the [emulated data](https://www.iot-ensemble.com/docs/getting-started/emulated-data), add an additional query string parameter of `includeEmulated=true`:
+If you would like to use the [emulated data](../../getting-started/emulated-data), add an additional query string parameter of `includeEmulated=true`:
 
 ```console
 https://fathym-prd.azure-api.net/iot-ensemble/ColdQuery?flatten=false&resultType=JSON&includeEmulated=true
