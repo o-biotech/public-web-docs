@@ -1,4 +1,5 @@
 ---
+slug: connecting-downstream
 title: Getting Started - Connecting Downstream Services
 hide_title: true
 sidebar_label: Connect Downstream
