@@ -20,7 +20,7 @@ From our own and our customer’s experience, we know that starting new IoT proj
 
 Choosing a plan that best suits your needs depends on whether you wish to leverage cloud infrastructure in a managed shared environment, or in your own Azure environment. Another consideration is the velocity at which data needs to move through the system.  
 
-The following are high-level descriptions of our plans to help you determine the best place to start. Read the [complete licenses guide](../developers/licenses) for more in-depth information.
+The following are high-level descriptions of our plans to help you determine the best place to start. Read the [complete licenses guide](../devs/licenses) for more in-depth information.
 
 ### Shared Cloud Plans
 

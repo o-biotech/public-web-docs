@@ -13,34 +13,34 @@ module.exports = {
       "tutorials/arduino-esp32-and-enviro-sensor"
     ],
     Developers: [
-      'developers/licenses',
-      // 'developers/azure-iot-hub-explained',
+      'devs/licenses',
+      // 'devs/azure-iot-hub-explained',
       {
         'Device Setup': [
-          'developers/device-setup/overview',
-          'developers/device-setup/iot-best-practice-schema-explained',
+          'devs/device-setup/overview',
+          'devs/device-setup/iot-best-practice-schema-explained',
           {
             Connect: [
-              //'developers/device-setup/connect/overview',
-              'developers/device-setup/connect/http',
-              //'developers/device-setup/connect/azure-iot-devices-sdk',
-              //'developers/device-setup/connect/device-simulator',
-              //'developers/device-setup/connect/rasp-pi-spark-fun',
-              //'developers/device-setup/connect/node-red',
+              //'devs/device-setup/connect/overview',
+              'devs/device-setup/connect/http',
+              //'devs/device-setup/connect/azure-iot-devices-sdk',
+              //'devs/device-setup/connect/device-simulator',
+              //'devs/device-setup/connect/rasp-pi-spark-fun',
+              //'devs/device-setup/connect/node-red',
             ],
           },
         ],
         'Alerts/Notifications': [
-            "developers/alerts/logic-apps",
-            "developers/alerts/grafana"
+            "devs/alerts/logic-apps",
+            "devs/alerts/grafana"
         ],
         'Storage Access': [
-          //  'developers/storage-access/overview',
-              'developers/storage-access/power-bi', 
-              'developers/storage-access/azure-ml',
-              'developers/storage-access/grafana',
-              'developers/storage-access/tableau',
-              'developers/storage-access/sql-server',
+          //  'devs/storage/overview',
+              'devs/storage/power-bi', 
+              'devs/storage/azure-ml',
+              'devs/storage/grafana',
+              'devs/storage/tableau',
+              'devs/storage/sql-server',
         ],
       },
     ],

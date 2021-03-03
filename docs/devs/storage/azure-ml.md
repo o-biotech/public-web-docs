@@ -108,7 +108,7 @@ Once the Automated ML is running, you'll have to wait for it to complete to move
 
 For use with Time series docs...
 
-If your using [IoT Ensemble's Best Practice Schema](../../../developers/device-setup/iot-best-practice-schema-explained) then set the **Time column** to `Timestamp`, otherwise choose the appropriate value from your device payload schema or fall back to the system value `EventEnqueuedUtcTime`. 
+If your using [IoT Ensemble's Best Practice Schema](../../../devs/device-setup/iot-best-practice-schema-explained) then set the **Time column** to `Timestamp`, otherwise choose the appropriate value from your device payload schema or fall back to the system value `EventEnqueuedUtcTime`. 
 
 :::note
 
