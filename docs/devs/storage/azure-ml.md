@@ -19,7 +19,7 @@ Azure Machine Learning empowers developers and data scientists with a wide range
 
 ## IoT Ensemble Storage Access
 
-IoT Ensemble provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../getting-started/connecting-downstream-services) for more details.
+IoT Ensemble provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../getting-started/connecting-downstream) for more details.
 
 ## Azure Automated Machine Learning - Regression
 
@@ -108,7 +108,7 @@ Once the Automated ML is running, you'll have to wait for it to complete to move
 
 For use with Time series docs...
 
-If your using [IoT Ensemble's Best Practice Schema](../../../developers/device-setup/iot-best-practice-schema-explained) then set the **Time column** to `Timestamp`, otherwise choose the appropriate value from your device payload schema or fall back to the system value `EventEnqueuedUtcTime`. 
+If your using [IoT Ensemble's Best Practice Schema](../../../devs/device-setup/best-practice-schema) then set the **Time column** to `Timestamp`, otherwise choose the appropriate value from your device payload schema or fall back to the system value `EventEnqueuedUtcTime`. 
 
 :::note
 

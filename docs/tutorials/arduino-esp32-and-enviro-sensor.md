@@ -378,5 +378,5 @@ Just make sure that you have the Device Telemetry toggle set to "Enabled". For m
 
 ## Next Steps
 Hooking up the hardware is just the beginning of Iot Ensemble. There are a number of options for accessing and displaying your data easily. 
-- [Connecting Downstream Devices](../getting-started/connecting-downstream-services) will walk through the different ways to access your data.
-- Check out the documentation for connecting your data with outside tools, such as [Power BI](../developers/storage-access/power-bi), [Grafana](../developers/storage-access/grafana), and others. 
+- [Connecting Downstream Devices](../getting-started/connecting-downstream) will walk through the different ways to access your data.
+- Check out the documentation for connecting your data with outside tools, such as [Power BI](../devs/storage/power-bi), [Grafana](../devs/storage/grafana), and others. 

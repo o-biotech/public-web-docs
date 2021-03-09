@@ -30,7 +30,7 @@ At times, the IoT process can feel like a challenge.  We've done a lot to spring
 
 ### Best Practice IoT Ensemble Schema
 
-When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../developers/device-setup/iot-best-practice-schema-explained) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
+When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../devs/device-setup/best-practice-schema) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
@@ -74,7 +74,7 @@ On top of the readings sensors are taking, there can often be additional informa
   - **_**  
   This special property on the SensorMetadata allows sending information relating to a gateway or other non-sensor health information.
 
-We do have a [detailed explanation of the best practice schema](../developers/device-setup/iot-best-practice-schema-explained) if you need more information on how to use it from a custom device.  Here is a full example of what the telemetry payload would look like (as used by our emulated device):
+We do have a [detailed explanation of the best practice schema](../devs/device-setup/best-practice-schema) if you need more information on how to use it from a custom device.  Here is a full example of what the telemetry payload would look like (as used by our emulated device):
 
 ```json
 {
@@ -127,7 +127,7 @@ When connecting devices, the connection is to a cloud-native Azure IoT Hub.  We 
 
 ## Connection Quick Starts
 
-Starting off simple, then working up to some real device connection examples, we'll walk through some common connection workflows.  Check out our detailed guide on [device setup](../developers/device-setup/overview) for more ways to connect and get data flowing.
+Starting off simple, then working up to some real device connection examples, we'll walk through some common connection workflows.  Check out our detailed guide on [device setup](../devs/device-setup/overview) for more ways to connect and get data flowing.
 
 ### Send Via Dashboard
 
@@ -143,7 +143,7 @@ Next, a look at how to use HTTP to send a device-to-cloud message.   HTTP is a m
 
 <!-- :::note
 
-For more details on how to create a SAS Token from a connection string, read our [full device setup](../developers/device-setup/connect/http) documentation.
+For more details on how to create a SAS Token from a connection string, read our [full device setup](../devs/device-setup/connect/http) documentation.
 
 ::: -->
 
@@ -151,7 +151,7 @@ The easiest way to try out an HTTP request, with valid SAS Token, is to grab a S
 
 ![Send Device Message](/img/screenshots/dashboard-devices-sas-tokens-dialog.png)
 
-With SAS Token in hand, we can execute a curl command like the following to send a device message.  Continue reading for a complete guide on [sending messages with HTTP](../developers/device-setup/connect/http).
+With SAS Token in hand, we can execute a curl command like the following to send a device message.  Continue reading for a complete guide on [sending messages with HTTP](../devs/device-setup/connect/http).
 
 ```cli
 curl -X POST \
@@ -197,7 +197,7 @@ The {device-name} can be any unique value, though it is recommended to use the D
 
 :::note
 
-The same information can be used to execute requests from [Postman or custom devices](../developers/device-setup/connect/http).
+The same information can be used to execute requests from [Postman or custom devices](../devs/device-setup/connect/http).
 
 :::
 
@@ -205,16 +205,16 @@ The same information can be used to execute requests from [Postman or custom dev
 
 Quick connect with simulator and download, reference to full article for the rest
 
-[Connect with Device Simulator](../developers/device-setup/connect/device-simulator)
+[Connect with Device Simulator](../devs/device-setup/connect/device-simulator)
 
 ### Raspberry Pi with SparkFun
 
 Brief explanation of what this entails, with a deep link into a full article
 
-[Connect with Raspberry PI and SparkFun](../developers/device-setup/connect/rasp-pi-spark-fun)
+[Connect with Raspberry PI and SparkFun](../devs/device-setup/connect/rasp-pi-spark-fun)
 
 ### Node Red
 
 Brief explanation of what node red is and what this entails, with a deep link into a full article
 
-[Connect with Node Red](../developers/device-setup/connect/node-red) -->
+[Connect with Node Red](../devs/device-setup/connect/node-red) -->
