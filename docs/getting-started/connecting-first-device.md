@@ -30,7 +30,7 @@ At times, the IoT process can feel like a challenge.  We've done a lot to spring
 
 ### Best Practice IoT Ensemble Schema
 
-When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../devs/device-setup/iot-best-practice-schema-explained) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
+When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../devs/device-setup/best-practice-schema) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
@@ -74,7 +74,7 @@ On top of the readings sensors are taking, there can often be additional informa
   - **_**  
   This special property on the SensorMetadata allows sending information relating to a gateway or other non-sensor health information.
 
-We do have a [detailed explanation of the best practice schema](../devs/device-setup/iot-best-practice-schema-explained) if you need more information on how to use it from a custom device.  Here is a full example of what the telemetry payload would look like (as used by our emulated device):
+We do have a [detailed explanation of the best practice schema](../devs/device-setup/iot-best-practice-schema) if you need more information on how to use it from a custom device.  Here is a full example of what the telemetry payload would look like (as used by our emulated device):
 
 ```json
 {
