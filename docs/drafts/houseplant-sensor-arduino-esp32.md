@@ -13,13 +13,17 @@ keywords:
 hide_table_of_contents: true
 ---
 
-## Build Your Own Smart Houseplant Monitor with 
+## Build Your Own Smart Houseplant Monitor with Iot Ensemble
 
-In this tutorial, we will be taking a generic ESP32 board, a soil moisture sensor, a UV sensor, and LCD Screen, and turn them into  and send messages with IoT Ensemble. For simplicity sake, I have chosen to use Sparkfun's "Qwiic" connect ecosystem, which is a plug-and-play method of connecting boards and sensors. 
+![Hardware Hookup](/img/houseplant_monitor.jpg)
+
+For many people nowadays (myself included), houseplants are all the rage. They bring color and happiness to any space, and can really tie a room together with a lively aesthetic. That is, if they're kept alive and healthy, which is sometimes easier said than done. Thankfully, we can easily create our own solution to monitor your precious plant babies with just a few components.
+
+In this tutorial, we will be taking a generic ESP32 board, along with a soil moisture sensor and UV sensor, and create a real-time view of your houseplant's environment. The LCD screen shows the current UV Index and soil moisture content of the soil, while the ESP32 board sends this data up to Iot Ensemble every 30 seconds. Let's get started! 
 
 ### Things you will need
-- [SparkFun Thing Plus - ESP32 WROOM Board](https://www.sparkfun.com/products/15663) (You may also use a different generic ESP32 board, but it won't use the Qwiic system)
-- An assortment of [Qwiic Cables](https://www.sparkfun.com/products/14426) (Any length is fine for this tutorial)
+- [SparkFun Thing Plus - ESP32 WROOM Board](https://www.sparkfun.com/products/15663)
+- At least 4 [Qwiic Cables](https://www.sparkfun.com/products/14426) (Any length is fine for this tutorial)
 - Your computer/laptop
 - A Micro-USB cable to connect the ESP32 to your computer
 - [SparkFun Qwiic Mux Breakout - TCA9548A](https://www.sparkfun.com/products/16784)
@@ -30,9 +34,9 @@ In this tutorial, we will be taking a generic ESP32 board, a soil moisture senso
 - A [Fathym IoT Ensemble](https://www.iot-ensemble.com/dashboard) account (we’re using the free, shared version)
 
 ## Part 1 - Hook Up Your Hardware 
-First, we need to attach the sensor to your board. Take the qwiic cable, and plug it into the ESP32 "Qwiic" port. Take the other end of the cable, and plug it into either of the two "Qwiic" ports on the Environmental Sensor. Your hardware is ready to go! <br></br>
+First, we need to attach all the necessary sensors and components to each other. The picture below shows the way that I have set up my plant monitor.<br></br>
 
-<!-- ![Hardware Hookup](/img/screenshots/hardware-hookup.jpg) -->
+![Hardware Hookup](/img/houseplant_hardware_hookup.png)
 
 ## Part 2 - Installing Arduino IDE and Necessary Software
 Next, we will need to install all of the required software/libraries on your computer
@@ -44,10 +48,11 @@ Download your version of Arudino IDE [here](https://www.arduino.cc/en/software).
 ### Add Sensor Libraries
 Once that is complete, we need to install some libraries. Click the following links to download each zip folder <br></br>
 
-[Download the SparkFun SerLCD Library (For the LCD display) (ZIP)](https://github.com/sparkfun/SparkFun_SerLCD_Arduino_Library/archive/refs/heads/master.zip)  
+[Download the SparkFun SerLCD Library (ZIP)](https://github.com/sparkfun/SparkFun_SerLCD_Arduino_Library/archive/refs/heads/master.zip)  
 
-[Download the CCS811 Library (ZIP)](https://github.com/sparkfun/SparkFun_CCS811_Arduino_Library/archive/master.zip)  
+[Download the SparkFun I2C Mux Library (ZIP)](https://github.com/sparkfun/SparkFun_I2C_Mux_Arduino_Library/archive/refs/heads/master.zip)  
 
+[Download the VEML6075 UV Sensor Library (ZIP)](https://github.com/sparkfun/SparkFun_VEML6075_Arduino_Library/archive/master.zip) 
 
 Once you have downloaded those, go to your Arduino IDE screen. In the top toolbar, select **Sketch** -> **Include Library** -> **Add .ZIP Library**, as shown below:
 
@@ -107,17 +112,22 @@ First, copy the following code:
  * A simple example using an ESP32 board with a CCS811/BME280 sensor, and connecting to the cloud with Iot Ensemble
  */
  
-#include <NTPClient.h>
-#include <WiFi.h>
-#include <Wire.h>
+#include <SerLCD.h>
 #include "Esp32MQTTClient.h"
-#include "SparkFunBME280.h"
-#include "SparkFunCCS811.h"
-#include <WiFiUdp.h>
+#include <SparkFun_I2C_Mux_Arduino_Library.h>
+#include <WiFi.h>
+#include <SparkFun_VEML6075_Arduino_Library.h>
 
-#define INTERVAL 30000 //Time interval for sending messages in ms
+#define MUX_ADDR 0x70 //7-bit unshifted default I2C Address
+#define COMMAND_GET_VALUE 0x05
 #define MESSAGE_MAX_LEN 512
-#define CCS811_ADDR 0x5B
+
+const int qwiicAddress = 0x28;
+int ADC_VALUE=0;
+
+VEML6075 uv; // Create a VEML6075 object
+QWIICMUX myMux;
+SerLCD lcd;
 
 // These are the four values that need to be filled out. NOTE: ESP32 boards can only connect to 2.4GHz networks, they can NOT connect to 5Ghz networks///////
 const char* ssid     = "Your Wifi Name (SSID)";
@@ -126,94 +136,21 @@ static const char* connectionString = "Your Connection String";
 char DeviceID[] = "Your DeviceID";
 //////////////////////////////////////////////////////////////
 
+int moistureValue = 0;
+float uvIndex = 0;
 char deviceVersion[] = "0.0.1";
 char deviceType[] = "ESP32";
 char latitude[] = "40.7578";
 char longitude[] = "-104.9733";
-const char *messageData = "{\"DeviceID\":\"%s\", \"DeviceType\":\"%s\", \"Version\":\"%s\", \"DeviceData\": {\"Latitude\":%s, \"Longitude\":%s}, \"SensorReadings\": {\"Temperature\":%f, \"Humidity\":%f, \"TVOC\":%d, \"CO2\":%d, \"Pressure\":%f, \"Altitude\":%f}, \"SensorMetadata\": {\"_\": {\"SignalStrength\": 1}}}";
+const char *messageData = "{\"DeviceID\":\"%s\", \"DeviceType\":\"%s\", \"Version\":\"%s\", \"DeviceData\": {\"Latitude\":%s, \"Longitude\":%s}, \"SensorReadings\": {\"UVIndex\":%f, \"SoilMoistureRaw\":%u}, \"SensorMetadata\": {\"_\": {\"SignalStrength\": 1}}}";
 static bool hasIoTHub = false;
 static bool hasWifi = false;
-int messageCount = 1;
-static bool messageSending = true;
-static uint64_t send_interval_ms;
 
-//Global variables obtained from the two sensors
-unsigned int tVOC = 0;
-unsigned int CO2 = 0;
-float tempf = 0;
-float humidity = 0;
-float pressureInHg = 0;
-float altitudeFt = 0;
-
-CCS811 myCCS811(CCS811_ADDR);
-BME280 myBME280; //Global sensor object for BME280
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP);
-
-static void SendConfirmationCallback(IOTHUB_CLIENT_CONFIRMATION_RESULT result)
+void setup()
 {
-  if (result == IOTHUB_CLIENT_CONFIRMATION_OK)
-  {
-    Serial.println("Send Confirmation Callback finished.");
-  }
-}
+  Serial.begin(115200);
+  Wire.begin();
 
-static void MessageCallback(const char* payLoad, int size)
-{
-  Serial.println("Message callback:");
-  Serial.println(payLoad);
-}
-
-static void DeviceTwinCallback(DEVICE_TWIN_UPDATE_STATE updateState, const unsigned char *payLoad, int size)
-{
-  char *temp = (char *)malloc(size + 1);
-  if (temp == NULL)
-  {
-    return;
-  }
-  memcpy(temp, payLoad, size);
-  temp[size] = '\0';
-  // Display Twin message.
-  Serial.println(temp);
-  free(temp);
-}
-
-static int  DeviceMethodCallback(const char *methodName, const unsigned char *payload, int size, unsigned char **response, int *response_size)
-{
-  LogInfo("Try to invoke method %s", methodName);
-  const char *responseMessage = "\"Successfully invoke device method\"";
-  int result = 200;
-
-  if (strcmp(methodName, "start") == 0)
-  {
-    LogInfo("Start sending temperature and humidity data");
-    messageSending = true;
-  }
-  else if (strcmp(methodName, "stop") == 0)
-  {
-    LogInfo("Stop sending temperature and humidity data");
-    messageSending = false;
-  }
-  else
-  {
-    LogInfo("No method %s found", methodName);
-    responseMessage = "\"No method found\"";
-    result = 404;
-  }
-
-  *response_size = strlen(responseMessage) + 1;
-  *response = (unsigned char *)strdup(responseMessage);
-
-  return result;
-}
-
-void setup() {
-  Serial.begin(9600);
-  Serial.println("ESP32 Device");
-  Serial.println("CCS811+BME280 Read Example");  
-  
-  Wire.begin();//initialize I2C bus
-  
   Serial.println("Initializing...");
   Serial.println(" > WiFi");
   Serial.println("Starting connecting WiFi.");
@@ -231,11 +168,7 @@ void setup() {
   Serial.println("WiFi connected");
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
-  
-  Serial.println(" > NTPClient");
-  timeClient.begin();
-  timeClient.update();
-  
+
   Serial.println(" > IoT Hub");
   if (!Esp32MQTTClient_Init((const uint8_t*)connectionString, true))
   {
@@ -243,74 +176,144 @@ void setup() {
     Serial.println("Initializing IoT hub failed.");
     return;
   }
+  
   hasIoTHub = true;
 
-  myCCS811.begin();
-
-  //Setup the BME280 for basic readings
-  myBME280.settings.commInterface = I2C_MODE;
-  myBME280.setI2CAddress(0x77);
-  myBME280.settings.runMode = 3; //  3, Normal mode
-  myBME280.settings.tStandby = 0; //  0, 0.5ms
-  myBME280.settings.filter = 0; //  0, filter off
-  myBME280.settings.tempOverSample = 1;
-  myBME280.settings.pressOverSample = 1;
-  myBME280.settings.humidOverSample = 1;
-
-  delay(10); //Give BME280 time to come on
+  // Enable the I2C ports being used on the Sparkfun MUX Board.
+  enableMuxPort(0);
+  enableMuxPort(7);
   
-  //Calling .begin() causes the settings to be loaded
-  byte id = myBME280.begin(); //Returns ID of 0x60 if successful
-  if (id != 0x60)
+  // the VEML6075's begin function can take no parameters
+  // It will return true on success or false on failure to communicate
+  if (uv.begin() == false)
   {
-    Serial.println("Problem with BME280");
+    Serial.println("Unable to communicate with VEML6075.");
+    while (1);
   }
-  else
-  {
-    Serial.println("BME280 online");
-  }
-  
-  Esp32MQTTClient_SetSendConfirmationCallback(SendConfirmationCallback);
-  Esp32MQTTClient_SetMessageCallback(MessageCallback);
-  Esp32MQTTClient_SetDeviceTwinCallback(DeviceTwinCallback);
-  Esp32MQTTClient_SetDeviceMethodCallback(DeviceMethodCallback);
-  Serial.println("Start sending events.");
-  randomSeed(analogRead(0));
-  send_interval_ms = millis();
+  Serial.println("UVA, UVB, UV Index");
 
+  lcd.begin(Wire); //Set up the LCD for I2C communication
+  lcd.clear(); //Clear the display - this moves the cursor to home position as well
+
+  lcd.setBacklight(255, 255, 255); //Set backlight to bright white
+  lcd.setContrast(3); //Set contrast. Lower to 0 for higher contrast. 
 }
 
-void loop() {
-if (hasWifi && hasIoTHub)
-  {
-    if (messageSending && 
-        (int)(millis() - send_interval_ms) >= INTERVAL)
-    {
-      timeClient.update();
-      
-      myCCS811.readAlgorithmResults(); //Read latest from CCS811 and update tVOC and CO2 variables
-
+void loop()
+{
+  int i = 0;
+  
+  //take sensor readings every second to display on the LCD screen, but only send readings to Iot Ensemble every 30 seconds.
+  while(i<=30){
+    lcd.setCursor(0,0);
+    
+    moistureValue = get_soil_moisture(); //Soil moisture value. Value of 1023 is completely dry (or not in soil). Value of around 100 is submerged in water.
+    
+    uvIndex = uv.index(); //UV index value can be between 0-11 (0 = No UV, 11 = Highest UV).
+    
+    if (String(moistureValue).length() == 4)
+      lcd.print("UV:" + String(uvIndex) + " Wet:" + String(moistureValue));
+    else
+      lcd.print("UV:" + String(uvIndex) + " Wet:" + String(moistureValue) + " ");
+    
+    if (uvIndex <= 0.01 && moistureValue >= 900){  
+      lcd.setCursor(0,1);
+      lcd.print("Need sun & water");
+    }
+    else if (moistureValue >= 900){
+      lcd.setCursor(0,1);
+      lcd.print("Dry, Need water!");
+    }
+    else if (uvIndex <= 0.01){
+      lcd.setCursor(0,1);
+      lcd.print("Need sun!       ");
+    }
+    else if (moistureValue <= 200){
+      lcd.setCursor(0,1);
+      lcd.print("Wet, leave it!  ");
+    }
+    else{
+      lcd.setCursor(0,1);
+      lcd.print("All good! :)    ");
+    }
+    
+    i ++;
+    Serial.println(String(uv.uva()) + ", " + String(uv.uvb()) + ", " + String(uv.index()));
+    
+    // if it's been 30-ish seconds, send current message payload up to Iot Ensemble and clear the LCD screen
+    if(i == 30){
       char messagePayload[MESSAGE_MAX_LEN];
-
-      tempf = myBME280.readTempF();
-      humidity = myBME280.readFloatHumidity();
-      altitudeFt = myBME280.readFloatAltitudeFeet();
-      pressureInHg = myBME280.readFloatPressure();
-      tVOC = myCCS811.getTVOC();
-      CO2 = myCCS811.getCO2();
-      
-      snprintf(messagePayload, MESSAGE_MAX_LEN, messageData, DeviceID, deviceType, deviceVersion, latitude, longitude, tempf, humidity, tVOC, CO2, pressureInHg, altitudeFt);
-      Serial.println(messagePayload);
+      snprintf(messagePayload, MESSAGE_MAX_LEN, messageData, DeviceID, deviceType, deviceVersion, latitude, longitude, uvIndex, moistureValue);
       EVENT_INSTANCE* message = Esp32MQTTClient_Event_Generate(messagePayload, MESSAGE);
       Esp32MQTTClient_SendEventInstance(message);
-      send_interval_ms = millis();
+      Serial.println("Message Payload:" + String(messagePayload));
+      i = 0;
+      lcd.clear();
     }
-    else
-    {
-      Esp32MQTTClient_Check();
-    }
+    delay(1000);
   }
-  delay(10);
+}
+
+//Enables a specific port number
+boolean enableMuxPort(byte portNumber)
+{
+  if(portNumber > 7) portNumber = 7;
+
+  //Read the current mux settings
+  Wire.requestFrom(MUX_ADDR, 1);
+  if(!Wire.available()) return(false); //Error
+  byte settings = Wire.read();
+
+  //Set the wanted bit to enable the port
+  settings |= (1 << portNumber);
+
+  Wire.beginTransmission(MUX_ADDR);
+  Wire.write(settings);
+  Wire.endTransmission();
+
+  return(true);
+}
+
+//Disables a specific port number
+boolean disableMuxPort(byte portNumber)
+{
+  if(portNumber > 7) portNumber = 7;
+
+  //Read the current mux settings
+  Wire.requestFrom(MUX_ADDR, 1);
+  if(!Wire.available()) return(false); //Error
+  byte settings = Wire.read();
+
+  //Clear the wanted bit to disable the port
+  settings &= ~(1 << portNumber);
+
+  Wire.beginTransmission(MUX_ADDR);
+  Wire.write(settings);
+  Wire.endTransmission();
+
+  return(true);
+}
+
+// read the analog signal from the soil moisture sensor, compare high and low voltage values with bitwise operations to convert to a digital reading. 
+// Readings vary from 0 to 1024. The lower the number, the higher the moisture content
+int get_soil_moisture() {
+  Wire.beginTransmission(qwiicAddress);
+  Wire.write(COMMAND_GET_VALUE);
+  Wire.endTransmission();    
+
+  Wire.requestFrom(qwiicAddress, 2);    
+
+  while (Wire.available()) { 
+    uint8_t ADC_VALUE_L = Wire.read(); 
+    uint8_t ADC_VALUE_H = Wire.read();
+    ADC_VALUE=ADC_VALUE_H;
+    ADC_VALUE<<=8;
+    ADC_VALUE|=ADC_VALUE_L;
+    Serial.print("ADC_VALUE:  ");
+    Serial.println(String(ADC_VALUE)); 
+  }
+  
+  return ADC_VALUE;
 }
 ```
 <br></br>
