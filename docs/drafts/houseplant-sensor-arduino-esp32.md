@@ -38,6 +38,10 @@ First, we need to attach all the necessary sensors and components to each other.
 
 ![Hardware Hookup](/img/houseplant_hardware_hookup.png)
 
+Thanks to the Qwiic system and the Mux Breakout board, there are several ways that these sensors can be configured in a very "Lego-like" fashion. The only constant is that the ESP32 board needs to be connected to one of the two "Main" ports. The rest of the sensors can be plugged into any of the remaining ports. A few things to note here:
+- For my plant monitor, I used port 0 for the UV sensor and soil moisture sensor, and port 7 for the LCD screen. Again, you can use whatever ports you'd like, but if you use different ports than I used, you will need to make a small code change. For example, if you are using ports 1 instead of port 0, you will need to change the code from "enableMuxPort(0)" to "enableMuxPort(1)".
+- This also enables us to add more than one instance of the UV sensor and soil moisture sensor, that way you can truly cover a garden of any size!
+
 ## Part 2 - Installing Arduino IDE and Necessary Software
 Next, we will need to install all of the required software/libraries on your computer
 
@@ -109,7 +113,7 @@ Now that your Arduino can talk to your ESP32, it's time to put some code on your
 First, copy the following code:
 ```C
 /**
- * A simple example using an ESP32 board with a CCS811/BME280 sensor, and connecting to the cloud with Iot Ensemble
+ * A smart houseplant monitoring solution for Arduino ESP32 board
  */
  
 #include <SerLCD.h>
@@ -180,6 +184,7 @@ void setup()
   hasIoTHub = true;
 
   // Enable the I2C ports being used on the Sparkfun MUX Board.
+  // If you are using different port numbers, make the necessary changes below:
   enableMuxPort(0);
   enableMuxPort(7);
   
@@ -374,9 +379,9 @@ This will take your code, and flash it to the ESP32 board. You will see some red
 
 ![Done Uploading](/img/screenshots/done-uploading.png)
 
-Your ESP32 should now be taking sensor readings, and sending the information up to Iot Ensemble! If you want to see a live view of your code running, click **Tools** -> **Serial Monitor** in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "9600", as shown below:
+Your ESP32 should now be taking sensor readings, and sending the information up to Iot Ensemble! If you want to see a live view of your code running, click **Tools** -> **Serial Monitor** in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "115200", as shown below:
 
-![Serial Monitor](/img/screenshots/serial-monitor.png)
+![Serial Monitor](/img/screenshots/serial-monitor-115200.png)
 
 Once you confirm that messages are sending correctly, you can now go to [IoT Ensemble](https://www.iot-ensemble.com/dashboard/) and see your messages in real time. Messages will appear under the "Device Telemetry" section, as shown below:
 
@@ -385,6 +390,11 @@ Once you confirm that messages are sending correctly, you can now go to [IoT Ens
 Just make sure that you have the Device Telemetry toggle set to "Enabled". For more information on Device Telemetry, check out our [docs](../getting-started/viewing-device-data).
 
 ## Next Steps
+This solution is only one of several possibilities for your own personalized smart garden. Some fun next steps for expanding your monitor could be:
+- Adding additional UV and soil moisture sensors to monitor multiple houseplants or gardening zones
+- Monitoring for other useful data, like temperature, humidity, (check out one of our temperature solutions [here](../tutorials/arduino-esp32-and-enviro-sensor)) pH, air quality, and more!
+- If you are comfortable with C coding in Arduino, you could also set up different configurations for different types of plants. In my code sample, you can see that I created arbitrary values for what I thought "optimal" plant conditions would be. Instead, there could be different configurations for "Succulents", which generally need more light and less water than normal plants. Another configuration could be for "Tropical" plants, which generally require more soil moisture and humidity.
+
 Hooking up the hardware is just the beginning of Iot Ensemble. There are a number of options for accessing and displaying your data easily. 
 - [Connecting Downstream Devices](../getting-started/connecting-downstream) will walk through the different ways to access your data.
 - Check out the documentation for connecting your data with outside tools, such as [Power BI](../devs/storage/power-bi), [Grafana](../devs/storage/grafana), and others. 
