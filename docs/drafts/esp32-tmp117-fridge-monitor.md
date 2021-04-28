@@ -1,7 +1,7 @@
 ---
 title: Arduino ESP32 Board with High Precision TMP117 Temperature Sensor Tutorial
 hide_title: true
-sidebar_label: ESP32 / Houseplant Monitoring
+sidebar_label: ESP32 / Temperature Sensor
 keywords:
     - iot
     - azure
@@ -10,12 +10,13 @@ keywords:
     - support
     - temperature
     - monitor
+    - tutorial
 hide_table_of_contents: true
 ---
 
 ## Arduino ESP32 Board with High Precision TMP117 Temperature Sensor Tutorial
 
-In this tutorial, we will be taking a generic ESP32 board, and 
+In this tutorial, we will be taking a generic ESP32 board and the following items to create an IoT device to monitor temperature.
 ### Things you will need
 - [SparkFun Thing Plus - ESP32 WROOM Board](https://www.sparkfun.com/products/15663)
 - A [Qwiic Cable](https://www.sparkfun.com/products/14426) (Any length is fine for this tutorial)
@@ -41,7 +42,7 @@ Once downloaded, go to your Arduino IDE screen. In the top toolbar, select **Ske
 ![Add .Zip Library](/img/screenshots/add-zip-library.png)
 <br></br>
 
-This will open a file browser. Navigate to your downloaded package, select the zip folder, and click "Open".
+This will open a file browser. Navigate to your downloaded package, select the zip folder and click "Open".
 
 ### Add ESP32 Board Definition
 
@@ -54,7 +55,7 @@ In order for us to work with the ESP32, we need to add a board "definition".
 
 ![Add Board Definition](/img/screenshots/add-board-definition.png)
 
-Take the link from the previous step, and paste it into the "Additional Boards Manager URLs" field (highlighted above in red). Click "OK"
+Take the link from the previous step and paste it into the "Additional Boards Manager URLs" field (highlighted above in red). Click "OK"
 
 3. Next, in the top toolbar, click **Tools** -> **Board: "Name of Board"** -> **Boards Manager...**, as shown below:
 
@@ -88,7 +89,7 @@ Now that your Arduino can talk to your ESP32, it's time to put some code on your
 First, copy the following code:
 ```C
 /**
- * A simple example using an ESP32 board with a CCS811/BME280 sensor, and connecting to the cloud with Iot Ensemble
+ * A simple example using an ESP32 board with a CCS811/BME280 sensor and connecting to the cloud with IoT Ensemble
  */
 #include <Wire.h>
 #include <WiFi.h>
@@ -263,7 +264,7 @@ Before we can continue, we need to register your ESP32 device with Iot Ensemble
 
 ## Configuring IoT Ensemble
 
-Before we can tell your device where to send data, we first need somewhere to send the data.  There are a number of different ways this can be accomplished, with IoT Ensemble the focus is helping you leverage best practice cloud IoT technology.  Here we'll be using the Azure IoT Hub to connect devices to a shared data flow, and then make it avaiable downstream for use in other applications.
+Before we can tell your device where to send data, we first need somewhere to send the data.  There are multiple ways this can be accomplished, with IoT Ensemble the focus is helping you leverage best practice cloud IoT technology.  Here we'll be using the Azure IoT Hub to connect devices to a shared data flow, and then make it available downstream for use in other applications.
 
 Follow the following steps to create a new device in IoT Ensemble. For more details on the full IoT Ensemble experience, check out our [full documentation](../getting-started/connecting-first-device).
 
@@ -284,7 +285,7 @@ In addition to the whole connection string, there is one key part that we need: 
 
 ## Configure the Code
 
-Back in the Arduino IDE, near the top of the code, your should see a section of four values that need to be filled in, like this:
+Back in the Arduino IDE, near the top of the code, you should see a section of four values that need to be filled in, like this:
 
 ![Values to Fill In](/img/screenshots/arduino-fill-in-values.png)
 
@@ -293,9 +294,9 @@ First, fill in the WiFi name and password of the network you plan on using.
 > ### **Please Note!**
 > With this particular ESP32 board, it can only connect to 2.4 Ghz Wifi networks. The board **CAN NOT** connect to 5 Ghz networks. If you attempt to connect to a 5 Ghz network, this code will not work.
 
-Next, take your connection string from Iot Ensemble, and paste it into the "connectionString" variable. 
+Next, take your connection string from IoT Ensemble and paste it into the "connectionString" variable. 
 
-Finally, take the **YourDeviceID** portion of your connection string, and paste it into the "DeviceID" variable. Save your code file.
+Finally, take the **YourDeviceID** portion of your connection string and paste it into the "DeviceID" variable. Save your code file.
 
 ## Verify and Upload Your Code
 
@@ -303,17 +304,17 @@ Now it is time to bring your ESP32 to life! In the top left corner of the Arduin
 
 ![Verify Code](/img/screenshots/verify-code.png)
 
-This will compile your code, and ensure that your code has no errors like missing libraries or incorrect syntax.
+This will compile your code and ensure that your code has no errors like missing libraries or incorrect syntax.
 
 Once this is complete, click on the "Upload" button, which looks like a horizontal arrow, and is right next to the "Verify" button (shown below)
 
 ![Upload Code](/img/screenshots/upload-code.png)
 
-This will take your code, and flash it to the ESP32 board. You will see some red text outputted to the terminal on the bottom of the screen. The toolbar will say "Done Uploading" once complete, and should look something like this:
+This will take your code and flash it to the ESP32 board. You will see some red text outputted to the terminal on the bottom of the screen. The toolbar will say "Done Uploading" once complete and should look something like this:
 
 ![Done Uploading](/img/screenshots/done-uploading.png)
 
-Your ESP32 should now be taking sensor readings, and sending the information up to Iot Ensemble! If you want to see a live view of your code running, click **Tools** -> **Serial Monitor** in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "115200", as shown below:
+Your ESP32 should now be taking sensor readings and sending the information up to IoT Ensemble! If you want to see a live view of your code running, click **Tools** -> **Serial Monitor** in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "115200", as shown below:
 
 ![Serial Monitor](/img/screenshots/serial-monitor-115200.png)
 
@@ -324,6 +325,6 @@ Once you confirm that messages are sending correctly, you can now go to [IoT Ens
 Just make sure that you have the Device Telemetry toggle set to "Enabled". For more information on Device Telemetry, check out our [docs](../getting-started/viewing-device-data).
 
 ## Next Steps
-Hooking up the hardware is just the beginning of Iot Ensemble. There are a number of options for accessing and displaying your data easily. 
+Hooking up the hardware is just the beginning of IoT Ensemble. There are a number of options for accessing and displaying your data easily. 
 - [Connecting Downstream Devices](../getting-started/connecting-downstream) will walk through the different ways to access your data.
 - Check out the documentation for connecting your data with outside tools, such as [Power BI](../devs/storage/power-bi), [Grafana](../devs/storage/grafana), and others. 
