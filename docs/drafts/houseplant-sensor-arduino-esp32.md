@@ -10,16 +10,17 @@ keywords:
     - support
     - house plant
     - smart garden
+    - tutorial
 hide_table_of_contents: true
 ---
 
-## Build Your Own Smart Houseplant Monitor with Iot Ensemble
+## Build Your Own Smart Houseplant Monitor with IoT Ensemble
 
 ![Hardware Hookup](/img/houseplant_monitor.jpg)
 
 For many people nowadays (myself included), houseplants are all the rage. They bring color and happiness to any space, and can really tie a room together with a lively aesthetic. That is, if they're kept alive and healthy, which is sometimes easier said than done. Thankfully, we can easily create our own solution to monitor your precious plant babies with just a few components.
 
-In this tutorial, we will be taking a generic ESP32 board, along with a soil moisture sensor and UV sensor, and create a real-time view of your houseplant's environment. The LCD screen shows the current UV Index and soil moisture content of the soil, while the ESP32 board sends this data up to Iot Ensemble every 30 seconds. Let's get started! 
+In this tutorial, we will be taking a generic ESP32 board, along with a soil moisture sensor and UV sensor, and create a real-time view of your houseplant's environment. The LCD screen shows the current UV Index and soil moisture content of the soil, while the ESP32 board sends this data up to IoT Ensemble every 30 seconds. Let's get started! 
 
 ### Things you will need
 - [SparkFun Thing Plus - ESP32 WROOM Board](https://www.sparkfun.com/products/15663)
@@ -79,7 +80,7 @@ In order for us to work with the ESP32, we need to add a board "definition".
 
 ![Add Board Definition](/img/screenshots/add-board-definition.png)
 
-Take the link from the previous step, and paste it into the "Additional Boards Manager URLs" field (highlighted above in red). Click "OK"
+Take the link from the previous step and paste it into the "Additional Boards Manager URLs" field (highlighted above in red). Click "OK"
 
 3. Next, in the top toolbar, click **Tools** -> **Board: "Name of Board"** -> **Boards Manager...**, as shown below:
 
@@ -208,7 +209,7 @@ void loop()
 {
   int i = 0;
   
-  //take sensor readings every second to display on the LCD screen, but only send readings to Iot Ensemble every 30 seconds.
+  //take sensor readings every second to display on the LCD screen, but only send readings to IoT Ensemble every 30 seconds.
   while(i<=30){
     lcd.setCursor(0,0);
     
@@ -325,11 +326,11 @@ int get_soil_moisture() {
 
 Next, in the ArduinoIDE, delete the existing template code. Then, paste the code you just copied.
 
-Before we can continue, we need to register your ESP32 device with Iot Ensemble
+Before we can continue, we need to register your ESP32 device with IoT Ensemble
 
 ## Part 5 - Configuring IoT Ensemble
 
-Before we can tell your device where to send data, we first need somewhere to send the data.  There are a number of different ways this can be accomplished, with IoT Ensemble the focus is helping you leverage best practice cloud IoT technology.  Here we'll be using the Azure IoT Hub to connect devices to a shared data flow, and then make it avaiable downstream for use in other applications.
+Before we can tell your device where to send data, we first need somewhere to send the data.  There are a number of different ways this can be accomplished, with IoT Ensemble the focus is helping you leverage best practice cloud IoT technology.  Here we'll be using the Azure IoT Hub to connect devices to a shared data flow, and then make it available downstream for use in other applications.
 
 Follow these steps to create a new device in IoT Ensemble. For more details on the full IoT Ensemble experience, check out our [full documentation](../getting-started/connecting-first-device).
 
@@ -350,7 +351,7 @@ In addition to the whole connection string, there is one key part that we need: 
 
 ## Configure the Code
 
-Back in the Arduino IDE, near the top of the code, your should see a section of four values that need to be filled in, like this:
+Back in the Arduino IDE, near the top of the code, you should see a section of four values that need to be filled in, like this:
 
 ![Values to Fill In](/img/screenshots/arduino-fill-in-values.png)
 
@@ -359,9 +360,9 @@ First, fill in the WiFi name and password of the network you plan on using.
 > ### **Please Note!**
 > With this particular ESP32 board, it can only connect to 2.4 Ghz Wifi networks. The board **CAN NOT** connect to 5 Ghz networks. If you attempt to connect to a 5 Ghz network, this code will not work.
 
-Next, take your connection string from Iot Ensemble, and paste it into the "connectionString" variable. 
+Next, take your connection string from IoT Ensemble, and paste it into the "connectionString" variable. 
 
-Finally, take the **YourDeviceID** portion of your connection string, and paste it into the "DeviceID" variable. Save your code file.
+Finally, take the **YourDeviceID** portion of your connection string and paste it into the "DeviceID" variable. Save your code file.
 
 ## Verify and Upload Your Code
 
@@ -375,11 +376,11 @@ Once this is complete, click on the "Upload" button, which looks like a horizont
 
 ![Upload Code](/img/screenshots/upload-code.png)
 
-This will take your code, and flash it to the ESP32 board. You will see some red text outputted to the terminal on the bottom of the screen. The toolbar will say "Done Uploading" once complete, and should look something like this:
+This will take your code and flash it to the ESP32 board. You will see some red text outputted to the terminal on the bottom of the screen. The toolbar will say "Done Uploading" once complete and should look something like this:
 
 ![Done Uploading](/img/screenshots/done-uploading.png)
 
-Your ESP32 should now be taking sensor readings, and sending the information up to Iot Ensemble! If you want to see a live view of your code running, click **Tools** -> **Serial Monitor** in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "115200", as shown below:
+Your ESP32 should now be taking sensor readings and sending the information up to IoT Ensemble! If you want to see a live view of your code running, click **Tools** -> **Serial Monitor** in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "115200", as shown below:
 
 ![Serial Monitor](/img/screenshots/serial-monitor-115200.png)
 
@@ -395,6 +396,6 @@ This solution is only one of several possibilities for your own personalized sma
 - Monitoring for other useful data, like temperature, humidity, (check out one of our temperature solutions [here](../tutorials/arduino-esp32-and-enviro-sensor)) pH, air quality, and more!
 - If you are comfortable with C coding in Arduino, you could also set up different configurations for different types of plants. In my code sample, you can see that I created arbitrary values for what I thought "optimal" plant conditions would be. Instead, there could be different configurations for "Succulents", which generally need more light and less water than normal plants. Another configuration could be for "Tropical" plants, which generally require more soil moisture and humidity.
 
-Hooking up the hardware is just the beginning of Iot Ensemble. There are a number of options for accessing and displaying your data easily. 
+Hooking up the hardware is just the beginning of IoT Ensemble. There are a number of options for accessing and displaying your data easily. 
 - [Connecting Downstream Devices](../getting-started/connecting-downstream) will walk through the different ways to access your data.
 - Check out the documentation for connecting your data with outside tools, such as [Power BI](../devs/storage/power-bi), [Grafana](../devs/storage/grafana), and others. 
