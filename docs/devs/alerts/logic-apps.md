@@ -14,7 +14,7 @@ hide_table_of_contents: true
 
 # Sending Email & Text Alerts using Azure Logic Apps
 
-These instructions show how to use Logic Apps to call the IoT Ensemble warm query every 12 hours and check if the Temperature of any of the results is greater than 90. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
+These instructions show how to use Logic Apps to call the IoT Ensemble warm query every 12 hours and check if the Temperature of any of the results is greater than 45. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
 
 ![Completed Steps](/img/screenshots/alerts/completed-steps.png)
 
@@ -82,7 +82,7 @@ Adjust the past time to match how often the HTTP request is triggered in step 1.
 :::
 ## Step 4: Send Email
 
-When the 'Temperature is over 90' condition is met, we can add an action to send an email alert in the true block. Click the 'Add an action' button inside of true and search for 'Send Email'. Select the 'Office 365 Outlook' option.
+When the 'Temperature is over 45' condition is met, we can add an action to send an email alert in the true block. Click the 'Add an action' button inside of true and search for 'Send Email'. Select the 'Office 365 Outlook' option.
 
 ![Search for Send Email](/img/screenshots/alerts/search-for-sendemail.png)
 
@@ -108,6 +108,6 @@ Texting via email is easy. Type in the recipient's mobile number in front of the
 
 ## Overview of Steps
 
-Here's an overview of the entire Logic App with the steps collapsed. The Logic App calls the IoT Ensemble warm query every 12 hours and checks if the Temperature of any of the results is greater than 90. If so, it sends an email alert.
+Here's an overview of the entire Logic App with the steps collapsed. The Logic App calls the IoT Ensemble warm query every 12 hours and checks if the Temperature of any of the results is greater than 45. If so, it sends an email alert.
 
 ![Completed Steps](/img/screenshots/alerts/completed-steps.png)
