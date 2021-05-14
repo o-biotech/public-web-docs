@@ -11,7 +11,7 @@ module.exports = {
     ],
     Tutorials: [
       "tutorials/arduino-esp32-and-enviro-sensor",
-      "tutorials/arduino-tmp117-fridge-monitor",
+      "tutorials/esp32-tmp117-fridge-monitor",
       "tutorials/houseplant-sensor-arduino-esp32"
     ],
     Developers: [
