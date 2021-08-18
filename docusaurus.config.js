@@ -42,12 +42,12 @@ module.exports = {
           position: 'left',
           target: '_top',
         },
-        {
-          href: 'https://www.iot-ensemble.com/pricing',
-          label: 'Pricing',
-          position: 'right',
-          target: '_top',
-        },
+        // {
+        //   href: 'https://www.iot-ensemble.com/pricing',
+        //   label: 'Pricing',
+        //   position: 'right',
+        //   target: '_top',
+        // },
         {
           to: '/',
           label: 'Docs',
