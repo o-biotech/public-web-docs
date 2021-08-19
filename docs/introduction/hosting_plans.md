@@ -1,8 +1,7 @@
 ---
-slug: /
-title: Introduction - Hosting Plans
+title: Hosting Plans
 hide_title: true
-sidebar_label: Overview
+sidebar_label: Hosting Plans
 keywords:
     - iot
     - azure
@@ -23,7 +22,7 @@ What typically happens in organizations is there is an investment in a SaaS solu
 Let's look at how the different hosting plans align with the pace of your growth.
 
 HOSTING PLANS IMAGE HERE
-
+![Hosting Plans](/img/iot-ensemble-diagram.png)
 
 ## Shared Plan 
 
@@ -31,9 +30,12 @@ IoT Ensemble is a public SaaS application open to everyone. It’s available at 
 
 ## Enterprise Plans 
 
+### SaaS for You in Your Cloud
 With an enterprise plan, IoT Ensemble is hosted in your organization's Azure account and can be customized based on your needs. IoT Ensemble is private for your organization and not open to the public. 
 
+### SaaS for Your Customers
 Everything from Enterprise Plan 2, plus you can charge your customers to use your organization's IoT Ensemble. 
 
+### White Labeled SaaS
 Everything from Enterprise Plan 3, plus you can white label IoT Ensemble with your organization's logos and colors. In addition, sell your white-labeled IoT Ensemble application to other users. 
 
