@@ -10,6 +10,7 @@ keywords:
     - hosting plans
     - SaaS
     - enterprise
+    - shared
 hide_table_of_contents: true
 ---
 
