@@ -10,14 +10,15 @@ keywords:
     - hosting plans
     - SaaS
     - enterprise
+    - shared
 hide_table_of_contents: true
 ---
 
 # IoT Ensemble Hosting Plans
 
-Growth is good.  But it can be difficult. And costly. And time-consuming. And involve a lot of your resources. 
+Growth is good, but it can be difficult, costly, time-consuming and involve a lot of your resources. 
 
-What typically happens in organizations is there is an investment in a SaaS solution - time, money and resources. With growth, the organization finds their needs have changed and have to look for a different solution. Or technology changes and the organization wants to take advantage of it. But there is reluctance to make such a move - it's a huge level of effort to move data. The organization feels stuck between a rock and hard place. Not so with Fathym. If you outgrow Fathym SaaS, you can move it easily to your cloud and start customizing to your heart's content.
+What typically happens in organizations is there is an investment in a SaaS solution - time, money and resources. Over time, the organization grows and finds their needs have changed and has to look for a different solution. Technology may change as well and the organization wants to take advantage of it. But there is reluctance to make such a move - it's a huge level of effort to move data. Consequently, the organization feels stuck between a rock and hard place. This doesn't happen with Fathym. If you outgrow Fathym SaaS, you can move it easily to your cloud and start customizing to your heart's content.
 
 Let's look at how the different hosting plans align with the pace of your growth.
 
