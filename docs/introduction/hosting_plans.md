@@ -21,8 +21,7 @@ What typically happens in organizations is there is an investment in a SaaS solu
 
 Let's look at how the different hosting plans align with the pace of your growth.
 
-HOSTING PLANS IMAGE HERE
-![Hosting Plans](/img/iot-ensemble-diagram.png)
+![Hosting Plans](https://www.iot-ensemble.com/static/images/isometric-iot-ensemble-lcu-whitelabel-white.png)
 
 ## Shared Plan 
 
@@ -38,4 +37,3 @@ Everything from Enterprise Plan 2, plus you can charge your customers to use you
 
 ### White Labeled SaaS
 Everything from Enterprise Plan 3, plus you can white label IoT Ensemble with your organization's logos and colors. In addition, sell your white-labeled IoT Ensemble application to other users. 
-
