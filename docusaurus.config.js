@@ -16,6 +16,10 @@ module.exports = {
     oribi: {
       trackingID: 'XzcwMzAwMzkyNA',
     },
+    algolia: {
+      apiKey: '7cf0c6d743a656026774417b23922a4a', // search key
+      indexName: 'dev_fathym',
+    },
     colorMode: {
       // "light" | "dark"
       defaultMode: 'dark',
@@ -136,6 +140,7 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {},
       },
     ],
   ],
