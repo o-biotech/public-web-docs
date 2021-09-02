@@ -19,13 +19,13 @@ module.exports = {
     algolia: {
       apiKey: '7cf0c6d743a656026774417b23922a4a', // search key
       indexName: 'dev_fathym',
-      appId: 'ZVO5OXAWMB'
+      appId: 'ZVO5OXAWMB',
+      contextualSearch: false,
     },
     colorMode: {
       // "light" | "dark"
       defaultMode: 'dark',
-      // Hides the switch in the navbar
-      // Useful if you want to support a single color mode
+      // Hides the switch in the navbar. Useful if you want to support a single color mode
       disableSwitch: true,
     },
     navbar: {
