@@ -393,7 +393,7 @@ Just make sure that you have the Device Telemetry toggle set to "Enabled". For m
 ## Next Steps
 This solution is only one of several possibilities for your own personalized smart garden. Some fun next steps for expanding your monitor could be:
 - Adding additional UV and soil moisture sensors to monitor multiple houseplants or gardening zones
-- Monitoring for other useful data, like temperature, humidity, (check out one of our temperature solutions [here](../tutorials/arduino-esp32-and-enviro-sensor)) pH, air quality, and more!
+- Monitoring for other useful data, like temperature, humidity, (check out one of our temperature solutions [here](../tutorials/esp32/arduino-esp32-and-enviro-sensor)) pH, air quality, and more!
 - If you are comfortable with C coding in Arduino, you could also set up different configurations for different types of plants. In my code sample, you can see that I created arbitrary values for what I thought "optimal" plant conditions would be. Instead, there could be different configurations for "Succulents", which generally need more light and less water than normal plants. Another configuration could be for "Tropical" plants, which generally require more soil moisture and humidity.
 
 Hooking up the hardware is just the beginning of IoT Ensemble. There are a number of options for accessing and displaying your data easily. 
