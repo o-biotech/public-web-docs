@@ -36,7 +36,7 @@ module.exports = {
       },
       items: [
         {
-          href: 'https://www.iot-ensemble.com/',
+          href: '/',
           label: 'Home',
           position: 'left',
           target: '_top',
@@ -54,24 +54,25 @@ module.exports = {
         //   target: '_top',
         // },
         {
-          to: '/',
+          href: '/docs',
           label: 'Docs',
           position: 'right',
+          target: '_top',
         },
         {
-          href: 'https://www.iot-ensemble.com/blog',
+          href: '/blog',
           label: 'Blog',
           position: 'right',
           target: '_top',
         },
         {
-          href: 'https://www.iot-ensemble.com/dashboard',
+          href: '/dashboard',
           label: 'Sign In',
           position: 'right',
           target: '_top',
         },
         {
-          href: 'https://www.iot-ensemble.com/dashboard',
+          href: '/dashboard',
           label: 'Sign Up',
           position: 'right',
           target: '_top',
@@ -86,12 +87,12 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'https://www.iot-ensemble.com/dashboard',
+              to: '/dashboard',
             },
-            {
-              label: 'Pricing',
-              to: 'https://www.iot-ensemble.com/pricing',
-            },
+            // {
+            //   label: 'Pricing',
+            //   to: 'https://www.iot-ensemble.com/pricing',
+            // },
             {
               label: 'Support',
               to: '/introduction/support',
