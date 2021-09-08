@@ -18,15 +18,6 @@ module.exports = {
         ]
       },
       {
-          'Phoenix Contact': [
-          "tutorials/phoenix-contact/plcnext-to-powerbi",
-          "tutorials/phoenix-contact/plcnext-to-grafana-dashboard",
-          "tutorials/phoenix-contact/plcnext-to-email-text-alerts",
-          "tutorials/phoenix-contact/plcnext-to-azure-machine-learning",
-          "tutorials/phoenix-contact/plcnext-to-tableau-dashboard",
-        ]
-      },
-      {
           'MultiTech': [
           "tutorials/multitech/multitech-to-powerbi",
           "tutorials/multitech/multitech-to-grafana-dashboard",
@@ -35,6 +26,15 @@ module.exports = {
           "tutorials/multitech/multitech-to-tableau-dashboard",
         ]
       },
+      {
+          'Phoenix Contact': [
+          "tutorials/phoenix-contact/plcnext-to-powerbi",
+          "tutorials/phoenix-contact/plcnext-to-grafana-dashboard",
+          "tutorials/phoenix-contact/plcnext-to-email-text-alerts",
+          "tutorials/phoenix-contact/plcnext-to-azure-machine-learning",
+          "tutorials/phoenix-contact/plcnext-to-tableau-dashboard",
+        ]
+      },      
     ],
     Developers: [
       'devs/licenses',
