@@ -16,12 +16,6 @@ module.exports = {
     oribi: {
       trackingID: 'XzcwMzAwMzkyNA',
     },
-    algolia: {
-      apiKey: '7cf0c6d743a656026774417b23922a4a', // search key
-      indexName: 'dev_fathym',
-      appId: 'ZVO5OXAWMB',
-      contextualSearch: false,
-    },
     colorMode: {
       // "light" | "dark"
       defaultMode: 'dark',
