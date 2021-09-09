@@ -81,7 +81,7 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: '/dashboard',
+              to: 'https://www.iot-ensemble.com/dashboard',
             },
             // {
             //   label: 'Pricing',
