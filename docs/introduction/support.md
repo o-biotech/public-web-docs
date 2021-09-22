@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 # IoT Ensemble Support
 
-![Support](/img/beta.png)
+![Support](https://www.iot-ensemble.com/img/beta.png)
 
 Please email <a href="mailto:support@fathym.com">support@fathym.com</a> if you need support. A Fathym Support rep will reply asap.
 

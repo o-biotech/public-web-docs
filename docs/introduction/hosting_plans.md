@@ -22,7 +22,7 @@ What typically happens in organizations is there is an investment in a SaaS solu
 
 Let's look at how the different hosting plans align with the pace of your growth.
 
-![Hosting Plans](https://www.iot-ensemble.com/static/images/isometric-iot-ensemble-lcu-whitelabel-white.png)
+![Hosting Plans](https://www.iot-ensemble.com/img/isometric-iot-ensemble-lcu-whitelabel-white.png)
 
 ## Shared Plan 
 
