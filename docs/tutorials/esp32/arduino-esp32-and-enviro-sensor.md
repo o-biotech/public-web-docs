@@ -8,6 +8,14 @@ keywords:
     - connect a device
     - iot hub
     - support
+    - ESP32
+    - CCS811
+    - BME280
+    - environment sensor
+    - SparkFun
+    - Qwiic
+    - Arduino
+    - tutorial
 hide_table_of_contents: true
 ---
 

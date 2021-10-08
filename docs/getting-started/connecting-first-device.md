@@ -4,9 +4,15 @@ hide_title: true
 sidebar_label: Connect a Device
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
+    - send device data
+    - best practice schema
     - iot hub
+    - dashboard
+    - HTTP
 hide_table_of_contents: true
 ---
 

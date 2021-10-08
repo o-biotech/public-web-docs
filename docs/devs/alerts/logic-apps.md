@@ -4,7 +4,10 @@ hide_title: true
 sidebar_label: Azure Logic Apps 
 keywords:
     - iot
+    - fathym
+    - iot ensemble
     - azure
+    - logic apps
     - alerts
     - notifications
     - email

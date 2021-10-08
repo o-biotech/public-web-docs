@@ -5,6 +5,8 @@ hide_title: true
 sidebar_label: Overview
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
     - iot hub

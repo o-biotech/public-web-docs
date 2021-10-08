@@ -4,6 +4,8 @@ hide_title: true
 sidebar_label: ESP32 / Houseplant Monitoring
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
     - iot hub
@@ -11,6 +13,12 @@ keywords:
     - house plant
     - smart garden
     - tutorial
+    - ESP32
+    - soil moisture
+    - UV index
+    - SparkFun
+    - Qwiic
+    - Arduino
 hide_table_of_contents: true
 ---
 

@@ -4,9 +4,15 @@ hide_title: true
 sidebar_label: View Device Data
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
+    - device data
+    - telemetry
+    - dashboard
     - iot hub
+    - Freeboard
 hide_table_of_contents: true
 ---
 
