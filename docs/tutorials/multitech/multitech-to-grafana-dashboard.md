@@ -6,6 +6,7 @@ keywords:
     - multitech
     - multitech conduit
     - fathym
+    - iot
     - iot ensemble
     - microsoft azure
     - grafana

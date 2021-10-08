@@ -5,9 +5,15 @@ hide_title: true
 sidebar_label: Connect Downstream
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
     - iot hub
+    - downstream services
+    - cold storage
+    - warm storage
+    - power bi
 hide_table_of_contents: true
 ---
 
