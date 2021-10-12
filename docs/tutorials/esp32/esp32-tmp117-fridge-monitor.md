@@ -4,6 +4,8 @@ hide_title: true
 sidebar_label: ESP32 / Temperature Sensor
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
     - iot hub
@@ -11,6 +13,15 @@ keywords:
     - temperature
     - monitor
     - tutorial
+    - refrigerator
+    - refrigeration
+    - sensor
+    - device
+    - Arduino
+    - TMP117
+    - ESP32
+    - SparkFun
+    - Qwiic
 hide_table_of_contents: true
 ---
 

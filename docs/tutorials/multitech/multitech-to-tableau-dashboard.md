@@ -7,6 +7,7 @@ keywords:
     - multitech conduit
     - fathym
     - iot ensemble
+    - iot
     - microsoft azure
     - tableau
     - devices

@@ -4,6 +4,8 @@ hide_title: true
 sidebar_label: Grafana 
 keywords:
     - iot
+    - fathym
+    - iot ensemble
     - grafana
     - alerts
     - notifications

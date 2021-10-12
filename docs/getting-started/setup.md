@@ -4,9 +4,12 @@ hide_title: true
 sidebar_label: Setup
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
     - iot hub
+    - dashboard
 hide_table_of_contents: true
 ---
 

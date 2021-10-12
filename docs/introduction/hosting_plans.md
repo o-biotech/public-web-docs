@@ -4,13 +4,16 @@ hide_title: true
 sidebar_label: Hosting Plans
 keywords:
     - iot
+    - iot ensemble
+    - fathym
     - azure
     - connect a device
     - iot hub
-    - hosting plans
+    - hosting plan
     - SaaS
     - enterprise
     - shared
+    - white label
 hide_table_of_contents: true
 ---
 

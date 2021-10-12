@@ -4,6 +4,9 @@ hide_title: true
 sidebar_label: Emulated Data
 keywords:
     - iot
+    - iot ensemble
+    - fathym
+    - emulated data
     - azure
     - connect a device
     - iot hub
