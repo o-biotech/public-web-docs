@@ -4,7 +4,7 @@ module.exports = {
   title: 'Fathym IoT Ensemble Beta',
   tagline: 'Experience IoT in minutes | No credit card required',
   url: 'https://www.iot-ensemble.com',
-  baseUrl: '/docs/',
+  baseUrl: '/iot/docs/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'iot-ensemble', // Usually your GitHub org/user name.
