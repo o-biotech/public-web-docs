@@ -46,10 +46,10 @@ Now that my PLCnext data is flowing to IoT Ensemble, it's time to setup the emai
 
 ![Email Alert Logic Apps](https://www.fathym.com/iot/img/screenshots/logic-apps-sendemail-settings.png)
 
-[Sign up](https://www.fathym.com/iot/dashboard) for IoT Ensemble and save your company thousands of dollars in Azure setup and management costs. Enroll your first PLCnext Control with IoT Ensemble for free. No credit card required. No Azure account required. It really is that simple.
+[Sign up](https://www.fathym.com/dashboard/iot/) for IoT Ensemble and save your company thousands of dollars in Azure setup and management costs. Enroll your first PLCnext Control with IoT Ensemble for free. No credit card required. No Azure account required. It really is that simple.
 
 :::info
-[Enroll your first PLCnext Control](https://www.fathym.com/iot/dashboard) with IoT Ensemble for free.  
+[Enroll your first PLCnext Control](https://www.fathym.com/dashboard/iot/) with IoT Ensemble for free.  
 No credit card required.  
 No Azure account required.
 :::

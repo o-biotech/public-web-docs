@@ -29,7 +29,7 @@ Let's look at how the different hosting plans align with the pace of your growth
 
 ## Shared Plan 
 
-IoT Ensemble is a public SaaS application open to everyone. It’s available at www.iot-ensemble.com and it’s hosted in Fathym's Microsoft Azure account. 
+IoT Ensemble is a public SaaS application open to everyone. It’s available at https://www.fathym.com/iot/ and it’s hosted in Fathym's Microsoft Azure account. 
 
 ## Enterprise Plans 
 

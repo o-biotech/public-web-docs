@@ -342,7 +342,7 @@ Before we can tell your device where to send data, we first need somewhere to se
 
 Follow these steps to create a new device in IoT Ensemble. For more details on the full IoT Ensemble experience, check out our [full documentation](/getting-started/connecting-first-device).
 
-Start by navigating to the [IoT Ensemble Dashboard](https://www.fathym.com/iot/dashboard) and sign in or sign up.  For the purposes of moving forward, you will only need the Free license and no credit card will be required.
+Start by navigating to the [IoT Ensemble Dashboard](https://www.fathym.com/dashboard/iot/) and sign in or sign up.  For the purposes of moving forward, you will only need the Free license and no credit card will be required.
 
 ### Enroll a Device
 
@@ -392,7 +392,7 @@ Your ESP32 should now be taking sensor readings and sending the information up t
 
 ![Serial Monitor](https://www.fathym.com/iot/img/screenshots/serial-monitor-115200.png)
 
-Once you confirm that messages are sending correctly, you can now go to [IoT Ensemble](https://www.fathym.com/iot/dashboard/) and see your messages in real time. Messages will appear under the "Device Telemetry" section, as shown below:
+Once you confirm that messages are sending correctly, you can now go to [IoT Ensemble](https://www.fathym.com/dashboard/iot/) and see your messages in real time. Messages will appear under the "Device Telemetry" section, as shown below:
 
 ![Iot Ensemble ESP32 Telemetry](https://www.fathym.com/iot/img/screenshots/live-esp32-data.png)
 

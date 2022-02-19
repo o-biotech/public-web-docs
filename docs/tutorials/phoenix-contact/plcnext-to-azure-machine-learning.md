@@ -44,10 +44,10 @@ IoT Ensemble provides out of the box APIs that allow you to easily load your PLC
 
 ![Azure Automated ML](https://www.fathym.com/iot/img/screenshots/azure-ml-automated-ml-running.png)
 
-[Sign up](https://www.fathym.com/iot/dashboard) for IoT Ensemble and save your company thousands of dollars in Azure setup and management costs. Enroll your first PLCnext Control with IoT Ensemble for free. No credit card required. No Azure account required. It really is that simple.
+[Sign up](https://www.fathym.com/dashboard/iot/) for IoT Ensemble and save your company thousands of dollars in Azure setup and management costs. Enroll your first PLCnext Control with IoT Ensemble for free. No credit card required. No Azure account required. It really is that simple.
 
 :::info
-[Enroll your first PLCnext Control](https://www.fathym.com/iot/dashboard) with IoT Ensemble for free.  
+[Enroll your first PLCnext Control](https://www.fathym.com/dashboard/iot/) with IoT Ensemble for free.  
 No credit card required.  
 No Azure account required.
 :::
