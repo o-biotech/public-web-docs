@@ -76,4 +76,7 @@ Switch to the Table visualization to easily view the raw data from storage. Use 
 Success! Now that your data is loaded into Grafana, you can build dashboards like this:
 
 ![Grafana Dashboard](https://www.fathym.com/iot/img/screenshots/grafana-6.jpg)
+
+
+
  
