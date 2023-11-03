@@ -10,25 +10,24 @@ keywords:
     - azure
     - connect a device
     - iot hub
+    - biotech
 hide_table_of_contents: true
 ---
 
-# Introducing IoT Ensemble
+# Welcome to OpenBiotech
 
-IoT Ensemble automates a best practice Azure IoT cloud for rapidly connecting devices and ingesting and processing device data for cloud-based applications. IoT Ensemble is one of Fathym’s three tools for assembling cloud-based applications, alongside the [Fathym Platform](https://www.fathym.com) and [Habistack](https://www.fathym.com/forecast).
+OpenBiotech is a set of tools for rapidly assembling cloud-based web applications powered by biosensor data. From device to cloud to app, OpenBiotech’s tools offer a cloud-based application pathway. This pathway brings greater access and simplicity to IoT, cloud and application development technologies, but without sacrificing control and ownership or compromising future development options, scalability and security. 
 
-IoT Ensemble is an out-of-the-box and intuitive control system for connecting devices, understanding data and integrating with application templates and downstream services. Easy to hook up devices to the cloud and initiate the flow of device data, IoT Ensemble automatically splits ingested device data into 3 streams – hot, warm and cold data flows.
+OpenBiotech is powered by [Fathym](https://www.fathym.com) and its tools: Fathym Platform, IoT Ensemble and Habistack. 
 
-- The hot flow gives near-real-time information via web sockets and/or message queuing directly into applications such as dashboards.
-- The warm flow and its database are accessible via built-in REST API and route data into a time-series window for analytics, alerts, dashboards and more.
-- The cold flow is the “absolute truth,” raw sensor data – also accessible via built-in REST API for AI/ML and deep analytics.
+Fathym’s tools in turn draw from Microsoft Azure, curating Azure services with best practice configurations and streamlined tooling. These tools can be licensed through OpenBiotech’s SaaS offering or run on a customer’s own Azure cloud for maximum control. 
 
-IoT Ensemble operates as a virtual development team that automates best practices for cloud-based IoT application delivery, augmenting your team’s skills by handling the heavy lifting and radically reducing the time and work involved.
+**Fathym Platform:** An out-of-the-box app deployment platform, it is the central hub for assembling, integrating and launching cloud-based applications. The platform also gives users ready-made and open-source templates and pre-configured automations for launching cloud applications and dashboards. The platform has three interfaces: a web application, CLI and the new Thinky AI bot. 
 
-![IoT Ensemble Architecture](https://www.fathym.com/iot/img/IoT_Architecture.png)
+**IoT Ensemble:** An out-of-the-box IoT cloud that automates Azure IoT cloud services for ingesting and processing data for cloud applications. Native integration with the Fathym platform to turn device data into cloud apps. 
 
-## Device > Cloud > App
+**Habistack:** Habistack is the most flexible, cloud-native API for delivering machine learning and statistics-based forecasts with any combination of variables. Native integration with the Fathym platform to turn advanced ML forecasts into cloud apps. 
 
-IoT Ensemble in combination with the Fathym platform is a powerful **Device-to-Cloud-to-Applications suite**. The Fathym platform offers pre-configured automations, open-source app templates and streamlined DevOps to assemble and launch cloud-based apps and dashboards auto-populated with device data from IoT ensemble.
+Together these tools provide an intuitive and powerful device > cloud > app flow. The following docs will guide you through that flow. 
 
-Alongside the Fathym platform and Habistack, IoT Ensemble is available as a hosted SaaS. IoT Ensemble and Fathym’s tools can also be licensed to run on your own Azure cloud for maximum control and data security, avoiding vendor lock-in or compromising future development pathways.
+The next section details how to get set up with OpenBiotech and establish your device to cloud flow. 

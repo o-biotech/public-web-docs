@@ -1,5 +1,5 @@
 ---
-title: Developers - Device Setup - Overview
+title: Deep Dive - Device Setup - Overview
 hide_title: true
 sidebar_label: Overview 
 keywords:
@@ -24,4 +24,4 @@ We'll start off with a symmetric key protected device, and can move to other sec
 
 ![Device List](https://www.fathym.com/iot/img/screenshots/dashboard-device-list-first-device.png)
 
-[Click here](https://www.fathym.com/iot/blog/raspberry-pi-dht11-node-red-iot-ensemble-power-bi) to learn how to connect a Raspberry Pi, a DHT11 temperature sensor, and NodeRed to IoT Ensemble.
+[Click here](https://www.fathym.com/iot/blog/blogs/2021/january/raspberry-pi-fathym-power-bi) to learn how to connect a Raspberry Pi, a DHT11 temperature sensor, and NodeRed to IoT Ensemble.

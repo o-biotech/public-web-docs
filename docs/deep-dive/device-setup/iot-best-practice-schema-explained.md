@@ -1,6 +1,6 @@
 ---
 slug: best-practice-schema
-title: Getting Started - For Devs - IoT Schema Explained
+title: Deep Dive - IoT Schema Explained
 hide_title: true
 sidebar_label: IoT Schema Explained 
 keywords:

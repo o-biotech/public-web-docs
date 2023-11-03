@@ -1,13 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  title: 'Fathym IoT Ensemble',
-  tagline: 'Experience IoT in minutes | No credit card required',
-  url: 'https://www.iot-ensemble.com',
-  baseUrl: '/iot/docs/',
+  title: 'Fathym OpenBiotech',
+  tagline: 'Experience OpenBiotech in minutes | No credit card required',
+  url: 'https://www.fathym.com',
+  baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'iot-ensemble', // Usually your GitHub org/user name.
+  organizationName: 'o-biotech', // Usually your GitHub org/user name.
   projectName: 'public-web-docs', // Usually your repo name.
   themeConfig: {
     oribi: {
@@ -30,14 +30,14 @@ module.exports = {
       }
     },
     navbar: {
-      title: 'IoT Ensemble',
+      title: 'OpenBiotech',
       logo: {
-        alt: 'IoT Ensemble',
+        alt: 'OpenBiotech',
         src: 'img/Fathym-logo-white-01.png',
       },
       items: [
         {
-          to: 'https://www.fathym.com/iot',
+          to: 'https://www.openbiotech.co/',
           label: 'Home',
           position: 'left',
           target: '_top',
@@ -54,20 +54,20 @@ module.exports = {
         //   position: 'right',
         //   target: '_top',
         // },
+        //{
+        //  to: 'https://www.fathym.com/iot/docs',
+        //  label: 'Docs',
+        //  position: 'right',
+        //  target: '_top',
+        //},
+        //{
+        //  to: 'https://www.fathym.com/iot/blog',
+        //  label: 'Blog',
+        //  position: 'right',
+        //  target: '_top',
+        //},
         {
-          to: 'https://www.fathym.com/iot/docs',
-          label: 'Docs',
-          position: 'right',
-          target: '_top',
-        },
-        {
-          to: 'https://www.fathym.com/iot/blog',
-          label: 'Blog',
-          position: 'right',
-          target: '_top',
-        },
-        {
-          to: 'https://www.fathym.com/dashboard/iot',
+          to: 'https://www.fathym.com/dashboard/',
           label: 'Sign In',
           position: 'right',
           target: '_top',
@@ -88,7 +88,7 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'https://www.iot-ensemble.com/dashboard',
+              to: 'https://www.fathym.com/dashboard',
             },
             // {
             //   label: 'Pricing',
@@ -105,7 +105,7 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              to: 'https://stackoverflow.com/questions/tagged/iot-ensemble',
+              to: 'https://stackoverflow.com/questions/tagged/fathym',
             },
             //{
             //  label: 'Discord',
@@ -113,7 +113,7 @@ module.exports = {
             //},
             {
               label: 'Twitter',
-              to: 'https://twitter.com/iotensemble',
+              to: 'https://twitter.com/FathymIt',
             },
           ],
         },
@@ -137,8 +137,8 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          // The iot-ensemble website repo
-          // editUrl: 'https://github.com/iot-ensemble/public-web-docs/edit/master/website/',
+          // The OpenBiotech website repo
+          // editUrl: 'https://github.com/o-biotech/public-web-docs/',
         },
         gtag: {
           trackingID: 'G-NEWEXH7W8C',

@@ -1,5 +1,5 @@
 ---
-title: Fathym IoT Ensemble Support
+title: Fathym OpenBiotech Support
 hide_title: true
 sidebar_label: Support
 keywords:
@@ -10,11 +10,12 @@ keywords:
     - connect a device
     - iot hub
     - support
+    - biotech
 hide_table_of_contents: true
 ---
 
-# IoT Ensemble Support
+# Fathym OpenBiotech Support
 
 Please email <a href="mailto:support@fathym.com">support@fathym.com</a> if you need support. A Fathym Support rep will reply asap.
 
-Fathym appreciates any feedback or comments you can send our way. We want your help to build the easiest to use IoT product today. 
+Fathym appreciates any feedback or comments you can send our way. We want your help to build the easiest to use OpenBiotech product today. 

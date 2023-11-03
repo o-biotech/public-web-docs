@@ -3,80 +3,60 @@ module.exports = {
     Introduction: [
       'introduction/overview', 
       'introduction/support',
-      //'introduction/hosting_plans',
     ],
     "Getting Started": [
       'getting-started/setup',
       'getting-started/emulated-data',
-      'getting-started/connecting-first-device',
-      'getting-started/viewing-device-data',
-      'getting-started/connecting-downstream-services',
-      //'getting-started/buy-and-scale',
     ],
-    Tutorials: [
+    "Ingest, Process and Send":[
+      'ingest-process-send/connecting-first-device',
+      'ingest-process-send/viewing-device-data',
+      'ingest-process-send/connecting-downstream-services',
+    ],
+    "Launch Cloud Apps": [
+      'launch-cloud-apps/overview',
+      'launch-cloud-apps/ready-to-go-launch-pad',
+      'launch-cloud-apps/import-custom-apps',
+      'launch-cloud-apps/integrate-iot-api',
       {
-          'ESP32': [
-          "tutorials/esp32/arduino-esp32-and-enviro-sensor",
-          "tutorials/esp32/esp32-tmp117-fridge-monitor",
-          "tutorials/esp32/houseplant-sensor-arduino-esp32",
+          'Reports and Dashboards': [
+            'launch-cloud-apps/reports-dashboards/power-bi', 
+            'launch-cloud-apps/reports-dashboards/grafana',
+            'launch-cloud-apps/reports-dashboards/tableau',
+            'launch-cloud-apps/reports-dashboards/sql-server',
         ]
       },
       {
-          'MultiTech': [
-          "tutorials/multitech/multitech-to-powerbi",
-          "tutorials/multitech/multitech-to-grafana-dashboard",
-          "tutorials/multitech/multitech-to-email-text-alerts",
-          "tutorials/multitech/multitech-to-azure-machine-learning",
-          "tutorials/multitech/multitech-to-tableau-dashboard",
+          'Alerts': [
+            "launch-cloud-apps/alerts/logic-apps",
+            "launch-cloud-apps/alerts/grafana"
         ]
       },
       {
-          'Phoenix Contact': [
-          "tutorials/phoenix-contact/plcnext-to-powerbi",
-          "tutorials/phoenix-contact/plcnext-to-grafana-dashboard",
-          "tutorials/phoenix-contact/plcnext-to-email-text-alerts",
-          "tutorials/phoenix-contact/plcnext-to-azure-machine-learning",
-          "tutorials/phoenix-contact/plcnext-to-tableau-dashboard",
+          'AI & ML': [
+            'launch-cloud-apps/ai-ml/azure-ml',
         ]
       },      
     ],
-    Developers: [
-      //'devs/licenses',
-      // 'devs/azure-iot-hub-explained',
+    //Tutorials: [
+      //{
+          //'ESP32': [
+          //"tutorials/esp32/arduino-esp32-and-enviro-sensor",
+        //]
+      //}, 
+    //],
+    "Deep Dive": [
       {
         'Device Setup': [
-          'devs/device-setup/overview',
-          'devs/device-setup/iot-best-practice-schema-explained',
+          'deep-dive/device-setup/overview',
+          'deep-dive/device-setup/iot-best-practice-schema-explained',
           {
             Connect: [
-              //'devs/device-setup/connect/overview',
-              'devs/device-setup/connect/http',
-              //'devs/device-setup/connect/azure-iot-devices-sdk',
-              //'devs/device-setup/connect/device-simulator',
-              //'devs/device-setup/connect/rasp-pi-spark-fun',
-              //'devs/device-setup/connect/node-red',
+              'deep-dive/device-setup/connect/http',
             ],
           },
         ],
-        'Alerts/Notifications': [
-            "devs/alerts/logic-apps",
-            "devs/alerts/grafana"
-        ],
-        'Storage Access': [
-          //  'devs/storage/overview',
-              'devs/storage/power-bi', 
-              'devs/storage/azure-ml',
-              'devs/storage/grafana',
-              'devs/storage/tableau',
-              'devs/storage/sql-server',
-        ],
       },
     ],
-  },
-  api: {
-    Introduction: ['api/introduction/overview'],
-  },
-  drafts: {
-    Blogs: ['drafts/template-blog-entry'],
   },
 };
