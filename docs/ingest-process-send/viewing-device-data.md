@@ -26,7 +26,7 @@ The IoT Ensemble dashboard provides two quick ways to start looking at data.  Us
 
 ### Devices Telemetry
 
-We used the devices telemetry table when working through the [emulated data](../getting-started/emulated-data) and [connecting a device](../getting-started/connecting-first-device) guides. Here is a deeper look at how it works.
+We used the devices telemetry table when working through the [emulated data](../getting-started/emulated-data) and [connecting a device](../ingest-process-send/connecting-first-device) guides. Here is a deeper look at how it works.
 
 #### Telemetry Sync
 
@@ -34,7 +34,7 @@ Each of the dashboard views is powered by the telemetry sync.  The sync is respo
 
 ![Devices Telemetry Header](https://www.fathym.com/iot/img/screenshots/dashboard-devices-telemetry-header.png)
 
-The toggle in this header enables and disables the telemetry sync, and the device telemetry can be downloaded using the <img src="https://www.fathym.com/iot/img/screenshots/icon-download.png" class="text-image" /> button.  Every time telemetry is enabled, a fresh 30 minute sync window is started.  In addition, the top left status indicator will show if the sync is active and when it was last run.
+The toggle in this header enables and disables the telemetry sync, and the device telemetry can be downloaded using the ![Icon Download](https://www.fathym.com/iot/img/screenshots/icon-download.png) button.  Every time telemetry is enabled, a fresh 30 minute sync window is started.  In addition, the top left status indicator will show if the sync is active and when it was last run.
 
 #### Telemetry Table
 
@@ -42,7 +42,7 @@ When first connecting devices, this is a great place to start seeing data.  A ne
 
 ![Devices Telemetry Table](https://www.fathym.com/iot/img/screenshots/dashboard-devices-telemetry-table.png)
 
-The system is dynamic in terms of how the payload can come in, so the telemetry row provides only the Device ID and the time at which the message was processed.  To see what real data is flowing through, the copy or expand payload features can be used.  Using the <img src="https://www.fathym.com/iot/img/screenshots/icon-expand.png" class="text-image" /> button will expand the row to show the raw payload of the message.  To quickly copy the payload of one of the messages, use the <img src="https://www.fathym.com/iot/img/screenshots/icon-copy.png" class="text-image" /> button.
+The system is dynamic in terms of how the payload can come in, so the telemetry row provides only the Device ID and the time at which the message was processed.  To see what real data is flowing through, the copy or expand payload features can be used.  Using the ![Icon Expand](https://www.fathym.com/iot/img/screenshots/icon-expand.png) button will expand the row to show the raw payload of the message.  To quickly copy the payload of one of the messages, use the ![Icon Copy](https://www.fathym.com/iot/img/screenshots/icon-copy.png) button.
 
 <img src="https://www.fathym.com/iot/img/screenshots/dashboard-devices-telemetry-table-payload.png" />
 
@@ -71,17 +71,17 @@ In the screenshot above, the following properties are not part of the [IoT Best 
 
 #### Telemetry Actions
 
-As outlined previously in our [connecting a device](../getting-started/connecting-first-device#send-via-dashboard) guide, use the send device message form to easily send sample data for a device into the system.
+As outlined previously in our [connecting a device](../ingest-process-send/connecting-first-device#send-via-dashboard) guide, use the send device message form to easily send sample data for a device into the system.
 
 ### Freeboard Dashboard
 
-As an inline example of how data can be visualized, we use an open source tool called [freeboard](http://freeboard.io/).  Use this tool to create and locally save custom visualizations and later load them into view.  
+As an inline example of how data can be visualized, we use an open source tool called [Freeboard](http://freeboard.io/).  Use this tool to create and locally save custom visualizations and later load them into view.  
 
 <!-- In addition, we'll talk through connecting with a hosted freeboard account in the next article. -->
 
 ![Devices Freeboard](https://www.fathym.com/iot/img/screenshots/dashboard-devices-freeboard.png)
 
-To edit the freeboard, click the <img src="https://www.fathym.com/iot/img/screenshots/dashboard-devices-freeboard-settings.png" class="text-image" /> icon at the top of the freeboard.  This will change the freeboard into edit mode.  Now add new panes, edit existing ones and when complete click <img src="https://www.fathym.com/iot/img/screenshots/dashboard-devices-freeboard-save.png" class="text-image" />.  Choose a path on the local computer to save the freeboard, and next time visiting the dashboard, simply use the <img src="https://www.fathym.com/iot/img/screenshots/dashboard-devices-freeboard-load.png" class="text-image" /> option to load the custom freeboard configuration.
+To edit the freeboard, click the ![Freeboard Edit Button](https://www.fathym.com/iot/img/screenshots/freeboard_edit_button.png) icon at the top of the freeboard.  This will change the freeboard into edit mode.  Now add new panes, edit existing ones and when complete click ![Save Freeboard](https://www.fathym.com/iot/img/screenshots/dashboard-devices-freeboard-save.png) Choose a path on the local computer to save the freeboard, and next time visiting the dashboard, simply use the ![Load Freeboard](https://www.fathym.com/iot/img/screenshots/dashboard-devices-freeboard-load.png) option to load the custom freeboard configuration.
 
 For more information on freeboard, how it works, and how to code it, please visit their [documentation](https://github.com/Freeboard/freeboard).
 

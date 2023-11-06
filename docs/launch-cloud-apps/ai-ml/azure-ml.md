@@ -19,7 +19,7 @@ Azure Machine Learning empowers developers and data scientists with a wide range
 
 ## IoT Ensemble Storage Access
 
-IoT Ensemble provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../getting-started/connecting-downstream) for more details.
+IoT Ensemble provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../ingest-process-send/connecting-downstream) for more details.
 
 ## Azure Automated Machine Learning - Regression
 

@@ -36,7 +36,7 @@ At times, the IoT process can feel like a challenge.  We've done a lot to spring
 
 ### Best Practice IoT Ensemble Schema
 
-When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../devs/device-setup/best-practice-schema) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
+When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../deep-dive/device-setup/best-practice-schema) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
@@ -80,7 +80,7 @@ On top of the readings sensors are taking, there can often be additional informa
   - **_**  
   This special property on the SensorMetadata allows sending information relating to a gateway or other non-sensor health information.
 
-We do have a [detailed explanation of the best practice schema](../devs/device-setup/best-practice-schema) if you need more information on how to use it from a custom device.  Here is a full example of what the telemetry payload would look like (as used by our emulated device):
+We do have a [detailed explanation of the best practice schema](../deep-dive/device-setup/best-practice-schema) if you need more information on how to use it from a custom device.  Here is a full example of what the telemetry payload would look like (as used by our emulated device):
 
 ```json
 {
@@ -121,7 +121,7 @@ If not using the best practice schema, data will still be accessible throughout 
 
 With an understanding of the device schema options, connecting is fairly straight forward.  The following connection quick starts will walk through some initial ways to get data flowing, then dig into more complex connection scenarios.  
 
-All that's needed for the following sections is the device connection string.  Copy it from the dashboard, after creating a first device, using the <img src="https://www.fathym.com/iot/img/screenshots/icon-copy.png" class="text-image" /> button.
+All that's needed for the following sections is the device connection string.  Copy it from the dashboard, after creating a first device, using the ![Icon Copy](https://www.fathym.com/iot/img/screenshots/icon-copy.png) button.
 
 ![Copy Connection String](https://www.fathym.com/iot/img/screenshots/dashboard-device-list-single-record.png)
 
@@ -133,15 +133,15 @@ When connecting devices, the connection is to a cloud-native Azure IoT Hub.  We 
 
 ## Connection Quick Starts
 
-Starting off simple, then working up to some real device connection examples, we'll walk through some common connection workflows.  Check out our detailed guide on [device setup](../devs/device-setup/overview) for more ways to connect and get data flowing.
+Starting off simple, then working up to some real device connection examples, we'll walk through some common connection workflows.  Check out our detailed guide on [device setup](../deep-dive/device-setup/overview) for more ways to connect and get data flowing.
 
 ### Send Via Dashboard
 
-Using the send device message form from the dashboard is the easiest way to start seeing what data for devices would look like throughout the system.  To open up the form, go to the <img src="https://www.fathym.com/iot/img/screenshots/icon-devices-telemetry.png" class="text-image" /> Devices Telemetry section and at the bottom click the <img src="https://www.fathym.com/iot/img/screenshots/dashboard-send-device-message.png" class="text-image" /> button.
+Using the send device message form from the dashboard is the easiest way to start seeing what data for devices would look like throughout the system.  To open up the form, go to the ![Icon Devices Telemetry](https://www.fathym.com/iot/img/screenshots/icon-devices-telemetry.png) Devices Telemetry section and at the bottom click the ![Dashboard Send Device Message](https://www.fathym.com/iot/img/screenshots/dashboard-send-device-message.png) button.
 
 ![Send Device Message](https://www.fathym.com/iot/img/screenshots/dashboard-send-device-message-dialog.png)
 
-Once opened, select the device to send from and adjust any of the values.  Press <img src="https://www.fathym.com/iot/img/screenshots/dashboard-send-device-message-dialog-send-message.png" class="text-image" /> when ready, and on the next telemetry sync the custom device data will be visible.  The telemetry table is only one way to see data, read on for more details on [viewing device data](viewing-device-data).
+Once opened, select the device to send from and adjust any of the values.  Press ![dashboard-send-device-message-dialog-send-message](https://www.fathym.com/iot/img/screenshots/dashboard-send-device-message-dialog-send-message.png) when ready, and on the next telemetry sync the custom device data will be visible.  The telemetry table is only one way to see data, read on for more details on [viewing device data](viewing-device-data).
 
 ### Send Via HTTP
 
@@ -153,11 +153,11 @@ For more details on how to create a SAS Token from a connection string, read our
 
 ::: -->
 
-The easiest way to try out an HTTP request, with valid SAS Token, is to grab a SAS Token from the dashboard (only good for 1 hour).  Use the <img src="https://www.fathym.com/iot/img/screenshots/icon-setup.png" class="text-image" /> button to open a dialog where the <img src="https://www.fathym.com/iot/img/screenshots/icon-copy.png" class="text-image" /> button will copy the SAS Token signature.
+The easiest way to try out an HTTP request, with valid SAS Token, is to grab a SAS Token from the dashboard (only good for 1 hour).  Use the ![Icon Setup](https://www.fathym.com/iot/img/screenshots/icon-setup.png) button to open a dialog where the ![Icon Copy](https://www.fathym.com/iot/img/screenshots/icon-copy.png) button will copy the SAS Token signature.
 
 ![Send Device Message](https://www.fathym.com/iot/img/screenshots/dashboard-devices-sas-tokens-dialog.png)
 
-With SAS Token in hand, we can execute a curl command like the following to send a device message.  Continue reading for a complete guide on [sending messages with HTTP](../devs/device-setup/connect/http).
+With SAS Token in hand, we can execute a curl command like the following to send a device message.  Continue reading for a complete guide on [sending messages with HTTP](../deep-dive/device-setup/connect/http).
 
 ```cli
 curl -X POST \
@@ -203,7 +203,7 @@ The {device-name} can be any unique value, though it is recommended to use the D
 
 :::note
 
-The same information can be used to execute requests from [Postman or custom devices](../devs/device-setup/connect/http).
+The same information can be used to execute requests from [Postman or custom devices](../deep-dive/device-setup/connect/http).
 
 :::
 
