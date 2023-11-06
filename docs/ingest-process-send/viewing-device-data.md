@@ -56,7 +56,7 @@ If you're seeing emulated data in the table and only want to see custom device d
 
 :::note
 
-In the screenshot above, the following properties are not part of the [IoT Best Practice Schema](../devs/device-setup/best-practice-schema). Fathym IoT Ensemble is not adding these properties. These are system properties that are added by the IoT Hub.
+In the screenshot above, the following properties are not part of the [IoT Best Practice Schema](../deep-dive/device-setup/best-practice-schema). Fathym IoT Ensemble is not adding these properties. These are system properties that are added by the IoT Hub.
 
 - `"_ts": 1613087733`
 - `"EventProcessedUtcTime": "2021-02-11T23:55:30.227905Z"`
