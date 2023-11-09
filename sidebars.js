@@ -39,11 +39,7 @@ module.exports = {
       },      
     ],
     //Tutorials: [
-      //{
-          //'ESP32': [
-          //"tutorials/esp32/arduino-esp32-and-enviro-sensor",
-        //]
-      //}, 
+      //'tutorials/cyton-biosensing-board',
     //],
     "Deep Dive": [
       {
