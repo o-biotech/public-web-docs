@@ -38,9 +38,9 @@ module.exports = {
         ]
       },      
     ],
-    //Tutorials: [
-      //'tutorials/cyton-biosensing-board',
-    //],
+    Tutorials: [
+      'tutorials/cyton-biosensing-board',
+    ],
     "Deep Dive": [
       {
         'Device Setup': [
