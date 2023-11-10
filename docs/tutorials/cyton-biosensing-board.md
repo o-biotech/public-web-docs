@@ -19,7 +19,7 @@ hide_table_of_contents: true
 
 ![Cyton Biosensing Board](https://www.fathym.com/iot/img/cyton_biosensing_board.png)
 
-In this tutorial, we will be taking OpenBCI’s Cyton Biosensing Board, reading it's sensor datastreams, and sending real-time messages to Fathym's IoT Ensemble. The Cyton allows you to gather 8-channels of scientifically-validated physiological data.
+In this tutorial, we will be taking OpenBCI’s Cyton Biosensing Board, reading its sensor datastreams, and sending real-time messages to Fathym's IoT Ensemble. The Cyton allows you to gather 8-channels of scientifically-validated physiological data.
 
 ## Things you will need
 
@@ -37,16 +37,16 @@ OpenBiotech's IoT streaming application can be downloaded here: https://github.c
 :::
 
 ## Part 1 - Hooking Up Your Hardware
-1. You will need to plug in your USB “dongle” into your computer. Ensure that the small toggle on your USB dongle is set to “GPIO_6”
+1. You will need to plug in your USB “dongle” into your computer. Ensure that the small toggle on your USB dongle is set to “GPIO_6.”
 
 2. Plug in the provided lithium ion battery into the Cyton board itself. 
 
-3. Once this is done, slide the small toggle switch to “PC”
+3. Once this is done, slide the small toggle switch to “PC.”
 
 If you need additional docs for setting up the Cyton board, go [here](https://docs.openbci.com/GettingStarted/Boards/CytonGS/)
 
 :::note 
-No need to install OpenBCI’s GUI, just follow the hardware setup portion
+No need to install OpenBCI’s GUI, just follow the hardware setup portion.
 :::
 
 ## Part 2 - Download the OpenBiotech IoT Stream Application
@@ -95,7 +95,7 @@ When connecting devices, the connection is to a cloud-native Azure IoT Hub.  We 
 
 ## Part 4 - Running the application and Streaming your Data
 
-1. Open the newly installed OpenBiotech Iot Stream - Brainflow application. 
+1. Open the newly installed OpenBiotech IoT Stream - Brainflow application. This application utilizes Brainflow, a library for obtaining, parsing and analyzing EEG, EMG, ECG and other kinds of data from biosensors. 
 
 ![OpenBiotech Connection String Prompt](https://www.fathym.com/iot/img/brainflow_connection_string_prompt.png)
 
@@ -109,4 +109,4 @@ If everything is correct, the application will start to read and pull data from 
 
 ![OpenBiotech Datastream](https://www.fathym.com/iot/img/brainflow_datastream.png)
 
-From there, you can use IoT Ensemble’s built in [API endpoints](https://www.openbiotech.co/docs/ingest-process-send/connecting-downstream) to query and access your data
+From there, you can use IoT Ensemble’s built in [API endpoints](https://www.openbiotech.co/docs/ingest-process-send/connecting-downstream) to query and access your data.
