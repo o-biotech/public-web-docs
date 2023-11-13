@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 # IoT Best Practice Schema Explained
 
-When starting with our shared plans, to get the most out of the system, we offer a best practice schema that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
+To get the most out of the system, we recommend using our best practice schema to send IoT messages. This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
@@ -64,7 +64,7 @@ The **DeviceType** is optional, though recommended to properly work with histori
 
 ### Version
 
-The **Version** is optional, though recommended to properly work with historic data.  We recommend adopting a [semantic versioniing](https://semver.org/) strategy, though any string will work.
+The **Version** is optional, though recommended to properly work with historic data.  We recommend adopting a [semantic versioning](https://semver.org/) strategy, though any string will work.
 
 ### Timestamp
 
