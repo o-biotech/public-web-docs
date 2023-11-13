@@ -53,16 +53,16 @@ No need to install OpenBCI’s GUI, just follow the hardware setup portion.
 
 Now that we have the board set up, we need to download and install the data streaming application to your Windows PC. 
 
-1. Download the “.msi” file from the release page [here](https://github.com/o-biotech/openbiotech-iot-stream-brainflow/releases)
+1. Download the “.msi” file from the release page [here](https://github.com/o-biotech/openbiotech-iot-stream-brainflow/releases).
 
-2. Run the downloaded file, which should open up a wizard installer
+2. Run the downloaded file, which should open up a wizard installer.
 
-3. Complete step through of the installation wizard
+3. Complete step through of the installation wizard.
 
 ![Biotech Wizard Start Screen](https://www.fathym.com/iot/img/startscreen_biotech_wizard_installer.png)
 
 :::tip
-Certain firewalls/virus protection programs may attempt to block the download/install of the file. Be sure to make a firewall exception in order for the application to install/run
+Certain firewalls/virus protection programs may attempt to block the download/install of the file. Be sure to make a firewall exception in order for the application to install/run.
 :::
 
 ## Part 3 - Register with Fathym IoT Ensemble and Create a Device
@@ -99,7 +99,7 @@ When connecting devices, the connection is to a cloud-native Azure IoT Hub.  We 
 
 ![OpenBiotech Connection String Prompt](https://www.fathym.com/iot/img/brainflow_connection_string_prompt.png)
 
-2. When prompted, paste your IoT Ensemble connection string (copied from the previous step)
+2. When prompted, paste your IoT Ensemble connection string (copied from the previous step).
 
 3. The application will ask you to select which computer port the Cyton is connected to. Type the corresponding port selection and hit enter.
 
