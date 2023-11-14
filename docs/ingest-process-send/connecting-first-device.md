@@ -86,7 +86,7 @@ We do have a [detailed explanation of the best practice schema](../deep-dive/dev
 {
     "DeviceID":"Emulated-4",
     "DeviceType":"Generic",
-    "Timestamp":"2020-12-10T00:26:30.0217778+00:00",
+    "Timestamp":"2023-11-10T00:26:30.0217778+00:00",
     "Version":"0.0.2",
     "DeviceData": {
         "Latitude": 40.7578,
@@ -167,7 +167,7 @@ curl -X POST \
   -d '{
     "DeviceID":"{device-name}",
     "DeviceType":"Generic",
-    "Timestamp":"2020-12-10T00:26:30.0217778+00:00",
+    "Timestamp":"2023-11-10T00:26:30.0217778+00:00",
     "Version":"0.0.2",
     "DeviceData": {
         "Latitude": 40.7578,

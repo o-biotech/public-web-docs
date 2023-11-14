@@ -38,7 +38,7 @@ curl -X POST \
   -d '{
     "DeviceID":"{device-id}",
     "DeviceType":"Generic",
-    "Timestamp":"2020-12-10T00:26:30.0217778+00:00",
+    "Timestamp":"2023-11-14T00:26:30.0217778+00:00",
     "Version":"0.0.2",
     "DeviceData": {
         "Latitude": 40.7578,
@@ -105,7 +105,7 @@ To send a request with Postman, follow these steps:
 {
     "DeviceID":"{device-id}",
     "DeviceType":"Generic",    
-    "Timestamp":"2020-12-30T00:26:30.0217778+00:00",
+    "Timestamp":"2024-11-14T00:26:30.0217778+00:00",
     "Version":"0.0.2",
     "DeviceData": {
         "Latitude": 40.7578,
@@ -172,7 +172,7 @@ To send a request with Insomnia, follow these steps:
 {
     "DeviceID":"{device-id}",
     "DeviceType":"Generic",    
-    "Timestamp":"2020-12-30T00:26:30.0217778+00:00",
+    "Timestamp":"2023-11-14T00:26:30.0217778+00:00",
     "Version":"0.0.2",
     "DeviceData": {
         "Latitude": 40.7578,
