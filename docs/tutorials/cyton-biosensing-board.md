@@ -43,7 +43,7 @@ OpenBiotech's IoT streaming application can be downloaded here: https://github.c
 
 3. Once this is done, slide the small toggle switch to “PC.”
 
-If you need additional docs for setting up the Cyton board, go [here](https://docs.openbci.com/GettingStarted/Boards/CytonGS/)
+If you need additional docs for setting up the Cyton board, go [here](https://docs.openbci.com/GettingStarted/Boards/CytonGS/).
 
 :::note 
 No need to install OpenBCI’s GUI, just follow the hardware setup portion.
