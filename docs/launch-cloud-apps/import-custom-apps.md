@@ -19,7 +19,7 @@ In the previous section we showed how easy it is to launch a dashboard template 
 
 ## Import an app to the Fathym Platform 
 
-Let’s start by creating a new project in your Fathym enterprise. Go to the [Fathym dashboard](https://www.fathym.com/dashboard/create-project)
+Let’s start by creating a new project in your Fathym enterprise. Go to the [Fathym dashboard](https://www.fathym.com/dashboard/create-project).
 
 At the top of the Create Project page you will see the Deploy a Project option. Click the Import from Git button. 
 
@@ -51,7 +51,7 @@ Navigate to the main dashboard again and you will see the project deploying in t
 
 ## Import additional routes 
 
-As detailed in the Launch Cloud Apps section, The Fathym platform enables you to assemble, deploy and host web applications in a highly modular fashion. To add an additional route to your new project, enter your project in the dashboard and then Add Route.  
+As detailed in the Launch Cloud Apps section, the Fathym platform enables you to assemble, deploy and host web applications in a highly modular fashion. To add an additional route to your new project, enter your project in the dashboard and then Add Route.  
 
 ![Add Route](https://www.fathym.com/iot/img/screenshots/project_add_route.png)
 

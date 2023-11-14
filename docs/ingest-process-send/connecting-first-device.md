@@ -36,7 +36,7 @@ At times, the IoT process can feel like a challenge.  We've done a lot to spring
 
 ### Best Practice IoT Ensemble Schema
 
-When starting with our shared plans, to get the most out of the system, there is a [best practice schema](../deep-dive/device-setup/best-practice-schema) that we recommend using to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
+To get the most out of the system, we recommend using our [best practice schema](../deep-dive/device-setup/best-practice-schema) to send IoT messages.  This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
@@ -192,7 +192,7 @@ curl -X POST \
 }'
 ```
 
-There are a couple of values to replace, and adust the payload as desired.  Here is a description on where to find the values for replacement.
+You need to adjust the payload by replacing a few values. Here is a description on where to find the values for replacement.
 
 - **{device-id}**  
 The {device-id} can be located in the connection string, and is the value after "DeviceId=" prior to the ";".  Set this value in the path  to ensure messages are sent to the correct device.
