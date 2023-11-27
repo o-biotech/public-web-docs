@@ -22,7 +22,7 @@ Viewing device messages is the first step in understanding and debugging IoT dat
 
 ## Dashboard Views
 
-The IoT Ensemble dashboard provides two quick ways to start looking at data.  Using these, easily view raw device message payloads and visualize data in an open source dashboard.
+The IoT Ensemble dashboard provides two quick ways to start looking at data.  Use these to easily view raw device message payloads and visualize data in an open-source dashboard.
 
 ### Devices Telemetry
 
@@ -75,7 +75,7 @@ As outlined previously in our [connecting a device](../ingest-process-send/conne
 
 ### Freeboard Dashboard
 
-As an inline example of how data can be visualized, we use an open source tool called [Freeboard](http://freeboard.io/).  Use this tool to create and locally save custom visualizations and later load them into view.  
+As an inline example of how data can be visualized, we use an open-source tool called [Freeboard](http://freeboard.io/).  Use this tool to create and locally save custom visualizations and later load them into view.  
 
 <!-- In addition, we'll talk through connecting with a hosted freeboard account in the next article. -->
 

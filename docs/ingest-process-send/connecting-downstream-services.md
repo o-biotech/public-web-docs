@@ -23,15 +23,13 @@ The main goal of an IoT Solution is the need to collect device data and bring it
 
 ## Storage Access
 
-While our enterprise licenses allow connections directly with data sources, there is still often a need to massage the data into the correct format for other integrations (Azure Machine Learning's automated ML feature needs data in json lines or CSV format).  
+While our APIs allow connections directly with data sources, there is still often a need to massage the data into the correct format for other integrations (Azure Machine Learning's automated ML feature needs data in json lines or CSV format).  
 
 When working with IoT storage data, how it is stored and what interval it is stored at is extremely important to the overall cost of the system.  We break our storage into three categories that support a cost-efficient way to handle data storage and access.  Cold storage contains historic data, warm storage contains near-term queryable data, and hot storage provides a way to stream individual messages to other services in real time.  The following high-level walk-through outlines APIs for accessing these storage types.
 
 :::note
 
-This storage access documentation focuses around our pre-built APIs, available to all shared and enterprise licenses.  When using our enterprise licenses, direct access to the many data options is available.  
-
-<!-- For more information read our complete guide on [storage access](../devs/storage/overview). -->
+This storage access documentation focuses around our pre-built APIs available to all Fathym Enterprise users.
 
 :::
 
