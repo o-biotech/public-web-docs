@@ -19,11 +19,11 @@ Azure Machine Learning empowers developers and data scientists with a wide range
 
 ## IoT Ensemble Storage Access
 
-IoT Ensemble provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../ingest-process-send/connecting-downstream) for more details.
+IoT Ensemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../ingest-process-send/connecting-downstream) for more details.
 
 ## Azure Automated Machine Learning - Regression
 
-Apply automated ML when you want [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml) to train and tune a model for you using the target metric you specify. Automated ML democratizes the machine learning model development process, and empowers its users, no matter their data science expertise, to identify an end-to-end machine learning pipeline for any problem.
+Apply automated ML when you want [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml) to train and tune a model using the target metric you specify. Automated ML democratizes the machine learning model development process, and empowers its users, no matter their data science expertise, to identify an end-to-end machine learning pipeline for any problem.
 Data scientists, analysts, and developers across industries can use automated ML to:
 
 - Implement ML solutions without extensive programming knowledge
@@ -81,7 +81,7 @@ There is nothing to do on the **Schema** step, so you can click next through tha
 
 ### Configuring Automated ML Run
 
-The next step is to configure a Azure Automated Machine Learning run so that it can train and build a model of your choosing.  Start by setting the **New experiment name** to `TemperatureExperiment`, then select the appropriate **Target column**, for this example the `SensorReadings_Temperature` column.  Now either create or select an existing compute cluster to run the experiment on and select **Next**.
+The next step is to configure an Azure Automated Machine Learning run so that it can train and build a model of your choosing.  Start by setting the **New experiment name** to `TemperatureExperiment`, then select the appropriate **Target column**, for this example the `SensorReadings_Temperature` column.  Now either create or select an existing compute cluster to run the experiment on and select **Next**.
 
 ![Azure ML Automated ML Run Configure](https://www.fathym.com/iot/img/screenshots/azure-ml-automated-ml-run-wizard-configure-run.png)
 
