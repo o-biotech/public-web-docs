@@ -29,7 +29,7 @@ When working with IoT storage data, how it is stored and what interval it is sto
 
 :::note
 
-This storage access documentation focuses around our pre-built APIs available to all Fathym Enterprise users.
+This storage access documentation focuses on our pre-built APIs available to all OpenBiotech users.
 
 :::
 
@@ -81,12 +81,4 @@ The purpose of the storage access APIs is to provide a secure way to access data
 
 ## Downstream Services
 
- The point of the Storage Access APIs is to give rapid access to IoT data, in a number of different formats, ready to be used with other systems.  Here is a high level overview of the types of downstream services you can connect with.
-
-### Microsoft Power BI
-
-There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation.  IoT Ensemble provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
-
-Your IoT Ensemble Dashboard will give you access to API Access Storage Keys as well as the interactive forms described above to obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
-
-You can get started with a [Power BI dashboard](../launch-cloud-apps/reports-dashboards/power-bi), or for a complete look at how it fits in, check out our [End-to-end IoT blog](https://www.fathym.com/iot/blog/blogs/2021/january/raspberry-pi-fathym-power-bi).
+ The purpose of the Storage Access APIs is to give rapid access to device data in a number of different formats that is ready to be used with other systems. In the next section, we will guide you on how to combine these APIs with the Fathym Platform to integrate with and launch cloud apps powered by device data, and on how to use the APIs to send device data downstream to various third-party services for dashboards (Power BI, Grafana, Tableau, SQL Server), alerts (Azure Logic Apps, Grafana) and AI/ML (Azure ML).
