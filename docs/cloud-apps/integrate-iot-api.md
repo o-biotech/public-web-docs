@@ -1,7 +1,7 @@
 ---
-title: Integrate with IoT Ensemble APIs 
+title: Integrate with OpenBiotech APIs 
 hide_title: true
-sidebar_label: Integrate with IoT Ensemble APIs  
+sidebar_label: Integrate OpenBiotech APIs  
 keywords:
     - iot
     - iot ensemble

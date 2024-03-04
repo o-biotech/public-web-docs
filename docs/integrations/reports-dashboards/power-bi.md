@@ -14,13 +14,13 @@ hide_table_of_contents: true
 
 # Storage Access with Microsoft Power BI
 
-There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation.  IoT Ensemble provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
+There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation. OpenBiotech provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
 
-Your IoT Ensemble Dashboard will give you access to API Access Storage Keys as well as interactive forms to obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
+Your OpenBiotech Dashboard will give you access to API Access Storage Keys as well as interactive forms to obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
 
-## IoT Ensemble Storage Access
+## OpenBiotech Storage Access
 
-IoT Ensemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.  Check out the [getting started guide](../../ingest-process-send/connecting-downstream) for more details.
+OpenBiotech provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
 
 ## Configuring Power BI Desktop
 
@@ -32,27 +32,17 @@ Once this has been selected, a popup will appear allowing input of the API URL. 
 
 ![Power BI From Web Advanced](https://www.fathym.com/iot/img/screenshots/power-bi-from-web-advanced.png)
 
-The API request URL can be obtained from the dashboard using either the cold or warm query APIs.  Here is a sample cold query URL you can start with, and the dashboard will assist in discovering the parameters for this query.
+The API request URL can be obtained from the dashboard using either the cold or warm query APIs.  Here is a sample warm query URL you can start with, and the dashboard will assist in discovering the parameters for this query.
 
 ```console
-https://fathym-cloud-prd.azure-api.net/iot-ensemble/ColdQuery?flatten=false&resultType=JSON
+https://dashboard.openbiotech.co/api/data/warm/explorer
 ```
 
-:::note
+Now input the request URL from above (or obtained from the dashboard) into the Power BI **URL Parts** text field.  Then enter `Authorization` as a header parameter key, along with the **Bearer (token)** copied from OpenBiotech Dashboard in the value text field.
 
-If you would like to use the [emulated data](../../getting-started/emulated-data), add an additional query string parameter of `includeEmulated=true`:
+![Power BI From web Advanced Enter Values](https://www.fathym.com/iot/img/screenshots/biotech-power-bi-from-web-advanced-enter-values.png)
 
-```console
-https://fathym-cloud-prd.azure-api.net/iot-ensemble/ColdQuery?flatten=false&resultType=JSON&includeEmulated=true
-```
-
-:::
-
-Now input the request URL from above (or obtained from the dashboard) into the Power BI **URL Parts** text field.  Then enter `lcu-subscription-key` as a header parameter key, along with the **Access Key** copied from IoT Ensemble Dashboard in the value text field.
-
-![Power BI From web Advanced Enter Values](https://www.fathym.com/iot/img/screenshots/power-bi-from-web-advanced-enter-values.png)
-
-With these values entered, select **OK** and the Power Query Editor will load your JSON payloads.  These will need to be converted to a table before you can visualize your data.
+With these values entered, select **OK** and the Power Query Editor will load your payloads.  These will need to be converted to a JSON source and a table before you can visualize your data.
 
 ## Preparing Data for Use
 

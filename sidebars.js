@@ -5,46 +5,47 @@ module.exports = {
       'introduction/support',
     ],
     "Getting Started": [
-      'getting-started/setup',
-      'getting-started/emulated-data',
+      'getting-started/enterprise',
+      'getting-started/cloud',
+      'getting-started/devices',
+      'getting-started/data',
     ],
-    "Ingest, Process and Send":[
-      'ingest-process-send/connecting-first-device',
-      'ingest-process-send/viewing-device-data',
-      'ingest-process-send/connecting-downstream-services',
-    ],
-    "Launch Cloud Apps": [
-      'launch-cloud-apps/overview',
-      'launch-cloud-apps/ready-to-go-launch-pad',
-      'launch-cloud-apps/import-custom-apps',
-      'launch-cloud-apps/integrate-iot-api',
-      {
-          'Reports and Dashboards': [
-            'launch-cloud-apps/reports-dashboards/power-bi', 
-            'launch-cloud-apps/reports-dashboards/grafana',
-            'launch-cloud-apps/reports-dashboards/tableau',
-            'launch-cloud-apps/reports-dashboards/sql-server',
+    "Integrations":[
+      'integrations/connecting-downstream-services',
+      {        
+          'Reporting & Analytics': [
+            'integrations/reports-dashboards/power-bi', 
+            'integrations/reports-dashboards/grafana',
+            //'integrations/reports-dashboards/tableau',
+            //'integrations/reports-dashboards/sql-server',
         ]
       },
       {
           'Alerts': [
-            "launch-cloud-apps/alerts/logic-apps",
-            "launch-cloud-apps/alerts/grafana"
+            "integrations/alerts/logic-apps",
+            //"integrations/alerts/grafana"
         ]
       },
-      {
-          'AI & ML': [
-            'launch-cloud-apps/ai-ml/azure-ml',
-        ]
-      },      
+      //{
+          //'AI & ML': [
+          //{
+            //Services:[
+          //'integrations/ai-ml/azure-ml',
+            //],
+          //},
+        //]
+      //},
     ],
-    Tutorials: [
-      'tutorials/cyton-biosensing-board',
+    "Cloud Apps": [
+      'cloud-apps/overview',
+      'cloud-apps/ready-to-go-launch-pad',
+      'cloud-apps/import-custom-apps',
+      'cloud-apps/integrate-iot-api',      
     ],
     "Deep Dive": [
       {
         'Device Setup': [
-          'deep-dive/device-setup/overview',
+          //'deep-dive/device-setup/overview',
           'deep-dive/device-setup/iot-best-practice-schema-explained',
           {
             Connect: [
@@ -53,6 +54,10 @@ module.exports = {
           },
         ],
       },
+    ],
+    
+    Tutorials: [
+      'tutorials/cyton-biosensing-board',
     ],
   },
 };

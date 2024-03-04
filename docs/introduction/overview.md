@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Overview
 keywords:
     - iot
-    - iot ensemble
+    - open-biotech
     - fathym
     - azure
     - connect a device
@@ -14,20 +14,28 @@ keywords:
 hide_table_of_contents: true
 ---
 
-# Welcome to OpenBiotech
+# Introducing Fathym OpenBiotech
 
-OpenBiotech is a set of tools for rapidly assembling cloud-based web applications powered by biosensor data. From device to cloud to app, OpenBiotech’s tools offer a cloud-based application pathway. This pathway brings greater access and simplicity to IoT, cloud and application development technologies, but without sacrificing control and ownership or compromising future development options, scalability and security. 
+![New Open Biotech Logo](https://www.fathym.com/iot/img/openBiotechLogoDarkBg.svg)
 
-OpenBiotech is powered by [Fathym](https://www.fathym.com) and its tools: Fathym Platform, IoT Ensemble and Habistack. 
+Fathym OpenBiotech is a platform designed to facilitate the rapid integration, assembly and deployment of cloud-based applications and services powered by biosensor data. It provides a cloud-based application pathway that substantially simplifies cloud, IoT, DevOps and application development processes, without sacrificing control and ownership. 
 
-Fathym’s tools in turn draw from Microsoft Azure, curating Azure services with best practice configurations and streamlined tooling. These tools can be licensed through OpenBiotech’s SaaS offering or run on a customer’s own Azure cloud for maximum control. 
+Key features of OpenBiotech include: 
 
-- **Fathym Platform:** An out-of-the-box app deployment platform, it is the central hub for assembling, integrating and launching cloud-based applications. The platform also gives users ready-made and open-source templates and pre-configured automations for launching cloud applications and dashboards. The platform has three interfaces: a web application, CLI and the new Thinky AI bot. 
+- **Cloud-native:** From device to cloud to app, an end-to-end cloud interface leveraging Azure and curated for biosensing. 
 
-- **IoT Ensemble:** An out-of-the-box IoT cloud that automates Azure IoT cloud services for ingesting and processing data for cloud applications. Native integration with the Fathym platform to turn device data into cloud apps. 
+- **No Development Skills Needed:** OpenBiotech simplifies and streamlines cloud, IoT and DevOps technologies – you don’t need development expertise.
 
-- **Habistack:** Habistack is the most flexible, cloud-native API for delivering machine learning and statistics-based forecasts with any combination of variables. Native integration with the Fathym platform to turn advanced ML forecasts into cloud apps. 
+- **Ownership and Control:** Despite its simplicity, OpenBiotech does not compromise on control and ownership. Users maintain access to services, resources and data in Azure.
 
-Together these tools provide an intuitive and powerful device > cloud > app flow. The following docs will guide you through that flow. 
+- **Get Started Fast:** Get going immediately with streamlined workflows, infrastructure automation, pre-configured dashboards and open-source app templates.
 
-The next section details how to get set up with OpenBiotech and establish your device to cloud flow. 
+- **Send Data Anywhere:** APIs and pre-configured integrations to securely send device data to any app, tool or system. 
+
+- **Curate, Personalize and Scale:** Modify and extend the platform’s open-source modules, automate integrations and reconfigure underlying cloud services to adapt as needs and tech stacks evolve.
+
+All this makes OpenBiotech a powerful, intuitive and highly flexible tool for anyone – whether scientist, researcher or developer – looking to leverage biosensor data in the cloud.
+
+To get started with OpenBiotech, there is a setup workflow that guides users step-by-step through connecting to an Azure cloud subscription, selecting and provisioning data infrastructure options, configuring APIs and dashboard services, and flowing real or simulated device data to the cloud.
+
+In the next getting started sections, we will guide you through this initial setup workflow.

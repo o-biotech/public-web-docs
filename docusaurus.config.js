@@ -30,10 +30,9 @@ module.exports = {
       }
     },
     navbar: {
-      title: 'OpenBiotech',
       logo: {
         alt: 'OpenBiotech',
-        src: 'img/Fathym-logo-white-01.png',
+        src: 'static/o-biotech-logo.svg',
       },
       items: [
         {

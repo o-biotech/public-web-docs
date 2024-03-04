@@ -14,27 +14,23 @@ hide_table_of_contents: true
 
 # Storage Access with Grafana
 
-Grafana has many options for importing data. We recommend using the [JSON API data source for Grafana](https://github.com/marcusolsson/grafana-json-datasource) plugin to load your IoT Ensemble data. It's a data source plugin for loading JSON data from REST APIs into Grafana.
+Grafana has many options for importing data. We recommend using the [JSON API data source for Grafana](https://github.com/marcusolsson/grafana-json-datasource) plugin to load your OpenBiotech data. It's a data source plugin for loading JSON data from REST APIs into Grafana.
 
-The IoT Ensemble Dashboard displays your API Keys. 
+The OpenBiotech Dashboard displays your API Keys. 
 
-![IoT Ensemble API Keys](https://www.fathym.com/iot/img/screenshots/dashboard-storage-access.png)
+![API Keys](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark.png)
 
 For the Cold Query, use this URL:
 
 ```console
-Request URL: https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/ColdQuery?dataType=Telemetry&flatten=true&includeEmulated=false&resultType=JSON&zip=false
+Request URL: https://dashboard.openbiotech.co/api/data/cold/execute
 ```
 
 For the Warm Query, use this URL:
 
 ```console
-Request URL: https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/WarmQuery?includeEmulated=false
+Request URL: https://dashboard.openbiotech.co/api/data/warm/explorer
 ```
-
-:::note
-In IoT Ensemble, use the 'Try It' section to see the parameters available for the Cold and Warm APIs, as well as test to see the responses. 
-:::
 
 ## Configuring Grafana Data Source
 
@@ -48,20 +44,13 @@ Click the 'Add data source' button and search for 'json'.  Select the 'JSON API'
 
 This example uses the Cold Query. Use the following values in the form: 
 
-- URL: `https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/ColdQuery`
+- URL: `https://dashboard.openbiotech.co/api/data/warm/explorer`
 - Auth: `With Credentials`
-- Custom HTTP Headers: `lcu-subscription-key: ***********`
-- Query string: `dataType=Telemetry&flatten=true&includeEmulated=false&resultType=JSON&zip=false` 
+- Custom HTTP Headers: `Authorization: Bearer ***********`
 
 ![Grafana JSON API](https://www.fathym.com/iot/img/screenshots/grafana-3.jpg)
 
 Click the 'Save & Test' button to verify the connection is successful. It should say 'Success' like the screenshot above. 
-
-:::note
-Use your primaryKey or secondaryKey from the IoT Ensemble API Keys for the lcu-subscription-key value. For example:
-
-`lcu-subscription-key: f24047c3d5b14f****`
-:::
 
 ## Create a Grafana Dashboard 
 

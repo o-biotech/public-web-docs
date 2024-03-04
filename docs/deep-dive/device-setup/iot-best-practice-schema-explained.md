@@ -87,33 +87,25 @@ This special property on the SensorMetadata allows sending information relating 
 
 ## Payload Examples
 
-### Fathym IoT Ensemble Emulated Data Example
+### Open Biotech Data Example
 
 ```json
 {
-    "DeviceID":"Emulated-4",
-    "DeviceType":"Generic",
-    "Timestamp":"2023-11-14T00:26:30.0217778+00:00",
-    "Version":"0.0.2",
-    "DeviceData": {
-        "Latitude": 40.7578,
-        "Longitude": -104.9733,
-        "Floor": 2,
-        "Room": "Conference Room 5"
-    },
-    "SensorReadings": {
-        "Temperature": 105,
-        "Humidity": 83,
-        "Occupancy": 8,
-        "Occupied": 1
-    },
-    "SensorMetadata": {
-        "_": {
-            "SignalStrength": 1
-        },
-        "Temperature": {
-            "Battery": 0.4
-        }
-    },
+  "iothub-connection-device-id": "cytondevice",
+  "iothub-enqueuedtime": "2024-02-08T17:44:51.1640000Z",
+  "timestamp": "2024-02-08T17:44:51.2090000Z",
+  "DeviceID": "CytonBoard",
+  "DeviceType": "EEG",
+  "Version": "1.0",
+  "SensorReadings": {
+    "1": "-154361.28131881732",
+    "2": "-154929.50736636014",
+    "3": "-154641.48278730904",
+    "4": "-155028.7491117417",
+    "5": "132315.68870731458",
+    "6": "18695.513152541298",
+    "7": "-68085.33586088847",
+    "8": "-154866.43074350726"
+  }
 }
 ```

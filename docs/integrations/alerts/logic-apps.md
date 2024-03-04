@@ -17,7 +17,7 @@ hide_table_of_contents: true
 
 # Sending Email & Text Alerts using Azure Logic Apps
 
-These instructions show how to use Logic Apps to call the IoT Ensemble warm query every 12 hours and check if the Temperature of any of the results is greater than 45. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
+These instructions show how to use Logic Apps to call the Open Biotech warm query every 12 hours and check if the Temperature of any of the results is greater than 45. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
 
 ![Completed Steps](https://www.fathym.com/iot/img/screenshots/alerts/completed-steps.png)
 
@@ -29,20 +29,14 @@ For the first step of the Logic App, search for 'HTTP'.
 
 Configure the HTTP trigger with the following settings from your IoT Ensemble account. This example is using the Warm Query.
 - Method: `GET`
-- URI: `https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/WarmQuery?includeEmulated=true`
-- Header: `lcu-subscription-key: f24047c3d5b14f****`
+- URI: `https://dashboard.openbiotech.co/api/data/warm/explorer`
+- Header: `Authorization: Bearer ***********`
 - How often do you want to check for items?: `12 Hour`
 
 ![HTTP Settings](https://www.fathym.com/iot/img/screenshots/alerts/http-settings.png)
 
-:::note
-Use your primaryKey or secondaryKey from the IoT Ensemble API Keys for the lcu-subscription-key value. For example:
-
-`lcu-subscription-key: f24047c3d5b14f****`
-:::
-
 :::info
-In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the IoT Ensemble Warm Query for new data.
+In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the Open Biotech Warm Query for new data.
 :::
 
 ## Step 2: Parse JSON

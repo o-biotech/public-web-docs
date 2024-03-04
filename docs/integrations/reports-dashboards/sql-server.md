@@ -13,7 +13,7 @@ hide_table_of_contents: true
 
 # Storage Access with Logic Apps and SQL Server
 
-These instructions show how to use Logic Apps to call the IoT Ensemble warm query every 12 hours and insert the data into a SQL Server database. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
+These instructions show how to use Logic Apps to call the Open Biotech warm query every 12 hours and insert the data into a SQL Server database. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
 
 ![Completed Steps](https://www.fathym.com/iot/img/screenshots/logic-apps-sql-server-overview.png)
 
@@ -23,22 +23,16 @@ For the first step of the Logic App, search for 'HTTP'.
 
 ![Search for HTTP](https://www.fathym.com/iot/img/screenshots/alerts/search-for-http.png)
 
-Configure the HTTP trigger with the following settings from your IoT Ensemble account. This example is using the Warm Query.
+Configure the HTTP trigger with the following settings from your Open Biotech account. This example is using the Warm Query.
 - Method: `GET`
-- URI: `https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/WarmQuery?includeEmulated=true`
-- Header: `lcu-subscription-key: f24047c3d5b14f****`
+- URI: `https://dashboard.openbiotech.co/api/data/cold/execute`
+- Header: `Authorization: Bearer ***********`
 - How often do you want to check for items?: `12 Hour`
 
 ![HTTP Settings](https://www.fathym.com/iot/img/screenshots/alerts/http-settings.png)
 
-:::note
-Use your primaryKey or secondaryKey from the IoT Ensemble API Keys for the lcu-subscription-key value. For example:
-
-`lcu-subscription-key: f24047c3d5b14f****`
-:::
-
 :::info
-In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the IoT Ensemble Warm Query for new data.
+In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the Open Biotech Warm Query for new data.
 :::
 
 ## Step 2: Compose
@@ -47,89 +41,104 @@ For the next step of the Logic App, search for 'Compose'.
 
 ![Search for Compose](https://www.fathym.com/iot/img/screenshots/alerts/search-for-compose.png)
 
-For the Compose step we need to list an example JSON payload the Logic App will receive from the HTTP trigger. For the IoT Ensemble Warm Query, you can use the following:
+For the Compose step we need to list an example JSON payload the Logic App will receive from the HTTP trigger. For the Open Biotech Warm Query, you can use the following:
 
 ```
 {
-  "Payloads": [
-    {
-      "DeviceData": {
-        "Floor": 1,
-        "Latitude": 40.269,
-        "Longitude": -104.5808,
-        "Room": 4
-      },
-      "DeviceID": "Emulated-3",
-      "DeviceType": "Generic",
-      "EnterpriseLookup": "EMULATED",
-      "EventEnqueuedUtcTime": "2021-02-11T23:55:29.995Z",
-      "EventProcessedUtcTime": "2021-02-11T23:55:30.227905Z",
-      "PartitionId": 29,
-      "SensorMetadata": {
-        "Temperature": {
-          "Battery": 0.3
-        },
-        "_": {
-          "SignalStrength": 3
-        }
-      },
-      "SensorReadings": {
-        "Humidity": 9,
-        "Occupancy": 2,
-        "Occupied": 1,
-        "Temperature": 117
-      },
-      "Timestamp": "2021-02-11T23:55:29.9963929+00:00",
-      "Version": "0.0.2",
-      "_attachments": "attachments/",
-      "_etag": "\"09009632-0000-0700-0000-6025c3f50000\"",
-      "_rid": "8qpRAK49o3m60BAAAAAAAA==",
-      "_self": "dbs/8qpRAA==/colls/8qpRAK49o3k=/docs/8qpRAK49o3m60BAAAAAAAA==/",
-      "_ts": 1613087733,
-      "id": "1475d2e2-de67-6c8f-53c1-47699a3c40f2"
-    },
-    {
-      "DeviceData": {
-        "Floor": 2,
-        "Latitude": 40.8559,
-        "Longitude": -104.905,
-        "Room": 5
-      },
-      "DeviceID": "Emulated-4",
-      "DeviceType": "Generic",
-      "EnterpriseLookup": "EMULATED",
-      "EventEnqueuedUtcTime": "2021-02-11T23:55:29.995Z",
-      "EventProcessedUtcTime": "2021-02-11T23:55:30.227905Z",
-      "PartitionId": 29,
-      "SensorMetadata": {
-        "Temperature": {
-          "Battery": 0.4
-        },
-        "_": {
-          "SignalStrength": 2
-        }
-      },
-      "SensorReadings": {
-        "Humidity": 88,
-        "Occupancy": 12,
-        "Occupied": 1,
-        "Temperature": 11
-      },
-      "Timestamp": "2021-02-11T23:55:29.9964182+00:00",
-      "Version": "0.0.2",
-      "_attachments": "attachments/",
-      "_etag": "\"09009432-0000-0700-0000-6025c3f50000\"",
-      "_rid": "8qpRAK49o3m50BAAAAAAAA==",
-      "_self": "dbs/8qpRAA==/colls/8qpRAK49o3k=/docs/8qpRAK49o3m50BAAAAAAAA==/",
-      "_ts": 1613087733,
-      "id": "f583575c-3c40-9297-7c69-3add2a8b1c18"
-    }
-  ],
-  "Status": {
-    "Code": 0,
-    "Message": "Success"
+  "iothub-connection-device-id": "emotibit",
+  "iothub-enqueuedtime": "2024-02-14T16:49:56.2200000Z",
+  "DeviceID": "Emotibit",
+  "DeviceType": "emotibit",
+  "DeviceData": {
+    "Timestamp": "1707929392"
   },
-  "TotalPayloads": 43065
+  "SensorReadings": {
+    "EA": [
+      {
+        "Data": 0.03017691,
+        "Millis": 0
+      },
+      {
+        "Data": 0.030176779,
+        "Millis": 134
+      }
+    ],
+    "EL": [
+      {
+        "Data": 26543.40039,
+        "Millis": 0
+      },
+      {
+        "Data": 26543.59961,
+        "Millis": 134
+      }
+    ],
+    "PI": [
+      {
+        "Data": 6421,
+        "Millis": 0
+      },
+      {
+        "Data": 6414,
+        "Millis": 0
+      },
+      {
+        "Data": 6405,
+        "Millis": 0
+      },
+      {
+        "Data": 6424,
+        "Millis": 160
+      }
+    ],
+    "PR": [
+      {
+        "Data": 7675,
+        "Millis": 0
+      },
+      {
+        "Data": 7669,
+        "Millis": 0
+      },
+      {
+        "Data": 7683,
+        "Millis": 0
+      },
+      {
+        "Data": 7697,
+        "Millis": 160
+      }
+    ],
+    "PG": [
+      {
+        "Data": 1223,
+        "Millis": 0
+      },
+      {
+        "Data": 1221,
+        "Millis": 0
+      },
+      {
+        "Data": 1221,
+        "Millis": 0
+      },
+      {
+        "Data": 1232,
+        "Millis": 160
+      }
+    ],
+    "TH": [
+      {
+        "Data": 22.74003029,
+        "Millis": 134
+      }
+    ]
+  },
+  "SensorMetadata": {
+    "BatteryPercentage": 99,
+    "MACAddress": "58:f4:cc:7e:dc:0c",
+    "EmotibitVersion": "V01b"
+  }
 }
 ```
 

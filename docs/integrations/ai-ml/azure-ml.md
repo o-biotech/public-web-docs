@@ -15,11 +15,11 @@ hide_table_of_contents: true
 
 # Storage Access with Azure Machine Learning
 
-Azure Machine Learning empowers developers and data scientists with a wide range of productive experiences for building, training, and deploying machine learning models faster.  IoT Ensemble makes it simple to connect your devices and immediately use its data within Azure Machine Learning.
+Azure Machine Learning empowers developers and data scientists with a wide range of productive experiences for building, training, and deploying machine learning models faster.  Open Biotech makes it simple to connect your devices and immediately use its data within Azure Machine Learning.
 
-## IoT Ensemble Storage Access
+## Open Biotech Storage Access
 
-IoT Ensemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../ingest-process-send/connecting-downstream) for more details.
+Open Biotech provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Azure ML.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
 
 ## Azure Automated Machine Learning - Regression
 
@@ -34,12 +34,6 @@ Data scientists, analysts, and developers across industries can use automated ML
 Make sure that you've created your free [Azure account](https://azure.microsoft.com/en-us/free/services/machine-learning/), and walk through the setup process for a new subscription or use one that you've [already setup](https://ml.azure.com).  With your acccount and subscription in hand, you will also need to make sure you have an [Azure ML workspace](https://portal.azure.com/#create/Microsoft.MachineLearningServices).
 
 Once setup, you can access the [Macine Learning portal](https://ml.azure.com), and dig deeper into the [Azure Machine Learning docs](https://docs.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-ml) on your own.  We'll take you through some ways to start leveraging IoT Ensemble with Azure ML now.  
-
-:::note
-
-If using our Enterprise plan, Azure Machine Learning will already be setup and configured for you in your azure cloud.
-
-:::
 
 ### Configuring Automated ML Dataset
 
@@ -56,16 +50,6 @@ When the dataset create wizard opens, you'll need to input some values.  For **W
 ```console
 https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/coldquery?resultType=JSONLines&flatten=true&lcu-subscription-key={subscription-key}
 ```
-
-:::note
-
-This guide is using data returned from our emulated data, and [getting started blog](https://www.fathym.com/iot/blog/raspberry-pi-dht11-node-red-iot-ensemble-power-bi).  If you would like to use the [emulated data](../../getting-started/emulated-data), add an additional query string parameter of `includeEmulated=true`:
-
-```console
-https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/coldquery?resultType=JSONLines&flatten=true&includeEmulated=true&lcu-subscription-key={subscription-key}
-```
-
-:::
 
 Now input your own values in the **Name** and **Description** text fields, and check the **Skip data validation** checkbox.  With these values entered, select **Next**.
 
