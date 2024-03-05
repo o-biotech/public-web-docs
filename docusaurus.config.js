@@ -32,7 +32,7 @@ module.exports = {
     navbar: {
       logo: {
         alt: 'OpenBiotech',
-        src: 'static/o-biotech-logo.svg',
+        src: 'https://www.fathym.com/iot/img/o-biotech-logo.svg',
       },
       items: [
         {
