@@ -2,16 +2,16 @@ name: o-biotech/public-web-docs
 
 on:
   push:
-    branches: [integration]
+    branches: [integration,feature/**]
   pull_request:
-    branches: [integration]
+    branches: [integration,feature/**]
   workflow_dispatch:
 
 permissions: write-all
 
 env:
   CI: false
-  Branches: integration
+  Branches: integration,feature/**
   MainBranch: integration
   NPMRegistry: https://registry.npmjs.org/
   InstallCommand: npm i
