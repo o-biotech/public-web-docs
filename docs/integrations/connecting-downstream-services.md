@@ -37,7 +37,7 @@ This storage access documentation focuses on our pre-built APIs available to all
 
 The API keys will be located within the API tab in the dashboard.
 
-![API Storage Access](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark.png)
+![API Storage Access](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark_highlights.png)
 
 To quickly copy storage access keys use the ![Icon Copy](https://www.fathym.com/iot/img/screenshots/bt_copy_button.png) button
 

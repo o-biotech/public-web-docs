@@ -42,20 +42,21 @@ module.exports = {
       'cloud-apps/import-custom-apps',
       'cloud-apps/integrate-iot-api',      
     ],
-    "Deep Dive": [
-      {
-        'Device Setup': [
+    //"Deep Dive": [
+      //{
+        //'Device Setup': [
           //'deep-dive/device-setup/overview',
-          'deep-dive/device-setup/iot-best-practice-schema-explained',
-          {
-            Connect: [
-              'deep-dive/device-setup/connect/http',
-            ],
-          },
-        ],
-      },
-    ],
-    
+          //'deep-dive/device-setup/iot-best-practice-schema-explained',
+          //{
+            //Connect: [
+              //'deep-dive/device-setup/connect/http',
+              //'deep-dive/device-setup/connect/postman',
+              //'deep-dive/device-setup/connect/insomnia',
+            //],
+          //},
+        //],
+      //},
+    //],    
     Tutorials: [
       'tutorials/cyton-biosensing-board',
     ],

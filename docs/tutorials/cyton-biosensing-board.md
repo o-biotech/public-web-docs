@@ -65,11 +65,11 @@ Now that we have the board set up, we need to download and install the data stre
 Certain firewalls/virus protection programs may attempt to block the download/install of the file. Be sure to make a firewall exception in order for the application to install/run.
 :::
 
-## Part 3 - Register with Fathym Open Biotech and Create a Device
+## Part 3 - Register with Fathym OpenBiotech and Create a Device
 
-To get started with OpenBiotech’s tools, simply sign up for [Open Biotech](https://dashboard.openbiotech.co/) for free on the Open Biotech website. 
+To get started with OpenBiotech’s tools, simply sign up for [OpenBiotech](https://dashboard.openbiotech.co/) for free on the OpenBiotech website. 
 
-First you will land on the Open Biotech Set Up Configuration. Follow the steps as outlined in the process to configure your cloud infrastructure and register a device. 
+First you will land on the OpenBiotech Set Up Configuration. Follow the steps as outlined in the process to configure your cloud infrastructure and register a device. 
 
 We'll start off with a symmetric key protected device, and can move to other security in the future.  All that's needed for the following sections is the device connection string.  
 
@@ -87,13 +87,13 @@ When connecting devices, the connection is to a cloud-native Azure IoT Hub.  We 
 
 ![OpenBiotech Connection String Prompt](https://www.fathym.com/iot/img/brainflow_connection_string_prompt.png)
 
-2. When prompted, paste your Open Biotech device connection string (copied from the previous step).
+2. When prompted, paste your OpenBiotech device connection string (copied from the previous step).
 
 3. The application will ask you to select which computer port the Cyton is connected to. Type the corresponding port selection and hit enter.
 
 ![OpenBiotech Port Selection](https://www.fathym.com/iot/img/brainflow_port_selection.png)
 
-If everything is correct, the application will start to read and pull data from the Cyton board, and send them to the device created within Open Biotech.
+If everything is correct, the application will start to read and pull data from the Cyton board, and send them to the device created within OpenBiotech.
 
 ![OpenBiotech Datastream](https://www.fathym.com/iot/img/brainflow_datastream.png)
 
