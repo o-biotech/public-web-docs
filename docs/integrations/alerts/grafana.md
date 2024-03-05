@@ -20,7 +20,7 @@ These instructions show how to send email and text alerts using Grafana and Open
 
 ## Step 1: SQL Server
 
-The first step is to call the Open Biotech warm or cold query and load your device data into Microsoft SQL Server. This doc explains how to use a [Logic App to load the data into SQL Server](/launch-cloud-apps/reports-dashboards/sql-server). If you need help loading your Open Biotech data into SQL Server please email support@fathym.com and we'll point you in the right direction.
+The first step is to call the Open Biotech warm or cold query and load your device data into Microsoft SQL Server. This doc explains how to use a [Logic App to load the data into SQL Server](/integrations/reports-dashboards/sql-server). If you need help loading your Open Biotech data into SQL Server please email support@fathym.com and we'll point you in the right direction.
 
 This screenshot shows some sample Open Biotech data loaded in SQL Server.
 
