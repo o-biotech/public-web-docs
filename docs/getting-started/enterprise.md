@@ -18,7 +18,7 @@ hide_table_of_contents: true
 
 To get started with OpenBiotech you first need to create an enterprise. An enterprise is a structure that is made up of OpenBiotech’s default setups and workflows, and all the services, resources, apps or devices that can be configured and committed to it. With an OpenBiotech account you can create multiple separate enterprises, facilitating a scalable and multi-tenant architecture.
 
-To create an enterprise, navigate and sign up/in to [OpenBiotech](https://dashboard.openbiotech.co/) 
+To create an enterprise, navigate and sign up/in to [OpenBiotech](https://dashboard.openbiotech.co/).
 
 ![Biotech Create Enterprise](https://www.fathym.com/img/screenshots/biotech_create_enterprise.png)
 

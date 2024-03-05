@@ -68,7 +68,7 @@ Next, you will be prompted to ‘Use an existing subscription’ or ‘Create ne
 
 ![CLI Azure Subscription Selection](https://www.fathym.com/img/screenshots/cli_sub_select.png)
 
-If you select ‘use existing subscription’ the CLI prompts you to log in to Azure (opening a browser login window). If you do not already have an Azure account, you can sign up instead 
+If you select ‘use existing subscription’ the CLI prompts you to log in to Azure (opening a browser login window). If you do not already have an Azure account, you can sign up instead. 
 
 If you select the ‘use existing subscription option’, once authentication is complete the CLI will list out all your Azure subscriptions and you must select one. If you're new to Azure, a subscription called ‘Pay-As-You-Go’ is automatically created by Azure.
 
@@ -106,7 +106,7 @@ There are three data flows, one is required and two are optional. Each flow is b
 
 - **Hot (optional):** The hot flow provides data immediately, with no data storage, into applications such as real-time dashboards. When you select this option OpenBiotech integrates with GitHub and sets up a repository in your preferred organization.
 
-Select the check boxes for the cold and hot flows if you wish to include these options. If you select the hot storage option, you will be prompted to sign into GitHub (If you do not yet have GitHub, sign up [here](https://github.com/).
+Select the check boxes for the cold and hot flows if you wish to include these options. If you select the hot storage option, you will be prompted to sign into GitHub (If you do not yet have GitHub, sign up [here](https://github.com/).)
 
 ![Biotech Storage Flows Selection Isolated](https://www.fathym.com/img/screenshots/biotech_sf_selections_isolated.png)
 

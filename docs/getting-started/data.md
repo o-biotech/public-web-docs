@@ -64,7 +64,7 @@ To connect a physical device to IoT Hub, a Device Connection String is provided.
 ![Biotech IoT Device Connection String](https://www.fathym.com/img/screenshots/biotech_device_connection_String.png)
 
 :::info
-This Device Connection String consists of the Hostname, Device ID that was just selected and a Shared Access Key. This Connecting String is ready to be used on physical devices. Adding a connection string to a device is a different process for different devices. As an example, you can reference the [Cyton tutorial](https://www.openbiotech.co/docs/tutorials/cyton-biosensing-board).
+This Device Connection String consists of the Hostname, Device ID that was just selected and a Shared Access Key. This Connection String is ready to be used on physical devices. Adding a connection string to a device is a different process for different devices. As an example, you can reference the [Cyton tutorial](https://www.openbiotech.co/docs/tutorials/cyton-biosensing-board).
 :::
 
 ### Simulated device data: 
