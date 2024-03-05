@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   title: 'Fathym OpenBiotech',
   tagline: 'Experience OpenBiotech in minutes | No credit card required',
-  url: 'https://www.fathym.com',
+  url: 'https://www.openbiotech.co',
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -66,7 +66,7 @@ module.exports = {
         //  target: '_top',
         //},
         {
-          to: 'https://www.fathym.com/dashboard/',
+          to: 'https://dashboard.openbiotech.co/',
           label: 'Sign In',
           position: 'right',
           target: '_top',
