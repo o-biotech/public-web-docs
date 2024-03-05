@@ -87,7 +87,7 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'https://www.fathym.com/dashboard',
+              to: 'https://dashboard.openbiotech.co/',
             },
             // {
             //   label: 'Pricing',
