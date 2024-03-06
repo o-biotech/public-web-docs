@@ -15,7 +15,7 @@ hide_table_of_contents: true
 
 # Import Custom Applications Overview
 
-In the previous section we showed how easy it is to launch a dashboard template auto-populated with device data. However, it is also very straightforward to import custom apps or dashboards and integrate them with IoT Ensemble or any other APIs. 
+In the previous section we showed how easy it is to launch a dashboard template auto populated with device data. However, it is also very straightforward to import custom apps or dashboards and integrate them with OpenBiotech or any other APIs. 
 
 ## Import an app to the Fathym Platform 
 
@@ -51,7 +51,7 @@ Navigate to the main dashboard again and you will see the project deploying in t
 
 ## Import additional routes 
 
-As detailed in the Launch Cloud Apps section, the Fathym platform enables you to assemble, deploy and host web applications in a highly modular fashion. To add an additional route to your new project, enter your project in the dashboard and then Add Route.  
+As detailed in [the overview](https://www.openbiotech.co/docs/cloud-apps/overview), Fathym Platform enables you to assemble, deploy and host applications in a highly modular fashion.   
 
 ![Add Route](https://www.fathym.com/iot/img/screenshots/project_add_route.png)
 
@@ -69,4 +69,4 @@ As was also detailed earlier, you can add multiple child applications to each ro
 
 ## Proxy
 
-One of the application processor types listed above is Proxy and these are used as the integration layer of a project. There are two proxy options: API Proxy and SPA proxy. In the next section we will add an API proxy to connect our application to IoT Ensemble APIs so that it is populated with emulated or custom device data. 
+One of the application processor types listed above is Proxy and these are used as the integration layer of a project. There are two proxy options: API Proxy and SPA proxy. In the next section we will add an API proxy to connect our application to OpenBiotech APIs so that it is populated with simulated or real device data. 

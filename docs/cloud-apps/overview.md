@@ -15,11 +15,11 @@ hide_table_of_contents: true
 
 # Fathym Platform Overview
 
-The Fathym platform is a central hub for deploying and hosting application endpoints and integrating these endpoints with APIs: Whether APIs for databases, content management systems, or native integration with Fathym IoT Ensemble and Habistack APIs. 
+Fathym Platform is a central hub for assembling, deploying and hosting cloud applications and integrating with APIs: Whether APIs for databases, content management systems, or native integration with Fathym OpenBiotech, IoT Ensemble and Habistack APIs. 
 
-Fathym gives you a complete DevOps (CI/CD) workflow, pre-configured automations and open-source templates for assembling data-driven and cloud-based web applications, without needing any cloud or web development expertise. Get started with out-of-the box launch pads and easily fork templates to GitHub and make them your own or import custom code with GitHub or NPM. 
+Fathym Platform provides a complete DevOps (CI/CD) workflow, pre-configured automations and open-source templates for assembling data-driven and cloud-based web applications, without needing any DevOps or web development expertise. Get started with out-of-the box launch pads and easily fork templates to GitHub and make them your own or import custom code with GitHub or NPM. 
 
-Here we will provide a quick overview of OpenBiotech and Fathym’s default application architecture and hierarchy, and in the following sections will show how to install a pre-configured launch pad or import, integrate and deploy custom apps. 
+Here we will provide a quick overview of Fathym Platforms default application architecture and hierarchy, and in the following sections will show how to install a pre-configured launch pad or import, integrate and deploy custom apps. 
 
 ## The Fathym Application Structure
 

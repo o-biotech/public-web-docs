@@ -17,9 +17,9 @@ hide_table_of_contents: true
 
 ## DevOps >> AutoMagic
 
-OpenBiotech (via the Fathym Platform) gives users an intuitive and comprehensive workflow for deploying applications and integrating them with APIs. OpenBiotech also goes a step further than this through pre-configured automations. 
+Fathym Platform gives users an intuitive and comprehensive workflow for deploying applications and integrating them with APIs. It also goes beyond this by providing pre-configured automations that eliminate the steps involved in manually integrating and deploying apps.  
 
-Instead of importing and deploying a dashboard app and manually integrating with IoT Ensemble device data via an API proxy, you can instead install an automated launch pad that deploys a biometric dashboard auto populated with device data streaming in from IoT Ensemble. 
+Instead of importing and deploying a dashboard app and manually integrating with OpenBiotech device data via an API proxy, you can instead install an automated launch pad that deploys a biometric dashboard auto populated with simulated or real device data. 
 
 ## Low-Code Units (LCUs) 
 

@@ -19,7 +19,7 @@ hide_table_of_contents: true
 
 # Connecting Downstream Services
 
-The main goal of an IoT Solution is the need to collect device data and bring it into a set of preferred tools for visualization, AI/ML, application development, and more.  The following is a high level look at the APIs available for storage access and how to use them to get data downstream to other services.
+A common use case for exploring and analyzing collected device data is to send data to external services and tools for analytics, alerts, machine learning models, application development, and more. The following is a high level look at the APIs available for storage access and how to use them to send data downstream to other services.
 
 ## API Storage Access
 
@@ -71,7 +71,7 @@ The API Access Token can be located in the API section as described above.
 
 ### Hot Storage
 
-Hot Storage refers to data that must be accessible immediately and reliably. Data coming from hot storage is known as “data streams.” In order to connect to this API, you will use the Hot Storage URL, API Access Token and connect with a SignalR client in any language. SignalR is an open-source library that facilitates to add real-time functionality to web applications. Using this, the server application can push real-time data to the client. This API can be viewed in action on your main dashboard, on the 'Streaming' tab.
+Hot Storage refers to data that must be accessible immediately and reliably (referred to as “data streams"). To connect to this API, use the Hot Storage URL, API Access Token and a SignalR client in any language. SignalR is an open-source library that facilitates real-time functionality in web applications. Using this, the server application can push real-time data to the client. You can see this API in action in the 'Streaming' tab of the device data dashboard. 
 
 ```cli
 https://dashboard.openbiotech.co/api/data/hot/connect
@@ -97,7 +97,7 @@ The purpose of the storage access APIs is to provide a secure way to access data
  The purpose of the Storage Access APIs is to give rapid access to device data in a number of different formats that is ready to be used with other systems. In the next sections, we will guide you on how to combine these APIs to send device data downstream to various third-party services for dashboards (Power BI, Grafana, Tableau, SQL Server), alerts (Azure Logic Apps, Grafana) and AI/ML (Azure ML).
 
 :::tip
-Need help installing Git and cURL for Windows 11/10? Here's a helpful [tutorial](https://www.youtube.com/watch?v=uBUHJOE4oP8) and [Git download link](https://git-scm.com/)
+Need help installing Git and cURL for Windows 11/10? Here's a helpful [tutorial](https://www.youtube.com/watch?v=uBUHJOE4oP8) and [Git download link](https://git-scm.com/).
 :::
 
 

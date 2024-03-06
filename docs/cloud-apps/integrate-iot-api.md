@@ -15,13 +15,13 @@ hide_table_of_contents: true
 
 # Integrating with IoT Ensemble APIs Overview
 
-Serving as a reverse proxy, an API Proxy processor makes it possible to access APIs without divulging sensitive security keys.  
+Serving as a reverse proxy, an API Proxy processor makes it possible to access APIs without divulging sensitive security keys. 
 
-To connect to IoT Ensemble APIs or any other APIs, we need to configure an API proxy by adding it to our project (that was set up in the previous section). 
+To connect to OpenBiotech APIs or any other APIs, we need to configure an API proxy by adding it to our project (that was set up in the previous section). Let’s create an API proxy for OpenBiotech's Warm API. 
 
 ## Configure an API Proxy 
 
-To configure an API proxy, you need to add a new route to your project. Click the edit button to enter the project dashboard and then click Add Route. A Create Application form will pop up. 
+To configure an API proxy, you need to add a new route to your project. Click the edit button to enter the project dashboard and then click Add Route. A Create Application form will pop up.
 
 ![Application Form](https://www.fathym.com/iot/img/screenshots/create_application_form.png)
 
@@ -31,36 +31,30 @@ First, select Proxy and API in the Type fields.
 
 Now you need to give the proxy a name, description and a path for the route.  
 
-**Name:** ```IoT Ensemble API Proxy``` 
+**Name:** ```OpenBiotech Warm API Proxy``` 
 
-**Description:** ```The API Proxy for IoT Ensemble APIs```  
+**Description:** ```The API Proxy for the OpenBiotech Warm API```  
 
-**Route:** ```/api/iot```   
+**Route:** ```/api/openbiotech```   
 
-The next steps are to complete the Inbound Path, API Root and Security fields.  
+The next steps are to complete the Inbound Path, API Root and Security fields. To do this, we need to access the [OpenBiotech APIs dashboard](https://dashboard.openbiotech.co/apis).  
 
-**Inbound Path:** ```api/iot```
+![API Keys](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark.png)
 
-**API Root:** ```https://fathym-cloud-prd.azure-api.net/fcp-iotensemble```
+For the Warm Storage APIs, use the copy button to copy the API URL and paste it in the API proxy’s API Root field. Likewise, use the copy button to copy the API Access Token and paste the value after _Authorization~Bearer _ in the Security field.  
 
-**Security:** ```lcu-subscription-key~<API Key Value>``` 
+**Inbound Path:** ```api/openbiotech```
 
-As you can see, for the Security field you need to add your IoT Ensemble API key.  
+**API Root:** ```https://dashboard.openbiotech.co/api/data/warm/explorer```
 
-To retrieve this, navigate to the [IoT Ensemble Dashboard](https://www.fathym.com/dashboard/iot) and copy the primary key value. 
+**Security:** ```Authorization~Bearer <API ACCESS TOKEN>``` 
 
-![IoT API Keys](https://www.fathym.com/iot/img/screenshots/iot_api_keys.png)
-
-Then simply paste the value after ```lcu-subscription-key~``` in the security field.  
-
-The Allowed Methods field can remain blank.  
-
-Once these steps are completed, click save application. An API proxy for IoT Ensemble APIs is now configured for the project and will retrieve emulated and/or device data streaming from IoT Ensemble.  
+Once these steps are completed, click Save Application. An API proxy for OpenBiotech Warm API is now configured for the project and will retrieve simulated or real device data streaming from OpenBiotech. 
 
 ## Configure additional API integrations  
 
-With Fathym’s modular application structure, additional API integrations can be added as child applications to the project’s API route. For example, the route is configured as /api and the API proxy for IoT Ensemble APIs is configured as a child application /iot within that. The path is then /api/iot.  
+With Fathym’s modular application structure, additional API integrations can be added as child applications to the project’s API route. For example, the route is configured as /api and an API proxy for IoT Ensemble could be configured as a child application /iot within that. The path is then /api/iot. 
 
-The API Proxy for [Habistack Dashboard](https://www.fathym.com/dashboard/forecast) could be configured as /api/forecast, and if an API proxy is configured for Freeboard it could be /api/freeboard. When multiple API proxies are configured under an /api route, this is how it looks in the dashboard. 
+The API Proxy for Habistack could be configured as /api/forecast, and if an API proxy is configured for Freeboard, it could be /api/freeboard. When multiple API proxies are configured under an /api route, this is how it looks in the dashboard. 
 
 ![Biotech API Routes](https://www.fathym.com/iot/img/screenshots/biotech_api_routes.png)
