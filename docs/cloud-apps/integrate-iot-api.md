@@ -13,7 +13,7 @@ keywords:
 hide_table_of_contents: true
 ---
 
-# Integrating with IoT Ensemble APIs Overview
+# Integrating with OpenBiotech APIs Overview
 
 Serving as a reverse proxy, an API Proxy processor makes it possible to access APIs without divulging sensitive security keys. 
 
