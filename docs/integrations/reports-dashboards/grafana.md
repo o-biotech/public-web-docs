@@ -23,13 +23,13 @@ The OpenBiotech Dashboard displays your API Keys.
 For the Cold Query, use this URL:
 
 ```console
-Request URL: https://dashboard.openbiotech.co/api/data/cold/execute
+https://dashboard.openbiotech.co/api/data/cold/execute
 ```
 
 For the Warm Query, use this URL:
 
 ```console
-Request URL: https://dashboard.openbiotech.co/api/data/warm/explorer
+https://dashboard.openbiotech.co/api/data/warm/explorer
 ```
 
 ## Configuring Grafana Data Source
