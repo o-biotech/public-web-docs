@@ -34,7 +34,7 @@ Request URL: https://dashboard.openbiotech.co/api/data/warm/explorer
 
 ## Configuring Grafana Data Source
 
-From the Grafana Home, click on Configuration > Data Sources 
+From the Grafana Home, click on Configuration > Data Sources. 
 
 ![Grafana Data Sources](https://www.fathym.com/iot/img/screenshots/grafana-1.jpg)
 

@@ -11,6 +11,7 @@ keywords:
     - notifications
     - email
     - text
+    - biotech
 hide_table_of_contents: true
 ---
 
@@ -34,7 +35,7 @@ You need to create firewall rules for the Grafana ip addresses so they have perm
 
 ## Step 2: Configure the Grafana Data Source
 
-From the Grafana Home, click on Configuration > Data Sources 
+From the Grafana Home, click on Configuration > Data Sources. 
 
 ![Grafana Data Sources](https://www.fathym.com/iot/img/screenshots/grafana-1.jpg)
 
@@ -60,7 +61,7 @@ DateTime as time,
 Temperature
 FROM [grafana-data]`
 
-Modify the query to fit the properties of your IoT Ensemble data.
+Modify the query to fit the properties of your OpenBiotech data.
 :::
 
 ## Step 4: Configure the Grafana Alert

@@ -12,12 +12,13 @@ keywords:
     - notifications
     - email
     - text
+    - biotech
 hide_table_of_contents: true
 ---
 
 # Sending Email & Text Alerts using Azure Logic Apps
 
-These instructions show how to use Logic Apps to call the Open Biotech warm query every 12 hours and check if the Temperature of any of the results is greater than 45. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
+These instructions show how to use Logic Apps to call the OpenBiotech warm query every 12 hours and check if the Temperature of any of the results is greater than 45. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
 
 ![Completed Steps](https://www.fathym.com/iot/img/screenshots/alerts/completed-steps.png)
 
@@ -27,7 +28,7 @@ For the first step of the Logic App, search for 'HTTP'.
 
 ![Search for HTTP](https://www.fathym.com/iot/img/screenshots/alerts/search-for-http.png)
 
-Configure the HTTP trigger with the following settings from your IoT Ensemble account. This example is using the Warm Query.
+Configure the HTTP trigger with the following settings from your OpenBiotech account. This example is using the Warm Query.
 - Method: `GET`
 - URI: `https://dashboard.openbiotech.co/api/data/warm/explorer`
 - Header: `Authorization: Bearer ***********`
@@ -36,7 +37,7 @@ Configure the HTTP trigger with the following settings from your IoT Ensemble ac
 ![HTTP Settings](https://www.fathym.com/iot/img/screenshots/alerts/http-settings.png)
 
 :::info
-In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the Open Biotech Warm Query for new data.
+In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the OpenBiotech Warm Query for new data.
 :::
 
 ## Step 2: Parse JSON
@@ -105,6 +106,6 @@ Texting via email is easy. Type in the recipient's mobile number in front of the
 
 ## Overview of Steps
 
-Here's an overview of the entire Logic App with the steps collapsed. The Logic App calls the IoT Ensemble warm query every 12 hours and checks if the Temperature of any of the results is greater than 45. If so, it sends an email alert.
+Here's an overview of the entire Logic App with the steps collapsed. The Logic App calls the OpenBiotech warm query every 12 hours and checks if the Temperature of any of the results is greater than 45. If so, it sends an email alert.
 
 ![Completed Steps](https://www.fathym.com/iot/img/screenshots/alerts/completed-steps.png)
