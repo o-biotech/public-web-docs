@@ -6,7 +6,7 @@ module.exports = {
   url: 'https://www.openbiotech.co',
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://www.fathym.com/iot/img/openBiotechFavicon.svg',
   organizationName: 'o-biotech', // Usually your GitHub org/user name.
   projectName: 'public-web-docs', // Usually your repo name.
   themeConfig: {
