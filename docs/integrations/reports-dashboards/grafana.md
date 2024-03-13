@@ -1,5 +1,5 @@
 ---
-title: Developers - Storage Access - Grafana
+title: Grafana
 hide_title: true
 sidebar_label: Grafana
 keywords:

@@ -1,5 +1,5 @@
 ---
-title: Developers - Alerts - Logic Apps
+title: Azure Logic Apps
 hide_title: true
 sidebar_label: Azure Logic Apps 
 keywords:

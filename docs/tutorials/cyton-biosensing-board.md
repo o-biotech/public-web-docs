@@ -1,5 +1,5 @@
 ---
-title: Connecting OpenBCI's Cyton Hardware and Streaming Live Sensor Data with OpenBiotech
+title: OpenBCI Cyton Hardware
 hide_title: true
 sidebar_label: Connect OpenBCI's Cyton Hardware to OpenBiotech
 keywords:

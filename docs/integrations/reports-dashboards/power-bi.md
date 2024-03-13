@@ -1,5 +1,5 @@
 ---
-title: Developers - Storage Access - Power BI
+title: Power BI
 hide_title: true
 sidebar_label: Power BI
 keywords:
