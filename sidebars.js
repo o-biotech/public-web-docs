@@ -10,6 +10,13 @@ module.exports = {
       'getting-started/devices',
       'getting-started/data',
     ],
+    "Platform":[
+      {        
+          'Dashboard': [
+            'platform/dashboard/device-data-dashboard', 
+        ]
+      },
+    ],
     "Integrations":[
       'integrations/connecting-downstream-services',
       {        
