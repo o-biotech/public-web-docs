@@ -16,7 +16,7 @@ keywords:
 hide_table_of_contents: true
 ---
 
-# Overview 
+# Device Data Dashboard Overview 
 
 Once you have completed the getting started workflow you will land in the Device Data Dashboard. The device data dashboard is a turnkey dashboard that provides immediate access for exploring the device data (whether real or simulated) that was configured in the getting started workflow or for any additional devices that are connected to OpenBiotech.
 
