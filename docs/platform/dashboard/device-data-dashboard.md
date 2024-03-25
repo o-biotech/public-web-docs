@@ -330,5 +330,5 @@ And this is how the corresponding payloads tab looks:
 The Device Data Dashboard allows you to manually modify your query using the Custom tab. This dashboard uses Kusto Query Language, or KQL. KQL does not modify data and is a read-only request language which is solely used to fetch, filter, analyze, and visualize data. It excels at handling large volumes of structured and semi-structured data, and it is particularly useful in Azure Data Explorer, where it enables fast, interactive analysis of huge amounts of data.
 
 :::tip
-Learn more about how to use KQL [here](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/).
+Learn more about how to use KQL [here](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/). Here is also a helpful [cheat sheet](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/sql-cheat-sheet) if you're used to using SQL.
 :::
