@@ -13,7 +13,10 @@ module.exports = {
     "Platform":[
       {        
           'Dashboard': [
-            'platform/dashboard/device-data-dashboard', 
+            'platform/dashboard/device-data-dashboard',
+            'platform/dashboard/manage-dashboards', 
+            'platform/dashboard/manage-devices',
+            'platform/dashboard/manage-storage',
         ]
       },
     ],

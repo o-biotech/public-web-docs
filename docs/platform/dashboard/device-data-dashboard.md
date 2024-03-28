@@ -137,7 +137,7 @@ For example, here is that payload for the EmotBit device in full:
   },
   "SensorMetadata": {
     "BatteryPercentage": 79,
-    "MACAddress": "58:f4:cc:7e:dc:0c",
+    "MACAddress": "XX:XX:XX:XX:XX:XX",
     "EmotibitVersion": "V01b"
   }
 }
@@ -276,7 +276,7 @@ For example, here is the equivalent payload that we just examined for the payloa
       },
       "SensorMetadata": {
         "BatteryPercentage": 79,
-        "MACAddress": "58:f4:cc:7e:dc:0c",
+        "MACAddress": "XX:XX:XX:XX:XX:XX",
         "EmotibitVersion": "V01b"
       }
     }
