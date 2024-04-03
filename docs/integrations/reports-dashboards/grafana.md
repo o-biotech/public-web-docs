@@ -14,7 +14,7 @@ hide_table_of_contents: true
 
 # Storage Access with Grafana
 
-Grafana has many options for importing data. We recommend using the [JSON API data source for Grafana](https://github.com/marcusolsson/grafana-json-datasource) plugin to load your OpenBiotech data. It's a data source plugin for loading JSON data from REST APIs into Grafana.
+Grafana has many options for importing data. We recommend using the JSON API data source for Grafana which is used for loading JSON data from REST APIs into Grafana.
 
 The OpenBiotech Dashboard displays your API Keys. 
 
