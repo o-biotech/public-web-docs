@@ -14,17 +14,15 @@ hide_table_of_contents: true
 
 # Storage Access with Tableau
 
-Tableau Desktop has many options for importing data. You can import data from a file or from a server. Unfortunately, there is no option for loading data from a REST API, so let's use the JSON file option and create a historical report.
+Tableau Desktop has many options for importing data. You can import data from a file or from a server. Unfortunately, there is no free option for loading data from a REST API, so let's use the JSON file option and create a historical report.
 
-At the bottom of the IoT Ensemble Dashboard is your Storage Access. 
+The OpenBiotech Dashboard displays your API Storage Access Keys. 
 
-![Storage Access Try It](https://www.fathym.com/iot/img/screenshots/storage-access-tryit.png)
+![API Storage Access](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark.png)
 
-In the Try It section, click the GET button for the /ColdQuery and execute it. You should see the following: 
+In the Cold Storage APIs section, click the "Download Last 7 Days of Data" button and execute it.  
 
-![Storage Access Cold Query](https://www.fathym.com/iot/img/screenshots/api-cold-storage.jpg)
-
-In the Response Body, click the 'Download File' link to download the json file.
+![API Cold Download Button](https://www.fathym.com/iot/img/screenshots/biotech-cold-download-button-highlight.png)
 
 ## Loading JSON into Tableau
 

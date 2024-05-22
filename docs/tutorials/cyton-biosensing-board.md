@@ -35,6 +35,10 @@ Program only functions for Windows OS currently.
 :::info
 OpenBiotech's IoT streaming application can be downloaded here: https://github.com/o-biotech/openbiotech-iot-stream-brainflow/releases
 :::
+- **Fathym OpenBiotech account**
+:::info
+Sign up for OpenBiotech here: https://www.openbiotech.co/
+:::
 
 ## Part 1 - Hooking Up Your Hardware
 1. You will need to plug in your USB “dongle” into your computer. Ensure that the small toggle on your USB dongle is set to “GPIO_6.”
