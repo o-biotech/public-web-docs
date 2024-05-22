@@ -113,7 +113,7 @@ Now that your Arduino can talk to your ESP32, it's time to put some code on your
 
 First, copy the following code:
 
-```
+```js
 #include "Esp32MQTTClient.h"
 #include "EmotiBit.h"
 #include "time.h"
