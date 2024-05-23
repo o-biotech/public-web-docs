@@ -101,4 +101,4 @@ If everything is correct, the application will start to read and pull data from 
 
 ![OpenBiotech Datastream](https://www.fathym.com/iot/img/brainflow_datastream.png)
 
-From there, you can use IoT Ensemble’s built in [API endpoints](https://www.openbiotech.co/docs/integrations/connecting-downstream) to query and access your data.
+From there, you can use OpenBiotech's built in [API endpoints](https://www.openbiotech.co/docs/integrations/connecting-downstream) to query and access your data.

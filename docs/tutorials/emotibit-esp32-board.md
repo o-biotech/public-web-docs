@@ -19,7 +19,7 @@ hide_table_of_contents: true
 
 ![Emotibit ESP32 Board](https://www.fathym.com/iot/img/screenshots/emotibit-device.png)
 
-In this tutorial, we will be taking an [Emotibit](https://www.emotibit.com/) (An ESP32-based health monitoring board), reading it's multiple sensor datastreams, and send real-time messages to OpenBiotech.
+In this tutorial, we will be taking an [Emotibit](https://www.emotibit.com/) (An ESP32-based health monitoring board), reading its multiple data streams, and send real-time messages to OpenBiotech.
 
 ## Things you will need
 
@@ -49,13 +49,13 @@ Only follow the "Stack your Emotibit" section, we will be using a different appr
 
 ## Part 2 - Installing Arduino IDE and Necessary Software
 
-Next, we will need to install all of the required software/libraries on your computer
+Next, we will need to install all of the required software/libraries on your computer.
 
 ### Installing Arduino IDE
-Download your version of Arudino IDE [here](https://www.arduino.cc/en/software). Follow all of the steps in the wizard to complete installation (You can keep all of the default options the same)
+Download your version of Arudino IDE [here](https://www.arduino.cc/en/software). Follow all of the steps in the wizard to complete installation (You can keep all of the default options the same).
 
 ### Add Sensor Libraries
-Once that is complete, we need to install some libraries. Click the following links to download each zip folder
+Once that is complete, we need to install some libraries. Click the following links to download each zip folder.
 
 [Download the ESP32 Azure IoT Arduino Library (ZIP)](https://github.com/ttrichar/ESP32_AzureIoT_Arduino/archive/refs/heads/master.zip)
 
@@ -69,7 +69,7 @@ This will open a file browser. Navigate to your downloaded package, select the z
 
 ### Add Additional Library
 
-In the top toolbar navigate to Tools -> Manage Libraries. On the next screen, type "NTPClient" into the search bar. A library with the same name should show up in the list. Click "Install", and then "Close"
+In the top toolbar navigate to Tools -> Manage Libraries. On the next screen, type "NTPClient" into the search bar. A library with the same name should show up in the list. Click "Install", and then "Close".
 
 ### Add ESP32 Board Definition
 In order for us to work with the ESP32, we need to add a board "definition".
@@ -82,13 +82,13 @@ https://dl.espressif.com/dl/package_esp32_index.json
 
 ![Arduino Manager URL](https://www.fathym.com/iot/img/screenshots/add-board-definition.png)
 
-Take the link from the previous step, and paste it into the "Additional Boards Manager URLs" field (highlighted above in red). Click "OK"
+Take the link from the previous step, and paste it into the "Additional Boards Manager URLs" field (highlighted above in red). Click "OK".
 
 3. Next, in the top toolbar, click Tools -> Board: "Name of Board" -> Boards Manager..., as shown below:
 
 ![Arduino Boards Manager](https://www.fathym.com/iot/img/screenshots/boards-manager.png)
 
-In the next screen, type "esp32" into the search bar. A board definition with the same name will appear, click "Install", then click "Close" (as shown below)
+In the next screen, type "esp32" into the search bar. A board definition with the same name will appear, click "Install", then click "Close" (as shown below).
 
 ![Arduino ESP32 Definition](https://www.fathym.com/iot/img/screenshots/esp32-board-definition.png)
 
@@ -628,17 +628,17 @@ Next, take the YourDeviceID portion of your connection string, and paste it into
     - PR - PPG Red
     - PG - PPG Green
 
-Once you have set your values, save the config.txt file and remove the SD card from your PC. Place it back into your Emotibit device
+Once you have set your values, save the config.txt file and remove the SD card from your PC. Place it back into your Emotibit device.
 
 ## Part 6 - Verify and Upload Your Code
 
-Now it is time to bring your ESP32 to life! In the top left corner of the Arduino IDE, click the "Verify" button, which looks like a checkbox (shown below)
+Now it is time to bring your ESP32 to life! In the top left corner of the Arduino IDE, click the "Verify" button, which looks like a checkbox (shown below).
 
 ![Arduino Verify Code](https://www.fathym.com/iot/img/screenshots/verify-code.png)
 
 This will compile your code, and ensure that your code has no errors like missing libraries or incorrect syntax.
 
-Once this is complete, click on the "Upload" button, which looks like a horizontal arrow, and is right next to the "Verify" button (shown below)
+Once this is complete, click on the "Upload" button, which looks like a horizontal arrow, and is right next to the "Verify" button (shown below).
 
 ![Arduino Upload Code](https://www.fathym.com/iot/img/screenshots/upload-code.png)
 
@@ -646,7 +646,7 @@ This will take your code, and flash it to the ESP32 board. You will see some red
 
 ![Arduino Upload Complete](https://www.fathym.com/iot/img/screenshots/done-uploading.png)
 
-Your ESP32 should now be taking sensor readings, and sending the information up to OpenBiotech If you want to see a live view of your code running, click Tools -> Serial Monitor in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "2000000"
+Your ESP32 should now be taking sensor readings, and sending the information up to OpenBiotech. If you want to see a live view of your code running, click Tools -> Serial Monitor in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "2000000".
 
 Once you confirm that messages are sending correctly, you can now go to [OpenBiotech](https://www.openbiotech.co/dashboard/) and see your messages in real time.
 
@@ -738,6 +738,6 @@ If you have done everything correctly, your payloads should look something like 
   }
 }
 ```
-At the top, you will see your DeviceID, as well as a timestamp, represented in epoch time.
+At the top, you will see your DeviceID as well as a timestamp, represented in epoch time.
 
-Next, under the "SensorReadings" section, you will see an object for each of the typetags you set in the config file. Each typetag will contain an array of readings. Each reading will have a "Data" value (the actual value from the emotibit) and a "Millis" value. The "Millis" value is the time difference between the timestamp value, and the time that the actual sensor was polled.
+Next, under the "SensorReadings" section, you will see an object for each of the typetags you set in the config file. Each typetag will contain an array of readings. Each reading will have a "Data" value (the actual value from the emotibit) and a "Millis" value. The "Millis" value is the time difference between the timestamp value and the time that the actual sensor was polled.
