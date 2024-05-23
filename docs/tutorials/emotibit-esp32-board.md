@@ -573,7 +573,7 @@ Next, we will need to add the necessary config file to your Emotibit's SD card, 
 
 ## Part 5 - Configuring Fathym OpenBiotech
 
-Before we can tell your device where to send data, we first need somewhere to send the data. There are a number of different ways this can be accomplished, with OpenBiotech the focus is helping you leverage best practice cloud IoT technology. Here we'll be using the Azure IoT Hub to connect devices to a shared data flow, and then make it avaiable downstream for use in other applications.
+Before we can tell your device where to send data, we first need somewhere to send the data. There are a number of different ways this can be accomplished, with OpenBiotech the focus is helping you leverage best practice cloud IoT technology. Here we'll be using the Azure IoT Hub to connect devices to a shared data flow, and then make it available downstream for use in other applications.
 
 Follow the [Getting Started](https://www.openbiotech.co/docs/getting-started/enterprise) steps to create a new enterprise. If you already have an enterprise created, skip ahead to the [Devices](https://www.openbiotech.co/docs/getting-started/devices) section to create your device. Once you have your device created, continue to the [Data](https://www.openbiotech.co/docs/getting-started/data) section.
 
@@ -738,6 +738,6 @@ If you have done everything correctly, your payloads should look something like 
   }
 }
 ```
-At the top, you will see your DeviceID as well as a timestamp, represented in epoch time.
+At the top you will see your DeviceID as well as a timestamp represented in epoch time.
 
 Next, under the "SensorReadings" section, you will see an object for each of the typetags you set in the config file. Each typetag will contain an array of readings. Each reading will have a "Data" value (the actual value from the emotibit) and a "Millis" value. The "Millis" value is the time difference between the timestamp value and the time that the actual sensor was polled.
