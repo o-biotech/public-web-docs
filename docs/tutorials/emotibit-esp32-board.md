@@ -573,7 +573,7 @@ Next, we will need to add the necessary config file to your Emotibit's SD card, 
 
 ## Part 5 - Configuring Fathym OpenBiotech
 
-Before we can tell your device where to send data, we first need somewhere to send the data. There are a number of different ways this can be accomplished, with OpenBiotech the focus is helping you leverage best practice cloud IoT technology. Here we'll be using the Azure IoT Hub to connect devices to storage containers, and then make it available downstream for use in other applications.
+Before we can tell your device where to send data, we first need somewhere to send the data. There are a number of different ways this can be accomplished, with OpenBiotech the focus is helping you leverage best practice cloud IoT technology. Here we'll be using the Azure IoT Hub to connect devices to storage containers and then make it available downstream for use in other applications.
 
 Follow the [Getting Started](https://www.openbiotech.co/docs/getting-started/enterprise) steps to create a new enterprise, create a [Device](https://www.openbiotech.co/docs/getting-started/devices) and flow [Data](https://www.openbiotech.co/docs/getting-started/data).
 
