@@ -1,7 +1,7 @@
 ---
-title: Emotibit's ESP32
+title: EmotiBit's ESP32
 hide_title: true
-sidebar_label: Connect Emotibit's ESP32-based Board to OpenBiotech
+sidebar_label: Connect EmotiBit's ESP32-based Board to OpenBiotech
 keywords:
     - iot
     - OpenBiotech
@@ -15,17 +15,17 @@ keywords:
 hide_table_of_contents: true
 ---
 
-# Connecting Emotibit's ESP32-based Board and Streaming Live Sensor Data with Fathym OpenBiotech
+# Connecting EmotiBit's ESP32-based Board and Streaming Live Sensor Data with Fathym OpenBiotech
 
-![Emotibit ESP32 Board](https://www.fathym.com/iot/img/screenshots/emotibit-device.png)
+![EmotiBit ESP32 Board](https://www.fathym.com/iot/img/screenshots/emotibit-device.png)
 
-In this tutorial, we will be taking an [Emotibit](https://www.emotibit.com/) (An ESP32-based health monitoring board), reading its multiple data streams, and send real-time messages to OpenBiotech.
+In this tutorial, we will be taking an [EmotiBit](https://www.emotibit.com/) (An ESP32-based health monitoring board), reading its multiple data streams, and send real-time messages to OpenBiotech.
 
 ## Things you will need
 
-- **Emotibit Bundle** 
+- **EmotiBit Bundle** 
 :::info
-Emotibit Bundle can be purchased at: https://shop.openbci.com/products/all-in-one-emotibit-bundle
+EmotiBit Bundle can be purchased at: https://shop.openbci.com/products/all-in-one-emotibit-bundle
 :::
 - **A Windows computer/laptop PC operating system**
 :::note
@@ -42,9 +42,9 @@ Sign up for OpenBiotech here: https://www.openbiotech.co/
 
 ## Part 1 - Hooking Up Your Hardware
 
-First, we need to attach the male headers of the ESP32 board to the Emotibit sensor board. For more info on how to do this, look at the "Stack Your Emotibit" section of this [tutorial](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Getting_Started.md#stack-your-emotibit). 
+First, we need to attach the male headers of the ESP32 board to the EmotiBit sensor board. For more info on how to do this, look at the "Stack Your EmotiBit" section of this [tutorial](https://github.com/EmotiBit/EmotiBit_Docs/blob/master/Getting_Started.md#stack-your-emotibit). 
 :::note 
-Only follow the "Stack your Emotibit" section, we will be using a different approach to install/update our firmware.
+Only follow the "Stack your EmotiBit" section, we will be using a different approach to install/update our firmware.
 :::
 
 ## Part 2 - Installing Arduino IDE and Necessary Software
@@ -569,7 +569,7 @@ float round2(float value) {
 
 Next, in the ArduinoIDE, delete the existing template code. Then, paste the code you just copied.
 
-Next, we will need to add the necessary config file to your Emotibit's SD card, as well as register your Emotibit device with Fathym OpenBiotech.
+Next, we will need to add the necessary config file to your EmotiBit's SD card, as well as register your EmotiBit device with Fathym OpenBiotech.
 
 ## Part 5 - Configuring Fathym OpenBiotech
 
@@ -581,10 +581,10 @@ Follow the [Getting Started](https://www.openbiotech.co/docs/getting-started/ent
 From the "Data" section, you should see a Connection String for your newly created device. Copy this value for later use.
 :::
 
-### Add Config file to your Emotibit
-Next, we will need to create a config file on your Emotibit's SD card, and fill in the appropriate values.
+### Add Config file to your EmotiBit
+Next, we will need to create a config file on your EmotiBit's SD card, and fill in the appropriate values.
 
-First, remove the SD card from your Emotibit device, and plug it into your PC. Next, navigate to the SD card's directory on your PC, and add a new file called "config.txt". In this file, copy and paste the following template:
+First, remove the SD card from your EmotiBit device, and plug it into your PC. Next, navigate to the SD card's directory on your PC, and add a new file called "config.txt". In this file, copy and paste the following template:
 
 ```
 {"WifiCredentials": [{"ssid": "MyNetworkName", "password" : "*******"}],"Fathym":{"ConnectionString" : "HostName=**YourHostName**;DeviceId=**YourDeviceID**;SharedAccessKey=**YourDeviceKey**", "DeviceID": "Emotibit", "ReadingInterval": 50, "CaptureInterval": 5000, "ShowReadingLogs": false, "ShowCaptureLogs": false, "Readings": ["EA", "EL", "ER", "PI", "PR", "PG", "TH"]}}
@@ -606,7 +606,7 @@ Next, take the YourDeviceID portion of your connection string, and paste it into
 
 - ReadingInterval - The amount of time (in milliseconds) between each reading of device data
 - CaptureInterval - The amount of time (in milliseconds) between the sending of batched data to OpenBiotech
-- ShowReadingLogs - When set to True, shows the logs in the serial montior related to the polling of raw data from the Emotibit
+- ShowReadingLogs - When set to True, shows the logs in the serial montior related to the polling of raw data from the EmotiBit
 - ShowCaptureLogs - When set to True, shows the logs in the serial montior related to the batching and sending of data to OpenBiotech
 - Readings - An array of "TypeTags", which define the types of readings you would like to capture. The defined typeTags can be found below:
     - AX - Accelerometer X-axis
@@ -628,7 +628,7 @@ Next, take the YourDeviceID portion of your connection string, and paste it into
     - PR - PPG Red
     - PG - PPG Green
 
-Once you have set your values, save the config.txt file and remove the SD card from your PC. Place it back into your Emotibit device.
+Once you have set your values, save the config.txt file and remove the SD card from your PC. Place it back into your EmotiBit device.
 
 ## Part 6 - Verify and Upload Your Code
 
@@ -650,7 +650,7 @@ Your ESP32 should now be taking sensor readings, and sending the information up 
 
 Once you confirm that messages are sending correctly, you can now go to [OpenBiotech](https://dashboard.openbiotech.co/) and see your messages in real time.
 
-## Part 7 - Understanding the Emotibit Data Payloads
+## Part 7 - Understanding the EmotiBit Data Payloads
 
 If you have done everything correctly, your payloads should look something like this:
 
