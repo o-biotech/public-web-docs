@@ -648,7 +648,7 @@ This will take your code, and flash it to the ESP32 board. You will see some red
 
 Your ESP32 should now be taking sensor readings, and sending the information up to OpenBiotech. If you want to see a live view of your code running, click Tools -> Serial Monitor in the top toolbar. You should be able to see your sensor readings every 30 seconds. In the Serial Monitor window, make sure that you have the baud rate set to "2000000".
 
-Once you confirm that messages are sending correctly, you can now go to [OpenBiotech](https://www.openbiotech.co/dashboard/) and see your messages in real time.
+Once you confirm that messages are sending correctly, you can now go to [OpenBiotech](https://dashboard.openbiotech.co/) and see your messages in real time.
 
 ## Part 7 - Understanding the Emotibit Data Payloads
 
