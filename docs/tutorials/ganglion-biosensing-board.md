@@ -1,0 +1,104 @@
+---
+title: OpenBCI Ganglion Hardware
+hide_title: true
+sidebar_label: Connect OpenBCI's Ganglion Hardware to OpenBiotech
+keywords:
+    - iot
+    - OpenBiotech
+    - fathym
+    - azure
+    - connect a device
+    - iot hub
+    - dashboard
+    - biotech
+    - ganglion
+hide_table_of_contents: true
+---
+
+# Connecting OpenBCI's Ganglion Hardware and Streaming Live Sensor Data with Fathym's OpenBiotech
+
+![Ganglion Biosensing Board](https://www.fathym.com/iot/img/ganglion_board.jpg)
+
+In this tutorial, we will be taking OpenBCI’s Ganglion Biosensing Board, reading its sensor datastreams, and sending real-time messages to Fathym's OpenBiotech. The Ganglion allows you to gather 4-channels of scientifically-validated physiological data.
+
+## Things you will need
+
+- **Ganglion Biosensing Board** 
+:::info
+Ganglion Biosensing Board can be purchased at: https://shop.openbci.com/products/ganglion-board
+:::
+- **A Windows computer/laptop PC operating system**
+:::note
+Program only functions for Windows OS currently. 
+:::
+- **OpenBiotech Data Streaming Application**
+:::info
+OpenBiotech's IoT streaming application can be downloaded here: https://github.com/o-biotech/openbiotech-iot-stream-brainflow/releases
+:::
+- **Fathym OpenBiotech account**
+:::info
+Sign up for OpenBiotech here: https://www.openbiotech.co/
+:::
+
+## Part 1 - Hooking Up Your Hardware
+1. You will need to plug in your USB “dongle” into your computer. Ensure that the small toggle on your USB dongle is set to “GPIO_6.”
+
+2. Plug in the provided lithium ion battery into the Ganglion board itself. 
+
+3. Once this is done, slide the small toggle switch to “PC.”
+
+If you need additional docs for setting up the Ganglion board, go [here](https://docs.openbci.com/GettingStarted/Boards/GanglionGS/).
+
+:::note 
+No need to install OpenBCI’s GUI, just follow the hardware setup portion.
+:::
+
+## Part 2 - Download the OpenBiotech IoT Stream Application
+
+Now that we have the board set up, we need to download and install the data streaming application to your Windows PC. 
+
+1. Download the “.msi” file from the release page [here](https://github.com/o-biotech/openbiotech-iot-stream-brainflow/releases).
+
+2. Run the downloaded file, which should open up a wizard installer.
+
+3. Complete step through of the installation wizard.
+
+![Biotech Wizard Start Screen](https://www.fathym.com/iot/img/startscreen_biotech_wizard_installer.png)
+
+:::tip
+Certain firewalls/virus protection programs may attempt to block the download/install of the file. Be sure to make a firewall exception in order for the application to install/run.
+:::
+
+## Part 3 - Register with Fathym OpenBiotech and Create a Device
+
+To get started with OpenBiotech’s tools, simply sign up for [OpenBiotech](https://dashboard.openbiotech.co/) for free on the OpenBiotech website. 
+
+First you will land on the OpenBiotech Set Up Configuration. Follow the steps as outlined in the process to configure your cloud infrastructure and register a device. 
+
+We'll start off with a symmetric key protected device, and can move to other security in the future.  All that's needed for the following sections is the device connection string.  
+
+Copy it from the dashboard, after creating a first device, using the ![Icon Copy](https://www.fathym.com/iot/img/screenshots/bt_copy_button.png) button.
+
+![Copy Connection String](https://www.fathym.com/iot/img/screenshots/ganglion_device_connection_string_dark.png)
+
+:::note
+When connecting devices, the connection is to a cloud-native Azure IoT Hub.  We don't place any technology between the device and the IoT Hub, making it possible to develop solutions with the full capabilities of Azure IoT Hub.  [Read more](https://docs.microsoft.com/en-us/azure/iot-hub/quickstart-send-telemetry-cli) on how to connect devices using the connection string.
+:::
+
+## Part 4 - Running the application and Streaming your Data
+
+1. Open the newly installed OpenBiotech IoT Stream - Brainflow application. This application utilizes Brainflow, a library for obtaining, parsing and analyzing EEG, EMG, ECG and other kinds of data from biosensors. 
+
+![OpenBiotech Connection String Prompt](https://www.fathym.com/iot/img/brainflow_connection_string_prompt.png)
+
+2. When prompted, paste your OpenBiotech device connection string (copied from the previous step).
+
+3. The application will ask you to select which computer port the Ganglion is connected to. Type the corresponding port selection and hit enter.
+
+![OpenBiotech Port Selection](https://www.fathym.com/iot/img/brainflow_port_selection.png)
+
+If everything is correct, the application will start to read and pull data from the Ganglion board, and send them to the device created within OpenBiotech.
+
+![OpenBiotech Datastream](https://www.fathym.com/iot/img/brainflow_datastream.png)
+
+From there, you can use OpenBiotech's built in [API endpoints](https://www.openbiotech.co/docs/integrations/connecting-downstream) to query and access your data.

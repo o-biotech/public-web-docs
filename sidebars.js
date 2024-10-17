@@ -69,6 +69,7 @@ module.exports = {
     //],    
     Tutorials: [
       'tutorials/cyton-biosensing-board',
+      'tutorials/ganglion-biosensing-board',
       'tutorials/emotibit-esp32-board',
       'tutorials/raspberrypi-dht11',
     ],
