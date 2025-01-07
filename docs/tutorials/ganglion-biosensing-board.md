@@ -19,7 +19,7 @@ hide_table_of_contents: true
 
 ![Ganglion Biosensing Board](https://www.fathym.com/iot/img/ganglion_board.jpg)
 
-In this tutorial, we will be taking OpenBCI’s Ganglion Biosensing Board, reading its sensor datastreams, and sending real-time messages to Fathym's OpenBiotech. The Ganglion allows you to gather 4-channels of scientifically-validated physiological data.
+In this tutorial, we will be taking OpenBCI's Ganglion Biosensing Board, reading its sensor datastreams, and sending real-time messages to Fathym's OpenBiotech. The Ganglion allows you to gather 4-channels of scientifically-validated physiological data.
 
 ## Things you will need
 
@@ -50,7 +50,7 @@ Sign up for OpenBiotech here: https://www.openbiotech.co/
 If you need additional docs for setting up the Ganglion board, go [here](https://docs.openbci.com/GettingStarted/Boards/GanglionGS/).
 
 :::note 
-No need to install OpenBCI’s GUI, just follow the hardware setup portion.
+No need to install OpenBCI's GUI, just follow the hardware setup portion.
 :::
 
 ## Part 2 - Download the OpenBiotech IoT Stream Application
@@ -71,7 +71,7 @@ Certain firewalls/virus protection programs may attempt to block the download/in
 
 ## Part 3 - Register with Fathym OpenBiotech and Create a Device
 
-To get started with OpenBiotech’s tools, simply sign up for [OpenBiotech](https://dashboard.openbiotech.co/) for free on the OpenBiotech website. 
+To get started with OpenBiotech's tools, simply sign up for [OpenBiotech](https://dashboard.openbiotech.co/) for free on the OpenBiotech website. 
 
 First you will land on the OpenBiotech Set Up Configuration. Follow the steps as outlined in the process to configure your cloud infrastructure and register a device. 
 
