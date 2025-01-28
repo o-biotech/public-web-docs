@@ -84,4 +84,4 @@ Power BI can help you create compelling reports where you can change visualizati
 
 Additional information on how to visualize and bring your data to life can be located across the internet.  You can get started on [building your report](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-excel-stunning-report#build-your-report) and work through a quick [10 minute example](https://docs.microsoft.com/en-us/learn/modules/build-your-first-power-bi-report/4-exercise-create-visuals-in-power-bi) to get you going.
 
-![Completed Power BI Dashboard](https://powerbicdn.azureedge.net/mediahandler/blog/legacymedia/5078.dashboard5.png)
+![Completed Power BI Dashboard](https://www.fathym.com/iot/img/pbi_temp_humidity_dashboard_example.png)
