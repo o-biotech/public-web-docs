@@ -16,7 +16,7 @@ hide_table_of_contents: true
 
 # Set Up Data
 
-The third section of the OpenBiotech getting started workflow is to start flowing and exploring device data in the cloud.
+The third section of the OpenEnsemble getting started workflow is to start flowing and exploring device data in the cloud.
 
 ![Biotech Set Up Step 3](https://www.fathym.com/img/screenshots/biotech_set_up_data_step.png)
 
@@ -64,7 +64,7 @@ To connect a physical device to IoT Hub, a Device Connection String is provided.
 ![Biotech IoT Device Connection String](https://www.fathym.com/img/screenshots/biotech_device_connection_String.png)
 
 :::info
-This Device Connection String consists of the Hostname, Device ID that was just selected and a Shared Access Key. This Connection String is ready to be used on physical devices. Adding a connection string to a device is a different process for different devices. As an example, you can reference the [Cyton tutorial](https://www.openbiotech.co/docs/tutorials/cyton-biosensing-board).
+This Device Connection String consists of the Hostname, Device ID that was just selected and a Shared Access Key. This Connection String is ready to be used on physical devices. Adding a connection string to a device is a different process for different devices. As an example, you can reference the [Cyton tutorial](https://www.openbiotech.co/docs/tutorials/cyton-biosensing-board) from the OpenBiotech documentation.
 :::
 
 ### Simulated device data: 
@@ -75,7 +75,7 @@ To flow simulated data to IoT Hub, first install [Docker](https://docs.docker.co
 
 Copy the provided Docker command and, returning to the Fathym CLI, run the command in your terminal. Data should soon start populating your terminal.
 
-It can take a couple of minutes for that data to be confirmed in OpenBiotech.
+It can take a couple of minutes for that data to be confirmed in OpenEnsemble.
 
 ![CLI Data Simulator](https://www.fathym.com/img/screenshots/cli_data_simulator.png)
 

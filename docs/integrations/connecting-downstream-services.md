@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Overview
 keywords:
     - iot
-    - iot ensemble
+    - openensemble
     - fathym
     - azure
     - connect a device
@@ -29,7 +29,7 @@ When working with IoT storage data, how it is stored and what interval it is sto
 
 :::note
 
-This storage access documentation focuses on our pre-built APIs available to all OpenBiotech users.
+This storage access documentation focuses on our pre-built APIs available to all OpenEnsemble users.
 
 :::
 

@@ -1,7 +1,7 @@
 ---
-title: Integrate with OpenBiotech APIs 
+title: Integrate with OpenEnsemble APIs 
 hide_title: true
-sidebar_label: Integrate OpenBiotech APIs  
+sidebar_label: Integrate OpenEnsemble APIs  
 keywords:
     - iot
     - iot ensemble
@@ -13,11 +13,11 @@ keywords:
 hide_table_of_contents: true
 ---
 
-# Integrating with OpenBiotech APIs Overview
+# Integrating with OpenEnsemble APIs Overview
 
 Serving as a reverse proxy, an API Proxy processor makes it possible to access APIs without divulging sensitive security keys. 
 
-To connect to OpenBiotech APIs or any other APIs, we need to configure an API proxy by adding it to our project (that was set up in the previous section). Let’s create an API proxy for OpenBiotech's Warm API. 
+To connect to OpenEnsemble APIs or any other APIs, we need to configure an API proxy by adding it to our project (that was set up in the previous section). Let’s create an API proxy for OpenEnsemble's Warm API. 
 
 ## Configure an API Proxy 
 
@@ -31,25 +31,25 @@ First, select Proxy and API in the Type fields.
 
 Now you need to give the proxy a name, description and a path for the route.  
 
-**Name:** ```OpenBiotech Warm API Proxy``` 
+**Name:** ```OpenEnsemble Warm API Proxy``` 
 
-**Description:** ```The API Proxy for the OpenBiotech Warm API```  
+**Description:** ```The API Proxy for the OpenEnsemble Warm API```  
 
-**Route:** ```/api/openbiotech```   
+**Route:** ```/api/OpenEnsemble```   
 
-The next steps are to complete the Inbound Path, API Root and Security fields. To do this, we need to access the [OpenBiotech APIs dashboard](https://dashboard.openbiotech.co/apis).  
+The next steps are to complete the Inbound Path, API Root and Security fields. To do this, we need to access the [OpenEnsemble APIs dashboard](https://dashboard.openbiotech.co/apis).  
 
 ![API Keys](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark.png)
 
 For the Warm Storage APIs, use the copy button to copy the API URL and paste it in the API proxy’s API Root field. Likewise, use the copy button to copy the API Access Token and paste the value after _Authorization~Bearer _ in the Security field.  
 
-**Inbound Path:** ```api/openbiotech```
+**Inbound Path:** ```api/OpenEnsemble```
 
 **API Root:** ```https://dashboard.openbiotech.co/api/data/warm/explorer```
 
 **Security:** ```Authorization~Bearer <API ACCESS TOKEN>``` 
 
-Once these steps are completed, click Save Application. An API proxy for OpenBiotech Warm API is now configured for the project and will retrieve simulated or real device data streaming from OpenBiotech. 
+Once these steps are completed, click Save Application. An API proxy for OpenEnsemble Warm API is now configured for the project and will retrieve simulated or real device data streaming from OpenEnsemble. 
 
 ## Configure additional API integrations  
 

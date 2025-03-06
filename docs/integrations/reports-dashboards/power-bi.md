@@ -14,13 +14,13 @@ hide_table_of_contents: true
 
 # Storage Access with Microsoft Power BI
 
-There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation. OpenBiotech provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
+There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation. OpenEnsemble provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
 
-Your OpenBiotech Dashboard will give you access to API Access Storage Keys as well as interactive forms to obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
+Your OpenEnsemble Dashboard will give you access to API Access Storage Keys as well as interactive forms to obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
 
-## OpenBiotech Storage Access
+## OpenEnsemble Storage Access
 
-OpenBiotech provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
+OpenEnsemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
 
 ## Configuring Power BI Desktop
 
@@ -38,7 +38,7 @@ The API request URL can be obtained from the dashboard using either the cold or 
 https://dashboard.openbiotech.co/api/data/warm/explorer
 ```
 
-Now input the request URL from above (or obtained from the dashboard) into the Power BI **URL Parts** text field.  Then enter `Authorization` as a header parameter key, along with the **Bearer (token)** copied from OpenBiotech Dashboard in the value text field.
+Now input the request URL from above (or obtained from the dashboard) into the Power BI **URL Parts** text field.  Then enter `Authorization` as a header parameter key, along with the **Bearer (token)** copied from OpenEnsemble Dashboard in the value text field.
 
 ![Power BI From web Advanced Enter Values](https://www.fathym.com/iot/img/screenshots/biotech-power-bi-from-web-advanced-enter-values.png)
 

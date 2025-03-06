@@ -18,9 +18,9 @@ hide_table_of_contents: true
 
 # Device Data Dashboard Overview 
 
-Once you have completed the getting started workflow you will land in the Device Data Dashboard. The device data dashboard is a turnkey dashboard that provides immediate access for exploring the device data (whether real or simulated) that was configured in the getting started workflow or for any additional devices that are connected to OpenBiotech.
+Once you have completed the getting started workflow you will land in the Device Data Dashboard. The device data dashboard is a turnkey dashboard that provides immediate access for exploring the device data (whether real or simulated) that was configured in the getting started workflow or for any additional devices that are connected to OpenEnsemble.
 
-![OpenBiotech Device Data Dashboard](https://www.fathym.com/iot/img/screenshots/biotech-device-data-dashboard.png)
+![OpenEnsemble Device Data Dashboard](https://www.fathym.com/iot/img/screenshots/biotech-device-data-dashboard.png)
 
 The dashboard leverages the cloud infrastructure, APIs, services and device data flows that were configured in the getting started workflow. For example, Azure Data Explorer is being used to process and filter device data (wither real or simulated) that is flowing in from Azure IoT Hub. The warm storage API powers the payloads and raw JSON tabs, while the hot storage API streams near real-time data into the streaming tab.
 
@@ -34,23 +34,23 @@ The are four dashboard tabs:
 3.	Raw JSON
 4.	Current Query
 
-![OpenBiotech Device Data Dashboard Tabs](https://www.fathym.com/iot/img/screenshots/biotech-device-dashboard-tabs.png)
+![OpenEnsemble Device Data Dashboard Tabs](https://www.fathym.com/iot/img/screenshots/biotech-device-dashboard-tabs.png)
 
 ## 1. Payloads 
 
 Payloads are the messages of telemetry, time-series data that flow from devices to the cloud. The payload data is from devices registered on Azure IoT Hub, whether simulated IoT Hub data to test out the system or real devices connected and streaming data to the cloud.
 
-Each message is labeled with a Device ID (the name of the device registered on Azure IoT Hub, in this case ‘emotibit’) and the exact time and date that the payload was processed at (for example, 13/03/2024, 17:49:29.639 GMT+01:00). By default, OpenBiotech displays 100 rows of payloads at 30 second intervals, with the most recent payload at the top. Scroll down to view all displayed payloads.
+Each message is labeled with a Device ID (the name of the device registered on Azure IoT Hub, in this case ‘emotibit’) and the exact time and date that the payload was processed at (for example, 13/03/2024, 17:49:29.639 GMT+01:00). By default, OpenEnsemble displays 100 rows of payloads at 30 second intervals, with the most recent payload at the top. Scroll down to view all displayed payloads.
 
-![OpenBiotech Device Data Dashboard Payload](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-payload.png)
+![OpenEnsemble Device Data Dashboard Payload](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-payload.png)
 
-Each payload has two buttons. ![OpenBiotech Dashboard Payload Buttons](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-payload-buttons.png)
+Each payload has two buttons. ![OpenEnsemble Dashboard Payload Buttons](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-payload-buttons.png)
 
-Click ![OpenBiotech Dashboard Copy Button](https://www.fathym.com/iot/img/screenshots/bt_copy_button.png) to copy the payload to your clipboard. 
+Click ![OpenEnsemble Dashboard Copy Button](https://www.fathym.com/iot/img/screenshots/bt_copy_button.png) to copy the payload to your clipboard. 
 
-Click ![OpenBiotech Dashboard View Button](https://www.fathym.com/iot/img/screenshots/bt_view_button.png) to view the payload. 
+Click ![OpenEnsemble Dashboard View Button](https://www.fathym.com/iot/img/screenshots/bt_view_button.png) to view the payload. 
 
-![OpenBiotech Dashboard Payload Expanded](https://www.fathym.com/iot/img/screenshots/biotech-payload-expanded.png)
+![OpenEnsemble Dashboard Payload Expanded](https://www.fathym.com/iot/img/screenshots/biotech-payload-expanded.png)
 
 Payloads have some common components but are structured differently for each device.
 
@@ -175,15 +175,15 @@ To do this the hot storage API must be provisioned, and a device must be connect
 
 Bearing that in mind, by default the streaming tab should look like this: 
 
-![OpenBiotech Dashboard Streaming Data Default](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-streaming-nodata.png)
+![OpenEnsemble Dashboard Streaming Data Default](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-streaming-nodata.png)
 
 When real-time data is streaming, the tab will look like this, with payloads that can be copied or viewed in full, just like the payloads tab.
 
-![OpenBiotech Dashboard Streaming Data Live](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-streaming.png)
+![OpenEnsemble Dashboard Streaming Data Live](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-streaming.png)
 
 Data streaming can be halted at any moment with the pause button:
 
-![OpenBiotech Dashboard Streaming Pause Button](https://www.fathym.com/iot/img/screenshots/biotech-streaming-pause-button.png)
+![OpenEnsemble Dashboard Streaming Pause Button](https://www.fathym.com/iot/img/screenshots/biotech-streaming-pause-button.png)
 
 ## 3. Raw JSON
 
@@ -287,7 +287,7 @@ For example, here is the equivalent payload that we just examined for the payloa
 
 This tab states how the current query is defined. 
 
-![OpenBiotech Dashboard Current Query](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-current-query.png)
+![OpenEnsemble Dashboard Current Query](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-current-query.png)
 
 The default query states that 100 data records are displayed from all devices in descending order (so the most recent data record is displayed at the top) at 30 second intervals. In the next section, we will guide you on how to modify and update this query.
 
@@ -295,21 +295,21 @@ The default query states that 100 data records are displayed from all devices in
 
 #### 1. Devices
 
-![OpenBiotech Dashboard Filter Devices Tab](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-filter-devices.png)
+![OpenEnsemble Dashboard Filter Devices Tab](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-filter-devices.png)
 
 The devices filter determines which devices should be included in the query. The default query, with no boxes checked, includes data from all listed devices.
 
-![OpenBiotech Dashboard Current Query](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-current-query.png)
+![OpenEnsemble Dashboard Current Query](https://www.fathym.com/iot/img/screenshots/biotech-dashboard-current-query.png)
 
 If the box for ‘cytondevice’ is checked, only data from the connected Cyton device will be included in the query and displayed in the dashboard. The query now looks like this. 
 
-![OpenBiotech Cyton Device Query](https://www.fathym.com/iot/img/screenshots/biotech-cyton-device-query.png)
+![OpenEnsemble Cyton Device Query](https://www.fathym.com/iot/img/screenshots/biotech-cyton-device-query.png)
 
 #### 2. Settings
 
 The settings tab contains the following filters. These are the default settings. 
 
-![OpenBiotech Filter Settings Tab](https://www.fathym.com/iot/img/screenshots/biotech-filter-settings-tab.png)
+![OpenEnsemble Filter Settings Tab](https://www.fathym.com/iot/img/screenshots/biotech-filter-settings-tab.png)
 
 The ‘Use Take Rows’ setting determines how many data records are displayed, ‘Use Descending Order’ determines whether the most recent or oldest data records are displayed at the top, and ‘Enable Auto Refresh’ updates the dashboard with any new data records every 30 seconds.
 
@@ -317,11 +317,11 @@ To modify the query, let’s set ‘Use Take Rows’ to 20 rows, toggle off ‘U
 
 This is how the query looks now: 
 
-![OpenBiotech Device Modified Query Example](https://www.fathym.com/iot/img/screenshots/biotech-modified-query.png)
+![OpenEnsemble Device Modified Query Example](https://www.fathym.com/iot/img/screenshots/biotech-modified-query.png)
 
 And this is how the corresponding payloads tab looks:
 
-![OpenBiotech Device Modified Query Payload](https://www.fathym.com/iot/img/screenshots/biotech-modied-query-payload.png)
+![OpenEnsemble Device Modified Query Payload](https://www.fathym.com/iot/img/screenshots/biotech-modied-query-payload.png)
 
 20 payload rows are displayed in ascending order (the oldest at the top) at 60 second intervals.
 

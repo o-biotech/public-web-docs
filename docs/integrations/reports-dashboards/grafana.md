@@ -16,7 +16,7 @@ hide_table_of_contents: true
 
 Grafana has many options for importing data. We recommend using the JSON API data source for Grafana which is used for loading JSON data from REST APIs into Grafana.
 
-The OpenBiotech Dashboard displays your API Keys. 
+The OpenEnsemble Dashboard displays your API Keys. 
 
 ![API Keys](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark.png)
 

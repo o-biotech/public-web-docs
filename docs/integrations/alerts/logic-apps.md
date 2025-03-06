@@ -20,7 +20,7 @@ hide_table_of_contents: true
 
 Azure Logic Apps is a cloud platform where you can create and run automated workflows with little to no code. By using the visual designer and selecting from prebuilt operations, you can quickly build a workflow that integrates and manages your data.
 
-These instructions show how to use Logic Apps to call the OpenBiotech warm query every 12 hours and check if the Temperature of any of the results is greater than 90. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
+These instructions show how to use Logic Apps to call the OpenEnsemble warm query every 12 hours and check if the Temperature of any of the results is greater than 90. If so, it sends an email alert. Before we get started, here's an overview of the entire Logic App with the steps collapsed.
 
 ![Completed Steps](https://www.fathym.com/iot/img/screenshots/alerts/completed-steps.png)
 
@@ -30,7 +30,7 @@ For the first step of the Logic App, search for 'HTTP'.
 
 ![Search for HTTP](https://www.fathym.com/iot/img/screenshots/alerts/search-for-http.png)
 
-Configure the HTTP trigger with the following settings from your OpenBiotech account. This example is using the Warm Query.
+Configure the HTTP trigger with the following settings from your OpenEnsemble account. This example is using the Warm Query.
 - Method: `GET`
 - URI: `https://dashboard.openbiotech.co/api/data/warm/explorer`
 - Header: `Authorization: Bearer ***********`
@@ -43,7 +43,7 @@ After this step has been configured, save and run the trigger to verify API conn
 ![HTML Connesiton Test Results](https://www.fathym.com/iot/img/screenshots/alerts/biotech-html-logicapp-results.png)
 
 :::info
-In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the OpenBiotech Warm Query for new data.
+In the HTTP trigger above, use the 'How often do you want to check for items' fields to control how often the HTTP trigger calls the OpenEnsemble Warm Query for new data.
 :::
 
 ## Step 2: Compose JSON
@@ -136,6 +136,6 @@ Texting via email is easy. Type in the recipient's mobile number in front of the
 
 ## Overview of Steps
 
-Here's a trigger overview of the entire Logic App with the steps collapsed after all steps were successfully ran. The Logic App calls the OpenBiotech warm query every 12 hours and checks if the Temperature of any of the results is greater than 90. If so, it sends an email alert.
+Here's a trigger overview of the entire Logic App with the steps collapsed after all steps were successfully ran. The Logic App calls the OpenEnsemble warm query every 12 hours and checks if the Temperature of any of the results is greater than 90. If so, it sends an email alert.
 
 ![Completed Steps](https://www.fathym.com/iot/img/screenshots/alerts/successful-logicapps-trigger.png)

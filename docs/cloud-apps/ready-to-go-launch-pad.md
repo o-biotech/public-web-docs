@@ -19,11 +19,11 @@ hide_table_of_contents: true
 
 Fathym Platform gives users an intuitive and comprehensive workflow for deploying applications and integrating them with APIs. It also goes beyond this by providing pre-configured automations that eliminate the steps involved in manually integrating and deploying apps.  
 
-Instead of importing and deploying a dashboard app and manually integrating with OpenBiotech device data via an API proxy, you can instead install an automated launch pad that deploys a biometric dashboard auto populated with simulated or real device data. 
+Instead of importing and deploying a dashboard app and manually integrating with OpenEnsemble device data via an API proxy, you can instead install an automated launch pad that deploys a biometric dashboard auto populated with simulated or real device data. 
 
 ## Low-Code Units (LCUs) 
 
-In the OpenBiotech and Fathym system, pre-configured automations and launch pads are referred to as Low-Code Units (LCUs). Without getting bogged down in jargon, we will provide a quick overview here as you will see the term LCU pop up. 
+In the OpenEnsemble and Fathym system, pre-configured automations and launch pads are referred to as Low-Code Units (LCUs). Without getting bogged down in jargon, we will provide a quick overview here as you will see the term LCU pop up. 
 
 LCUs are essentially curated code packages that can be deployed to your enterprise, composable automations of all sorts of software components, configurations and services. These flexible packages are versatile and can range from instructions for creating repositories and scaffolding code, to installing API configurations or deploying cloud resources or app templates. They are building blocks for efficiently assembling and deploying applications in the cloud. 
 

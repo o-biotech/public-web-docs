@@ -15,7 +15,7 @@ hide_table_of_contents: true
 
 # Fathym Platform Overview
 
-Fathym Platform is a central hub for assembling, deploying and hosting cloud applications and integrating with APIs: Whether APIs for databases, content management systems, or native integration with Fathym OpenBiotech, IoT Ensemble and Habistack APIs. 
+Fathym Platform is a central hub for assembling, deploying and hosting cloud applications and integrating with APIs: Whether APIs for databases, content management systems, or native integration with Fathym OpenEnsemble, IoT Ensemble and Habistack APIs. 
 
 Fathym Platform provides a complete DevOps (CI/CD) workflow, pre-configured automations and open-source templates for assembling data-driven and cloud-based web applications, without needing any DevOps or web development expertise. Get started with out-of-the box launch pads and easily fork templates to GitHub and make them your own or import custom code with GitHub or NPM. 
 

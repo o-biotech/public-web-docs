@@ -16,7 +16,7 @@ hide_table_of_contents: true
 
 # Connect Devices
 
-The second section of the OpenBiotech getting started workflow is to start connecting devices and configuring default dashboard services.
+The second section of the OpenEnsemble getting started workflow is to start connecting devices and configuring default dashboard services.
 
 ![Biotech Connect Device Step](https://www.fathym.com/img/screenshots/biotech_connect_devices_step.png)
 

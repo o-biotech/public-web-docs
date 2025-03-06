@@ -16,69 +16,46 @@ hide_table_of_contents: true
 
 # Connecting with Insomnia
 
-Insomnia is a free cross-platform desktop application that takes the pain out of interacting with HTTP-based APIs.  You can download Insomnia from here:
-
-https://insomnia.rest
+Insomnia is a free cross-platform desktop application that takes the pain out of interacting with HTTP-based APIs.  You can download Insomnia from [here](https://insomnia.rest)
 
 ## Connection String
-The connection string for your device is displayed on your IoT Ensemble dashboard. It contains the DeviceId which is needed to make requests.
+The connection string for your device is displayed on your OpenEnsemble dashboard. It contains the DeviceId which is needed to make requests.
 
-## Generate SAS Token
-The easiest way to get a SAS Token going for some of these examples will be via your IoT Ensemble dashboard. Next to the device, you will find a link to generate a SAS token. This is never saved in the system, and can only be accessed the first time you see it.
+![IoT Flow Settings](https://www.fathym.com/iot/img/screenshots/openbiotech-iot-flow-settings-cs.png)
+
+To quickly copy the Device Connection String use the ![Icon Copy](https://www.fathym.com/iot/img/screenshots/bt_copy_button.png) button
+
+## API Access Token
+The easiest way to get an API Access Token for some of these examples will be via an OpenEnsemble dashboard. On the APIs tab, you will find a button to copy the API Access Token at the top of the page. 
+
+![API Storage Access](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark_highlights.png)
 
 ## Insomnia Request
 To send a request with Insomnia, follow these steps:
 
-1. Start Insomnia, then select the **New Request** button (or type Ctrl+N) to create a new request.
-2. Give the request a name of your choosing, change the request method dropdown from **GET** to **POST**, then select **Create*.
-4. Enter the following URL in the URL text box.  Replace **{device-id}** in the URL with the **DeviceId** from the connection string from your IoT Ensemble dashboard (described above).
+1. Start Insomnia and open or create a workspace. Then select the **Create** button and select Request Collection.
+2. Give the Request Collection a name of your choosing and select Create.
+3. Select **New HTTP Request** button. 
+4. Change the request method dropdown from **GET** to **POST**.
+5. Enter the Storage URL in the **URL** text box. A sample one is below from OpenIndustrial. 
 
-    https://fathym-cloud-prd.azure-devices.net/devices/{device-id}/messages/events?api-version=2018-06-30
+    https://www.openindustrial.co/api/o-biotech/data/warm/explorer
 
-    For example, if your connection string looked like this:
+6. Select the **Body** tab on your Insomnia request, then select the **JSON** from the dropdown menu. 
 
-    `HostName=fathym-cloud-prd.azure-devices.net;DeviceId=f1e5c1b5-f86b-4d08-99c1-efbf8fbbf6f1-Test-Device;SharedAccessKey=6cmhsKbRxOX8oin1XTJXTfTO9R5Fhs8bT4QaWCE19&k1`
-
-    Then the URL would look like this:
-
-    `https://fathym-cloud-prd.azure-devices.net/devices/f1e5c1b5-f86b-4d08-99c1-efbf8fbbf6f1-Test-Device/messages/events?api-version=2018-06-30`
-
-5. Select the **Header** tab, then add a new header with a New header key of **Authorization** and set its value to the value of the **SAS Token** from the IoT Ensemble dashboard (described above).  It should look similar to this:
-
-    `Authorization SharedAccessSignature sr=fathym-prd.azure-devices.net%2Fdevices%2Ff1e5c1b5-f96b-4c09-99b1-egbf8ecbf5f1-Test-Device&sig=oZcOiPfmz%2BnBEYPuPsPuemwfI%2FSbxcga8CXCLC6iYB0%3D&se=1610045395`
-
-6. Select the **Body** tab then select the dropdown triangle which is just to the right of the word *Body* and choose **JSON**.
-
-7. Paste the following JSON into the body text box.  Replace **{device-id}** with the **DeviceId** from the connection string from your IoT Ensemble dashboard (described above).
-
+Paste the following query into the body text box.  Replace **{DeviceID}** with the **DeviceID** from the connection string from an OpenEnsemble dashboard (described above).
+   
 ```console
 {
-    "DeviceID":"{device-id}",
-    "DeviceType":"Generic",    
-    "Timestamp":"2023-11-14T00:26:30.0217778+00:00",
-    "Version":"0.0.2",
-    "DeviceData": {
-        "Latitude": 40.7578,
-        "Longitude": -104.9733,
-        "Floor": 2,
-        "Room": "Conference Room 5"
-    },
-    "SensorReadings": {
-        "Temperature": 105,
-        "Humidity": 83,
-        "Occupancy": 8,
-        "Occupied": 1
-    },
-    "SensorMetadata": {
-        "_": {
-            "SignalStrength": 1
-        },
-        "Temperature": {
-            "Battery": 0.4
-        }
-    }
+  "Query": "Devices | where DeviceID == \"DHT22\" | project DeviceID, EnqueuedTime, MessageID, EventData = RawData[\"SensorReadings\"] | sort by EnqueuedTime desc | take 100"
 }
 
 ```
 
-1. Select **Send** to send the request.  You should receive a **204 No Content** response.
+7. Select the **Auth** tab on your Insomnia request, then add a new Auth Type of **Bearer Token** from the dropdown menu. Set its Token value to **API Access Token** from an OpenEnsemble dashboard (described above).  
+
+8. Select **Send** to send the request.  You should receive a **200 OK** response along with a preview of the data. 
+
+In the preview below, you are seeing data being returned for a DHT22 Temperature/Humidity device.
+
+![Postman Post Query Dashboard](https://www.fathym.com/iot/img/screenshots/insomnia-post-query-dashboard.png)

@@ -1,10 +1,10 @@
 ---
 title: Raspberry Pi/DHT11
 hide_title: true
-sidebar_label: Connect Raspberry Pi/DHT11, Node Red, and Power BI to OpenBiotech
+sidebar_label: Connect Raspberry Pi/DHT11, Node Red, and Power BI to OpenEnsemble
 keywords:
     - iot
-    - OpenBiotech
+    - OpenEnsemble
     - fathym
     - azure
     - connect a device
@@ -18,14 +18,14 @@ keywords:
 hide_table_of_contents: true
 ---
 
-## Connecting Raspberry Pi/DHT11, Node Red, and Power BI with OpenBiotech
+## Connecting Raspberry Pi/DHT11, Node Red, and Power BI with OpenEnsemble
 
-In this tutorial, we'll take you step-by-step through the process of setting up your own personal temperature sensor with OpenBiotech. Here's a look at what we'll do:
+In this tutorial, we'll take you step-by-step through the process of setting up your own personal temperature sensor with OpenEnsemble. Here's a look at what we'll do:
 
 - Configure and set up a Raspberry Pi
 - Connect a temperature sensor
 - Read the data with Node-Red
-- Use OpenBiotech to stream sensor data
+- Use OpenEnsemble to stream sensor data
 - Leverage helpful data tools from your dashboard
 - Visualize your data with PowerBI
 
@@ -38,7 +38,7 @@ In this walk through, we use the Model 3B Raspberry Pi (but you can use a Model 
 - [Raspberry Pi](https://www.amazon.com/CanaKit-Raspberry-Premium-Clear-Supply/dp/B07BC7BMHY/ref=sr_1_8?dchild=1&keywords=raspberry+pi&qid=1611254779&sr=8-8) with a Power Source
 - [MicroSD card](https://www.amazon.com/SanDisk-Ultra-microSDHC-Memory-Adapter/dp/B08GY9NYRM/ref=sr_1_3?crid=2XJMC54SCHQQD&dchild=1&keywords=micro+sd+card+32gb&qid=1610743336&sprefix=micro+sd+card%2Caps%2C229&sr=8-3), at least 16GB
 - [DHT11 or DHT22 humidity/temperature sensor w/ wires.](https://www.amazon.com/HiLetgo-Temperature-Humidity-Digital-3-3V-5V/dp/B01DKC2GQ0) DHT11 will be used for this tutorial.
-- A [Fathym OpenBiotech](https://dashboard.openbiotech.co/) account
+- A Fathym OpenEnsemble account
 - [Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)
 - A USB Keyboard and mouse
 - A computer monitor
@@ -125,16 +125,16 @@ Welcome to Node-Red! There are a few additional modules that we will need in ord
 - node-red-contrib-dht-sensor
 - node-red-contrib-unit-converter
 
-For the sake of simplicity, we are able to import previously created flows into Node Red. The following flow template takes temperature and humidity information from the DHT11, formats the JSON payload to use OpenBiotech's Best Practice Schema (in addition, uses a few extra fields like **key** and **protocol** to work with the Azure IoT Hub module), and takes a reading every 30 seconds. To use this template, copy the following Node-Red JSON template:
+For the sake of simplicity, we are able to import previously created flows into Node Red. The following flow template takes temperature and humidity information from the DHT11, formats the JSON payload to use OpenEnsemble's Best Practice Schema (in addition, uses a few extra fields like **key** and **protocol** to work with the Azure IoT Hub module), and takes a reading every 30 seconds. To use this template, copy the following Node-Red JSON template:
 
 ```json
 [
     {
         "id": "e97f8ba8.2829d8",
         "type": "tab",
-        "label": "DHT11 Sensor with Raspberry Pi to Fathym OpenBiotech",
+        "label": "DHT11 Sensor with Raspberry Pi to Fathym OpenEnsemble",
         "disabled": false,
-        "info": "This simple flow is designed to get basic temperature and humidity readings into Fathym's OpenBiotech dashboard"
+        "info": "This simple flow is designed to get basic temperature and humidity readings into Fathym's OpenEnsemble dashboard"
     },
     {
         "id": "2fe1190e.141286",
@@ -285,19 +285,19 @@ If you chose to use a sensor other than the DHT11, you can still start from the 
 
 :::
 
-Before we start sending actual device readings, we first need to provide Node Red some device configuration information. This is where OpenBiotech comes in!
+Before we start sending actual device readings, we first need to provide Node Red some device configuration information. This is where OpenEnsemble comes in!
 
-## Part 5 - Configuring OpenBiotech
+## Part 5 - Configuring OpenEnsemble
 
-Before we can tell your device where to send data, we first need somewhere to send the data. OpenBiotech facilitates streaming device data to the cloud. Here we are using Azure IoT Hub to connect devices to a data flow and make device data available for use downstream in other applications and services.
+Before we can tell your device where to send data, we first need somewhere to send the data. OpenEnsemble facilitates streaming device data to the cloud. Here we are using Azure IoT Hub to connect devices to a data flow and make device data available for use downstream in other applications and services.
 
-Follow these steps to create a new device in OpenBiotech. For more details on the full OpenBiotech experience, check out our [full documentation](https://www.openbiotech.co/docs/getting-started/devices).
+Follow these steps to create a new device in OpenEnsemble. For more details on the full OpenEnsemble experience, check out our [full documentation](https://www.fathym.com/openensemble/docs/getting-started/devices).
 
-Start by navigating to the [OpenBiotech Dashboard](https://dashboard.openbiotech.co/) and sign in or sign up. 
+Start by navigating to an OpenEnsemble Dashboard and sign in or sign up. 
 
 ### Enroll a Device
 
-After the IoT Infrastructure has been provisioned, the second section of the OpenBiotech getting started workflow is to start connecting devices. Register a name for your device (i.e. my-first-device) and click **Save Device**.  That’s it!  Your device is now registered, the shared access keys and connection strings will be available to be copied a little further in the setup process. 
+After the IoT Infrastructure has been provisioned, the second section of the OpenEnsemble getting started workflow is to start connecting devices. Register a name for your device (i.e. my-first-device) and click **Save Device**.  That’s it!  Your device is now registered, the shared access keys and connection strings will be available to be copied a little further in the setup process. 
 
 ![Biotech Connect Devices Step 1](https://www.fathym.com/img/screenshots/biotech_device_config_1.png)
 
@@ -333,19 +333,19 @@ Next, double click on the **"Azure IoT Hub"** node module. This will open a **Pr
 
 ![Update Hostname](https://www.fathym.com/iot/img/screenshots/update_hostname.png)
 
-Once this is complete, click the red **Deploy** button in the top right corner. Your Pi is now sending real time data to OpenBiotech! Simply visit your OpenBiotech dashboard and investigate your data payloads.
+Once this is complete, click the red **Deploy** button in the top right corner. Your Pi is now sending real time data to OpenEnsemble! Simply visit your OpenEnsemble dashboard and investigate your data payloads.
 
-![OpenBiotech Dashboard Device Telemetry](https://www.fathym.com/iot/img/screenshots/ob-dht11-device-data-dashboard.png)
+![OpenEnsemble Dashboard Device Telemetry](https://www.fathym.com/iot/img/screenshots/ob-dht11-device-data-dashboard.png)
 
 ## Part 6 - Connecting Data to Power BI Desktop
 
-There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation.  OpenBiotech provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
+There are a lot of options in Power BI Desktop for importing data to be used in reports and visualizations for data interpretation.  OpenEnsemble provides connection URLs and Storage Access Keys so you can import data from your devices into Power BI using the **Web** data source.
 
-Your OpenBiotech Dashboard will give you access to API Access Storage Keys as well as obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
+Your OpenEnsemble Dashboard will give you access to API Access Storage Keys as well as obtain request URLs for cold and warm storage queries.  This is all you need to get started visualizing data with Power BI!
 
-### OpenBiotech Storage Access
+### OpenEnsemble Storage Access
 
-OpenBiotech provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.
+OpenEnsemble provides out of the box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.
 
 ![API Storage Access](https://www.fathym.com/iot/img/screenshots/biotech_api_storage_access_dark_highlights.png)
 
@@ -353,7 +353,7 @@ To quickly copy storage access keys use the ![Icon Copy](https://www.fathym.com/
 
 :::note
 
-OpenBiotech Storage Access can be leveraged to connect to many diffrent types of services, check the [full documentation](https://www.openbiotech.co/docs/integrations/connecting-downstream) for more details.
+OpenEnsemble Storage Access can be leveraged to connect to many diffrent types of services, check the [full documentation](https://www.openbiotech.co/docs/integrations/connecting-downstream) for more details.
 
 :::
 
@@ -373,7 +373,7 @@ The API request URL can be obtained from the dashboard using either the cold or 
 https://dashboard.openbiotech.co/api/data/warm/explorer
 ```
 
-Now input the request URL from above (or obtained from the dashboard) into the Power BI **URL Parts** text field.  Then enter `Authorization` as a header parameter key, along with the **Bearer (token)** copied from OpenBiotech Dashboard in the value text field.
+Now input the request URL from above (or obtained from the dashboard) into the Power BI **URL Parts** text field.  Then enter `Authorization` as a header parameter key, along with the **Bearer (token)** copied from OpenEnsemble Dashboard in the value text field.
 
 ![Power BI From web Advanced Enter Values](https://www.fathym.com/iot/img/screenshots/biotech-power-bi-from-web-advanced-enter-values.png)
 
@@ -423,4 +423,4 @@ Additional information on how to visualize and bring your data to life can be lo
 
 ## Wrapping Up
 
-That's it! In this tutorial you have leveraged IoT cloud infrastructure, open-source programming and affordable hardware to create an end-to-end solution. To continue your journey, you can leverage [OpenBiotech](https://dashboard.openbiotech.co/) to connect open and affordable biometric devices, such as the Cyton and EmotiBit, to the cloud. OpenBiotech provides simplicity with access to best practice cloud infrastructure in your own cloud or managed cloud environment.
+That's it! In this tutorial you have leveraged IoT cloud infrastructure, open-source programming and affordable hardware to create an end-to-end solution. To continue your journey, you can leverage OpenEnsemble to connect open and affordable devices to the cloud. OpenEnsemble provides simplicity with access to best practice cloud infrastructure in your own cloud or managed cloud environment.

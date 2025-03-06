@@ -1,22 +1,24 @@
 ---
 slug: best-practice-schema
-title: Deep Dive - IoT Schema Explained
+title: Deep Dive - Source Data Schema Explained
 hide_title: true
-sidebar_label: IoT Schema Explained 
+sidebar_label: Source Data Schema Explained 
 keywords:
     - IoT
-    - IoT Ensemble
+    - OpenEnsemble
     - Fathym
     - best practice schema
 hide_table_of_contents: true
 ---
 
-# IoT Best Practice Schema Explained
+# Source Data Best Practice Schema Explained
 
 To get the most out of the system, we recommend using our best practice schema to send IoT messages. This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
+    "contentType": "application/json",
+    "contentEncoding": "UTF-8",
     "DeviceID": "{your-device-id}",
     "DeviceType": "{your-device-type}",
     "Version": "{your-message-version}",
@@ -49,6 +51,18 @@ Following is a brief explanation of our best practice schema and how to use it.
 If not using the best practice schema, data will still be accessible throughout the system. However, some more advanced features won't be accessible.
 
 :::
+
+## Required System Properties
+
+To facilitate accurate interpretation of incoming messages, always include the following system properties:
+
+### contentEncoding 
+
+This value must be set to **UTF-8**. It specifies the character encoding of the message body and ensures proper text interpretation.
+
+### contentType 
+
+This value must be set to **application/json**. It indicates that the message payload is formatted as JSON.
 
 ## Root Properties
 
@@ -85,12 +99,12 @@ On top of the readings sensors are taking, there can often be additional informa
 
 This special property on the SensorMetadata allows sending information relating to a gateway or other non-sensor health information.
 
-## Payload Examples
-
-### Open Biotech Data Example
+## OpenBiotech Payload Example
 
 ```json
 {
+  "contentType": "application/json",
+  "contentEncoding": "UTF-8",
   "iothub-connection-device-id": "cytondevice",
   "iothub-enqueuedtime": "2024-02-08T17:44:51.1640000Z",
   "timestamp": "2024-02-08T17:44:51.2090000Z",

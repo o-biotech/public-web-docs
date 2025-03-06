@@ -20,7 +20,7 @@ Next, we'll layout how you can use your connection string to generate a simple H
 
 ## Connection String
 
-The connection string for your device is displayed in your IoT Flow settings on the OpenBiotech dashboard.  It contains the DeviceId which is needed to make the requests.
+The connection string for your device is displayed in your IoT Flow settings on an OpenEnsemble dashboard.  It contains the DeviceId which is needed to make the requests.
 
 ![IoT Flow Settings](https://www.fathym.com/iot/img/screenshots/openbiotech-iot-flow-settings-cs.png)
 

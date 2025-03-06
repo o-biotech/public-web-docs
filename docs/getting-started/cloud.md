@@ -16,7 +16,7 @@ hide_table_of_contents: true
 
 # Connect to Cloud
 
-The first section of the OpenBiotech getting started workflow involves connecting to and provisioning the cloud. OpenBiotech leverages Microsoft Azure for this. By curating the most advanced cloud services and deploying resources into an Azure subscription, OpenBiotech ensures that you’re not locked into a limited cloud setup but can scale and extend your cloud ecosystem without constraint.
+The first section of the OpenEnsemble getting started workflow involves connecting to and provisioning the cloud. OpenEnsemble leverages Microsoft Azure for this. By curating the most advanced cloud services and deploying resources into an Azure subscription, OpenEnsemble ensures that you’re not locked into a limited cloud setup but can scale and extend your cloud ecosystem without constraint.
 
 ![Biotech Getting Started](https://www.fathym.com/img/screenshots/biotech_getting_started.png)
 
@@ -32,13 +32,13 @@ Within the cloud section of the getting started workflow are the following three
 To connect to the cloud there are two options.
 
 -	Bring your own Azure subscription 
--	Create an Azure subscription that is managed by Fathym OpenBiotech
+-	Create an Azure subscription that is managed by Fathym OpenEnsemble
 
 :::note
-Selecting which option is best for you depends on whether you want to have full access and ownership of your own cloud subscription and resources or whether you would prefer OpenBiotech to handle everything in an Azure subscription managed under Fathym OpenBiotech’s Azure tenant. For the first option, you directly pay cloud costs to Azure, and for the second option Fathym bills you for Azure cloud costs.
+Selecting which option is best for you depends on whether you want to have full access and ownership of your own cloud subscription and resources or whether you would prefer OpenEnsemble to handle everything in an Azure subscription managed under Fathym OpenEnsemble’s Azure tenant. For the first option, you directly pay cloud costs to Azure, and for the second option Fathym bills you for Azure cloud costs.
 :::
 
-OpenBiotech will connect to the existing or new Azure subscription and set up a service principal for that subscription so that it can configure and provision cloud services and resource groups on your behalf.
+OpenEnsemble will connect to the existing or new Azure subscription and set up a service principal for that subscription so that it can configure and provision cloud services and resource groups on your behalf.
 
 To do this you need to install and use the Fathym Command-line Interface (CLI). 
 
@@ -54,7 +54,7 @@ To connect your Fathym account to the CLI, run the following command:
 
 ```fathym auth```
 
-This will open your browser and prompt you to sign in to Fathym's OpenBiotech.
+This will open your browser and prompt you to sign in to Fathym's OpenEnsemble.
 
 ### Create Cloud Connection
 
@@ -74,7 +74,7 @@ If you select the ‘use existing subscription option’, once authentication is
 
 Once you select an existing or create a new subscription, Fathym will set up a service principal and generate values for the following variables: Name, Description, Tenant ID, Subscription ID, Application ID, Application Auth Key. 
 
-Returning to the OpenBiotech Getting Started workflow, you can now copy those values into this form. 
+Returning to the OpenEnsemble Getting Started workflow, you can now copy those values into this form. 
 
 ![Biotech Service Principal Form](https://www.fathym.com/img/screenshots/biotech_sp_value_form.png)
 
@@ -104,20 +104,20 @@ There are three data flows, one is required and two are optional. Each flow is b
 
 - **Warm (required):** The warm flow allows for shorter term storage with better querying performance, routing data into a time-series window for analytics, alerts and dashboards.
 
-- **Hot (optional):** The hot flow provides data immediately, with no data storage, into applications such as real-time dashboards. When you select this option OpenBiotech integrates with GitHub and sets up a repository in your preferred organization.
+- **Hot (optional):** The hot flow provides data immediately, with no data storage, into applications such as real-time dashboards. When you select this option OpenEnsemble integrates with GitHub and sets up a repository in your preferred organization.
 
 Select the check boxes for the cold and hot flows if you wish to include these options. If you select the hot storage option, you will be prompted to sign into GitHub (If you do not yet have GitHub, sign up [here](https://github.com/).)
 
 ![Biotech Storage Flows Selection Isolated](https://www.fathym.com/img/screenshots/biotech_sf_selections_isolated.png)
 
-To enable OpenBiotech to configure GitHub on your behalf, you will be prompted to install the GitHub app [Open Biotech Web Manager](https://github.com/apps/open-biotech-web-manager). You will then be able to select one of your GitHub organizations.
+To enable OpenEnsemble to configure GitHub on your behalf, you will be prompted to install the GitHub Web Manager app. You will then be able to select one of your GitHub organizations.
 
 ![Biotech Storage Flows GitHub Selection](https://www.fathym.com/img/screenshots/biotech_sf_gh_selection.png)
 
-OpenBiotech will then set up a GitHub repository (default name ‘iot-ensemble-device-flow') in that organization.
+OpenEnsemble will then set up a GitHub repository (default name ‘iot-ensemble-device-flow') in that organization.
 
 To complete the step and provision the infrastructure, click Establish IoT Infrastructure.
 
-OpenBiotech now automates the deployment of Azure services and resource groups that were defined in the last three steps. This process will take approximately 15-20 minutes.
+OpenEnsemble now automates the deployment of Azure services and resource groups that were defined in the last three steps. This process will take approximately 15-20 minutes.
 
 ![Biotech Azure Processing Status](https://www.fathym.com/img/screenshots/biotech_azure_processing_status.png)
