@@ -25,6 +25,8 @@ module.exports = {
       {        
           'Reporting & Analytics': [
             'integrations/reports-dashboards/power-bi', 
+            'integrations/reports-dashboards/excel',
+            'integrations/reports-dashboards/google-sheets',
             'integrations/reports-dashboards/grafana',
             //'integrations/reports-dashboards/tableau',
             //'integrations/reports-dashboards/sql-server',
