@@ -126,11 +126,20 @@ Once you’ve saved your script:
 
 ![Google Sheets Permission](https://www.fathym.com/iot/img/screenshots/google-sheets-permission.png)
 
-### Automating and Refreshing Data
+### Bonus: Automating and Refreshing Data
 You can set your sheet to refresh on a schedule:
 
 - In the script editor, go to Triggers (clock icon).
-- Set `fetchAndUpdateIoTData` to run on a time-based trigger (e.g., every hour). Learn more [here](https://developers.google.com/apps-script/guides/triggers/installable).
+- Select `create a new trigger`
+- Set `fetchAndUpdateIoTData` to run on a time-based trigger (e.g., every hour) and Save.
+
+![Google Sheets Trigger Icon](https://www.fathym.com/iot/img/screenshots/google-sheets-script-triggers.png)
+
+![Google Sheets Trigger Settings](https://www.fathym.com/iot/img/screenshots/google-sheet-time-trigger-settings.png)
+
+:::info
+Additional information on event triggers can be found [here](https://developers.google.com/apps-script/guides/triggers/installable).
+:::
 
 That’s it! Your IoT device data is now flowing into Google Sheets via a secure POST API call. From here, you can build charts, apply conditional formatting, or create dashboards to track real-time device insights.
 
