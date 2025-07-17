@@ -20,7 +20,7 @@ Your OpenEnsemble Dashboard will give you access to API Access Storage Keys as w
 
 ## OpenEnsemble Storage Access
 
-OpenEnsemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
+OpenEnsemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the warm query endpoint will allow us to easily connect with Excel.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
 
 ## Using a Blank Query to Run a POST API Call in Excel
 

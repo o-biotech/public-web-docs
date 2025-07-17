@@ -21,7 +21,7 @@ Your OpenEnsemble Dashboard gives you access to Storage Keys and API endpoints, 
 
 ## OpenEnsemble Storage Access
 
-OpenEnsemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the cold query endpoint will allow us to easily connect with Power BI.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
+OpenEnsemble provides out-of-the-box APIs that allow you to interact with your data and devices.  Leveraging the warm query endpoint will allow us to easily connect with Google Sheets.  Check out the [getting started guide](../../integrations/connecting-downstream) for more details.
 
 ## Using Google Apps Script to Run a POST API Call
 
