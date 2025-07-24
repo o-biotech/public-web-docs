@@ -1,12 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  title: 'Fathym OpenBiotech',
-  tagline: 'Experience OpenBiotech in minutes | No credit card required',
+  title: 'Fathym OpenEnsemble',
+  tagline: 'Experience OpenEnsemble in minutes | No credit card required',
   url: 'https://www.fathym.com',
-  baseUrl: '/docs/',
+  baseUrl: '/openensemble/docs/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://www.fathym.com/iot/img/Thinky-white.png',
   organizationName: 'o-biotech', // Usually your GitHub org/user name.
   projectName: 'public-web-docs', // Usually your repo name.
   themeConfig: {
@@ -30,14 +30,13 @@ module.exports = {
       }
     },
     navbar: {
-      title: 'OpenBiotech',
       logo: {
-        alt: 'OpenBiotech',
-        src: 'img/Fathym-logo-white-01.png',
+        alt: 'Fathym',
+        src: 'https://www.fathym.com/iot/img/Fathym-logo-white-01.png',
       },
       items: [
         {
-          to: 'https://www.openbiotech.co/',
+          to: 'https://www.fathym.com/',
           label: 'Home',
           position: 'left',
           target: '_top',
@@ -66,12 +65,12 @@ module.exports = {
         //  position: 'right',
         //  target: '_top',
         //},
-        {
-          to: 'https://www.fathym.com/dashboard/',
-          label: 'Sign In',
-          position: 'right',
-          target: '_top',
-        },
+        //{
+          //to: 'https://dashboard.openbiotech.co/',
+          //label: 'Sign In',
+          //position: 'right',
+          //target: '_top',
+        //},
         //{
         //  href: 'https://www.iot-ensemble.com/dashboard',
         //  label: 'Sign Up',
@@ -88,7 +87,7 @@ module.exports = {
           items: [
             {
               label: 'Getting Started',
-              to: 'https://www.fathym.com/dashboard',
+              to: '/getting-started/enterprise',
             },
             // {
             //   label: 'Pricing',

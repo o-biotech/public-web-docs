@@ -11,18 +11,19 @@ keywords:
     - notifications
     - email
     - text
+    - biotech
 hide_table_of_contents: true
 ---
 
 # Sending Email & Text Alerts using Grafana
 
-These instructions show how to send email and text alerts using Grafana and IoT Ensemble data stored in SQL Server.
+These instructions show how to send email and text alerts using Grafana and Open Biotech data stored in SQL Server.
 
 ## Step 1: SQL Server
 
-The first step is to call the IoT Ensemble warm or cold query and load your device data into Microsoft SQL Server. This doc explains how to use a [Logic App to load the data into SQL Server](/launch-cloud-apps/reports-dashboards/sql-server). If you need help loading your IoT Ensemble data into SQL Server please email support@fathym.com and we'll point you in the right direction.
+The first step is to call the Open Biotech warm or cold query and load your device data into Microsoft SQL Server. This doc explains how to use a [Logic App to load the data into SQL Server](/integrations/reports-dashboards/sql-server). If you need help loading your Open Biotech data into SQL Server please email support@fathym.com and we'll point you in the right direction.
 
-This screenshot shows some sample IoT Ensemble data loaded in SQL Server.
+This screenshot shows some sample Open Biotech data loaded in SQL Server.
 
 ![SQL Server Table](https://www.fathym.com/iot/img/screenshots/alerts/sql-server-data.png)
 
@@ -34,7 +35,7 @@ You need to create firewall rules for the Grafana ip addresses so they have perm
 
 ## Step 2: Configure the Grafana Data Source
 
-From the Grafana Home, click on Configuration > Data Sources 
+From the Grafana Home, click on Configuration > Data Sources. 
 
 ![Grafana Data Sources](https://www.fathym.com/iot/img/screenshots/grafana-1.jpg)
 
@@ -60,7 +61,7 @@ DateTime as time,
 Temperature
 FROM [grafana-data]`
 
-Modify the query to fit the properties of your IoT Ensemble data.
+Modify the query to fit the properties of your OpenBiotech data.
 :::
 
 ## Step 4: Configure the Grafana Alert

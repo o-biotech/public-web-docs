@@ -1,22 +1,24 @@
 ---
 slug: best-practice-schema
-title: Deep Dive - IoT Schema Explained
+title: Deep Dive - Source Data Schema Explained
 hide_title: true
-sidebar_label: IoT Schema Explained 
+sidebar_label: Source Data Schema Explained 
 keywords:
     - IoT
-    - IoT Ensemble
+    - OpenEnsemble
     - Fathym
     - best practice schema
 hide_table_of_contents: true
 ---
 
-# IoT Best Practice Schema Explained
+# Source Data Best Practice Schema Explained
 
 To get the most out of the system, we recommend using our best practice schema to send IoT messages. This allows for the collection of device data, sensor readings, and sensor metadata to deliver a rich, pre-configured IoT experience.   In short, the structure is as follows:
 
 ```json
 {
+    "contentType": "application/json",
+    "contentEncoding": "UTF-8",
     "DeviceID": "{your-device-id}",
     "DeviceType": "{your-device-type}",
     "Version": "{your-message-version}",
@@ -49,6 +51,18 @@ Following is a brief explanation of our best practice schema and how to use it.
 If not using the best practice schema, data will still be accessible throughout the system. However, some more advanced features won't be accessible.
 
 :::
+
+## Required System Properties
+
+To facilitate accurate interpretation of incoming messages, always include the following system properties:
+
+### contentEncoding 
+
+This value must be set to **UTF-8**. It specifies the character encoding of the message body and ensures proper text interpretation.
+
+### contentType 
+
+This value must be set to **application/json**. It indicates that the message payload is formatted as JSON.
 
 ## Root Properties
 
@@ -85,35 +99,27 @@ On top of the readings sensors are taking, there can often be additional informa
 
 This special property on the SensorMetadata allows sending information relating to a gateway or other non-sensor health information.
 
-## Payload Examples
-
-### Fathym IoT Ensemble Emulated Data Example
+## OpenBiotech Payload Example
 
 ```json
 {
-    "DeviceID":"Emulated-4",
-    "DeviceType":"Generic",
-    "Timestamp":"2023-11-14T00:26:30.0217778+00:00",
-    "Version":"0.0.2",
-    "DeviceData": {
-        "Latitude": 40.7578,
-        "Longitude": -104.9733,
-        "Floor": 2,
-        "Room": "Conference Room 5"
-    },
-    "SensorReadings": {
-        "Temperature": 105,
-        "Humidity": 83,
-        "Occupancy": 8,
-        "Occupied": 1
-    },
-    "SensorMetadata": {
-        "_": {
-            "SignalStrength": 1
-        },
-        "Temperature": {
-            "Battery": 0.4
-        }
-    },
+  "contentType": "application/json",
+  "contentEncoding": "UTF-8",
+  "iothub-connection-device-id": "cytondevice",
+  "iothub-enqueuedtime": "2024-02-08T17:44:51.1640000Z",
+  "timestamp": "2024-02-08T17:44:51.2090000Z",
+  "DeviceID": "CytonBoard",
+  "DeviceType": "EEG",
+  "Version": "1.0",
+  "SensorReadings": {
+    "1": "-154361.28131881732",
+    "2": "-154929.50736636014",
+    "3": "-154641.48278730904",
+    "4": "-155028.7491117417",
+    "5": "132315.68870731458",
+    "6": "18695.513152541298",
+    "7": "-68085.33586088847",
+    "8": "-154866.43074350726"
+  }
 }
 ```
